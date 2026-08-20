@@ -1,0 +1,240 @@
+# Zero-infrastructure default: fake embedder + in-memory store.
+# Runs with only requirements.txt installed — no GPU, no Qdrant, no downloads.
+# Real-backbone configs (siglip2 + qdrant) come in Sprint 2.
+
+name: default-fake-inmemory
+
+retriever:
+  type: dense
+  name: fake-inmemory
+  embedder:
+    type: fake
+    params:
+      dim: 64
+  store:
+    type: inmemory
+    params: {}
+
+# Invented demo catalog — hand-written placeholders, NOT scraped from any shop
+# and not the evaluation dataset. The real catalog comes from the public dataset
+# chosen in Sprint 1 (see DeCuong, Mục 3.2) and gets indexed by src/index.py.
+products:
+  - product_id: "P001"
+    title: "Áo khoác bomber nam màu be"
+    category: "áo khoác"
+    color: "be"
+    material: "polyester"
+    price_vnd: 459000
+    description: "Áo khoác bomber nam form rộng, bo tay chun, phong cách streetwear"
+    attributes:
+      gender: "nam"
+      style: "streetwear"
+
+  - product_id: "P002"
+    title: "Áo khoác denim nữ oversize"
+    category: "áo khoác"
+    color: "xanh"
+    material: "denim"
+    price_vnd: 529000
+    description: "Áo khoác jean nữ oversize wash nhẹ, phối cùng chân váy hoặc quần short"
+    attributes:
+      gender: "nữ"
+      style: "casual"
+
+  - product_id: "P003"
+    title: "Váy hai dây đi biển hoa nhí"
+    category: "váy"
+    color: "vàng"
+    material: "voan"
+    price_vnd: 320000
+    description: "Váy maxi hai dây họa tiết hoa nhí, chất voan mát, phù hợp đi biển"
+    attributes:
+      gender: "nữ"
+      style: "vintage"
+
+  - product_id: "P004"
+    title: "Váy công sở dáng suông màu đen"
+    category: "váy"
+    color: "đen"
+    material: "tuyết mưa"
+    price_vnd: 385000
+    description: "Váy suông tay lửng thanh lịch, phù hợp môi trường công sở"
+    attributes:
+      gender: "nữ"
+      style: "công sở"
+
+  - product_id: "P005"
+    title: "Quần baggy jean rộng ống nam"
+    category: "quần"
+    color: "xanh đậm"
+    material: "denim"
+    price_vnd: 415000
+    description: "Quần baggy jean nam ống rộng, cạp cao, phong cách Hàn Quốc"
+    attributes:
+      gender: "nam"
+      style: "phong cách Hàn Quốc"
+
+  - product_id: "P006"
+    title: "Quần tây ống suông nữ màu kem"
+    category: "quần"
+    color: "kem"
+    material: "vải tuyết mưa"
+    price_vnd: 349000
+    description: "Quần tây nữ ống suông cạp cao, đứng dáng, mặc đi làm"
+    attributes:
+      gender: "nữ"
+      style: "công sở"
+
+  - product_id: "P007"
+    title: "Áo thun cotton trắng basic unisex"
+    category: "áo thun"
+    color: "trắng"
+    material: "cotton"
+    price_vnd: 159000
+    description: "Áo phông trơn cotton 100%, form regular, dễ phối"
+    attributes:
+      gender: "unisex"
+      style: "basic"
+
+  - product_id: "P008"
+    title: "Áo polo nam kẻ sọc xanh navy"
+    category: "áo polo"
+    color: "navy"
+    material: "cá sấu cotton"
+    price_vnd: 265000
+    description: "Áo polo nam kẻ sọc ngang, cổ bo dệt, thoáng mát"
+    attributes:
+      gender: "nam"
+      style: "smart casual"
+
+  - product_id: "P009"
+    title: "Áo sơ mi lụa nữ tay dài màu hồng pastel"
+    category: "áo sơ mi"
+    color: "hồng"
+    material: "lụa"
+    price_vnd: 379000
+    description: "Sơ mi lụa nữ tay dài mềm rũ, tông pastel nhẹ nhàng"
+    attributes:
+      gender: "nữ"
+      style: "công sở"
+
+  - product_id: "P010"
+    title: "Áo sơ mi flannel kẻ caro nam"
+    category: "áo sơ mi"
+    color: "đỏ"
+    material: "flannel"
+    price_vnd: 299000
+    description: "Sơ mi flannel kẻ caro dày dặn, mặc ngoài như áo khoác nhẹ"
+    attributes:
+      gender: "nam"
+      style: "streetwear"
+
+  - product_id: "P011"
+    title: "Chân váy xếp ly tennis màu trắng"
+    category: "chân váy"
+    color: "trắng"
+    material: "polyester"
+    price_vnd: 245000
+    description: "Chân váy xếp ly ngắn kèm quần lót trong, phong cách tennis"
+    attributes:
+      gender: "nữ"
+      style: "preppy"
+
+  - product_id: "P012"
+    title: "Áo hoodie nỉ bông oversize màu xám"
+    category: "áo hoodie"
+    color: "xám"
+    material: "nỉ bông"
+    price_vnd: 389000
+    description: "Hoodie nỉ bông dày form oversize, mũ hai lớp, có túi kangaroo"
+    attributes:
+      gender: "unisex"
+      style: "streetwear"
+
+  - product_id: "P013"
+    title: "Áo dài truyền thống nữ gấm đỏ"
+    category: "áo dài"
+    color: "đỏ"
+    material: "gấm"
+    price_vnd: 1250000
+    description: "Áo dài gấm truyền thống tay dài, thêu hoa văn, dịp Tết và cưới hỏi"
+    attributes:
+      gender: "nữ"
+      style: "truyền thống"
+
+  - product_id: "P014"
+    title: "Áo dài cách tân nữ tay lỡ"
+    category: "áo dài"
+    color: "xanh ngọc"
+    material: "lụa tơ tằm"
+    price_vnd: 890000
+    description: "Áo dài cách tân tay lỡ, tà ngắn, mặc kèm chân váy dài"
+    attributes:
+      gender: "nữ"
+      style: "truyền thống"
+
+  - product_id: "P015"
+    title: "Áo len cổ lọ nữ màu nâu"
+    category: "áo len"
+    color: "nâu"
+    material: "len"
+    price_vnd: 279000
+    description: "Áo len cổ lọ dệt kim mỏng, giữ ấm, mặc mùa thu đông"
+    attributes:
+      gender: "nữ"
+      style: "minimal"
+
+  - product_id: "P016"
+    title: "Quần short thể thao nam màu đen"
+    category: "quần short"
+    color: "đen"
+    material: "thun co giãn"
+    price_vnd: 149000
+    description: "Quần short nam co giãn, thoáng khí, mặc tập gym và chạy bộ"
+    attributes:
+      gender: "nam"
+      style: "sportswear"
+
+  - product_id: "P017"
+    title: "Đầm body ôm dự tiệc màu đỏ"
+    category: "đầm"
+    color: "đỏ"
+    material: "thun cát"
+    price_vnd: 465000
+    description: "Đầm body ôm tôn dáng, tay ngắn, đi tiệc và sự kiện buổi tối"
+    attributes:
+      gender: "nữ"
+      style: "dự tiệc"
+
+  - product_id: "P018"
+    title: "Giày sneaker trắng đế cao unisex"
+    category: "giày"
+    color: "trắng"
+    material: "da PU"
+    price_vnd: 620000
+    description: "Sneaker trắng đế cao 4cm, dễ phối với jean và chân váy"
+    attributes:
+      gender: "unisex"
+      style: "basic"
+
+  - product_id: "P019"
+    title: "Túi tote canvas màu be in chữ"
+    category: "túi"
+    color: "be"
+    material: "canvas"
+    price_vnd: 129000
+    description: "Túi tote canvas dày, quai vai, đựng laptop 14 inch"
+    attributes:
+      gender: "unisex"
+      style: "basic"
+
+  - product_id: "P020"
+    title: "Mũ bucket vành tròn kẻ caro"
+    category: "mũ"
+    color: "nâu"
+    material: "cotton"
+    price_vnd: 119000
+    description: "Mũ bucket vành tròn họa tiết kẻ caro, phong cách Hàn Quốc"
+    attributes:
+      gender: "unisex"
+      style: "phong cách Hàn Quốc"

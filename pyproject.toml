@@ -1,0 +1,39 @@
+[project]
+name = "fashion-multimodal-search"
+version = "0.1.0"
+description = "Multimodal fashion product search for Vietnamese e-commerce"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "RUF"]
+
+[tool.mypy]
+# Not pinning python_version: forcing 3.11 parsing breaks on numpy's stubs when mypy
+# itself runs under a 3.12 interpreter (PEP 695 `type` stmt in numpy/__init__.pyi).
+# Let mypy match whichever interpreter actually runs it.
+warn_unused_configs = true
+ignore_missing_imports = false
+
+# Strict only where the contracts live: the core and the adapters implementing
+# it. app/, tests/ and the CLI scripts are checked loosely on purpose.
+[[tool.mypy.overrides]]
+module = ["src.core.*", "src.adapters.*"]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["yaml.*", "streamlit.*", "torch.*", "transformers.*", "peft.*", "qdrant_client.*", "rank_bm25.*", "open_clip.*", "sentence_transformers.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-m 'not gpu and not qdrant and not slow' --strict-markers"
+markers = [
+    "gpu: needs a CUDA GPU and the ML extras (requirements-ml.txt)",
+    "qdrant: needs a running Qdrant (docker compose up -d qdrant)",
+    "slow: takes more than a few seconds",
+]
