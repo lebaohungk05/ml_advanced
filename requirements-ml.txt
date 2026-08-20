@@ -1,0 +1,18 @@
+# Heavy extras, needed only once the real adapters land (Sprint 2+).
+# Install on top of requirements.txt, and install torch for your own CUDA
+# version first (https://pytorch.org/get-started/locally/) — the plain wheel may
+# be CPU-only.
+#     pip install -r requirements.txt -r requirements-ml.txt
+-r requirements.txt
+
+torch>=2.4
+transformers>=4.45
+peft>=0.18            # DoRA (use_dora=True) needs >= 0.18
+open_clip_torch>=2.24
+sentence-transformers>=3.0
+qdrant-client>=1.11
+rank-bm25>=0.2.2
+pillow>=10.3
+wandb>=0.17
+# NOTE: streamlit is deliberately not pinned here yet — app/streamlit_app.py is a
+# Sprint 5 stub. Add it when that work starts.

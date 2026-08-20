@@ -1,0 +1,24 @@
+# Only Qdrant. The API itself runs from the host (uvicorn app.api:app --reload)
+# and the default config needs no service at all — start this only when working
+# on src/adapters/vectorstore/qdrant_adapter.py.
+#
+#   docker compose up -d qdrant     # REST :6333, gRPC :6334, dashboard /dashboard
+#
+# No API key locally, so keep it bound to localhost. A hosted cluster is
+# configured through QDRANT_URL / QDRANT_API_KEY env vars instead — never commit
+# those values.
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.12.4
+    container_name: fashion-search-qdrant
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6334:6334"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    environment:
+      QDRANT__SERVICE__ENABLE_TLS: "false"
+
+volumes:
+  qdrant_storage:
