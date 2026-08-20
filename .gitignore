@@ -1,0 +1,36 @@
+# reference repos (external, cloned locally for reading only — not vendored)
+reference_repos/
+
+# local Claude Code config (not part of the project deliverable)
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# data & model artifacts
+data/raw/
+data/processed/
+models/
+*.pt
+*.ckpt
+checkpoints/
+results/
+wandb/
+
+# secrets / env
+.env
+.env.*
+
+# Excel lock files
+~$*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
