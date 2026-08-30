@@ -1,0 +1,2 @@
+run_id,date,run_by,commit,config,lora_rank,learning_rate,effective_batch,epochs,recall@1,recall@5,recall@10,mrr,ndcg@10,runtime_s,notes
+smoke,2026-08-26 15:09:50,,4129707,google/siglip2-base-patch16-224 dora=True,8,0.0001,8,1,,1.0000,,,,31.5,"LoRA/DoRA fine-tune, trainable 1253376/376441346 (0.33%), val recall is self-query proxy, checkpoint=C:\Users\dell\AppData\Local\Temp\pytest-of-dell\pytest-7\test_train_runs_end_to_end_on_0\checkpoints\smoke\best"

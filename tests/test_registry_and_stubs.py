@@ -17,7 +17,7 @@ from src.adapters.embedders.siglip2_adapter import Siglip2Embedder
 from src.adapters.embedders.visiglip_adapter import ViSiglipEmbedder
 from src.adapters.lexical.bm25_adapter import BM25Retriever
 from src.adapters.metrics.ranking_metrics import RankingMetrics
-from src.adapters.training.lora_dora_trainer import TrainConfig, build_peft_model
+from src.adapters.training.lora_dora_trainer import TrainConfig, lora_target_modules
 from src.adapters.vectorstore.qdrant_adapter import QdrantVectorStore
 from src.core.dense_retriever import DenseRetriever
 from src.core.models import Product, Query
@@ -77,13 +77,14 @@ def test_multimodal_query_is_rejected_until_fusion_is_designed() -> None:
 
 @pytest.mark.parametrize(
     "embedder",
-    [ClipEmbedder(), Siglip2Embedder(), ViSiglipEmbedder(), ResnetImageEmbedder()],
+    [ClipEmbedder(), Siglip2Embedder(), ResnetImageEmbedder(), ViSiglipEmbedder()],
     ids=lambda e: type(e).__name__,
 )
-def test_embedder_stubs_construct_and_raise_not_implemented(embedder: object) -> None:
+def test_real_embedders_defer_model_loading_until_first_use(embedder: object) -> None:
+    # Construction must stay free of torch/downloads, otherwise plain `pytest -q`
+    # would pull hundreds of MB of weights on a laptop with no ML extras.
     assert isinstance(embedder.name, str)  # type: ignore[attr-defined]
-    with pytest.raises(NotImplementedError):
-        embedder.encode_image([b"x"])  # type: ignore[attr-defined]
+    assert embedder._model is None  # type: ignore[attr-defined]
 
 
 def test_resnet_documents_that_it_has_no_text_tower() -> None:
@@ -91,7 +92,7 @@ def test_resnet_documents_that_it_has_no_text_tower() -> None:
         ResnetImageEmbedder().encode_text(["áo thun"])
 
 
-def test_qdrant_stub_reads_url_from_env_and_defaults_to_localhost(
+def test_qdrant_reads_url_from_env_and_defaults_to_localhost(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     monkeypatch.delenv("QDRANT_URL", raising=False)
@@ -100,18 +101,17 @@ def test_qdrant_stub_reads_url_from_env_and_defaults_to_localhost(
     monkeypatch.setenv("QDRANT_URL", "http://qdrant.internal:6333")
     assert QdrantVectorStore(dim=8).url == "http://qdrant.internal:6333"
 
-    with pytest.raises(NotImplementedError):
-        QdrantVectorStore(dim=8).count()
+
+def test_bm25_is_implemented_but_stays_text_only() -> None:
+    retriever = BM25Retriever()
+    retriever.index([])
+
+    with pytest.raises(NotImplementedError, match="lexical text index"):
+        retriever.search(Query(query_id="q1", image_path="anh.jpg"))
 
 
-def test_bm25_stub_raises_not_implemented() -> None:
-    with pytest.raises(NotImplementedError):
-        BM25Retriever().index([])
-
-
-def test_metrics_stub_raises_not_implemented() -> None:
-    with pytest.raises(NotImplementedError):
-        RankingMetrics().recall_at_k({}, [], k=5)
+def test_metrics_is_implemented_and_handles_an_empty_run() -> None:
+    assert RankingMetrics().recall_at_k({}, [], k=5) == 0.0
 
 
 def test_train_config_defaults_match_the_agreed_hyperparameters() -> None:
@@ -139,6 +139,54 @@ def test_train_config_rejects_batch_sizes_that_do_not_divide() -> None:
         TrainConfig(physical_batch_size=32, effective_batch_size=100)
 
 
-def test_trainer_functions_are_stubs() -> None:
-    with pytest.raises(NotImplementedError, match="Sprint 3"):
-        build_peft_model(TrainConfig())
+class _FakeBackbone:
+    """SigLIP's module tree, trimmed to what target-module selection looks at.
+
+    Lets the tower filtering be tested without torch or a weight download; the
+    real names come from ``AutoModel.from_pretrained(...).named_modules()``.
+    """
+
+    NAMES = (
+        "text_model",
+        "text_model.encoder.layers.0.self_attn.q_proj",
+        "text_model.encoder.layers.0.self_attn.out_proj",
+        "text_model.encoder.layers.0.mlp.fc1",
+        "text_model.head",
+        "vision_model",
+        "vision_model.encoder.layers.0.self_attn.q_proj",
+        "vision_model.encoder.layers.0.self_attn.v_proj",
+        "vision_model.encoder.layers.0.mlp.fc1",
+        # The pooling head owns an out_proj too, but it belongs to
+        # nn.MultiheadAttention and must NOT be adapted.
+        "vision_model.head.attention.out_proj",
+    )
+
+    def named_modules(self) -> list[tuple[str, None]]:
+        return [(name, None) for name in self.NAMES]
+
+
+def test_lora_adapts_only_the_towers_the_config_asks_for() -> None:
+    model = _FakeBackbone()
+
+    both = lora_target_modules(model, TrainConfig())
+    assert both == [
+        "text_model.encoder.layers.0.self_attn.q_proj",
+        "text_model.encoder.layers.0.self_attn.out_proj",
+        "vision_model.encoder.layers.0.self_attn.q_proj",
+        "vision_model.encoder.layers.0.self_attn.v_proj",
+    ]
+
+    image_only = lora_target_modules(model, TrainConfig(adapt_text_tower=False))
+    assert all(name.startswith("vision_model.encoder") for name in image_only)
+
+    text_only = lora_target_modules(model, TrainConfig(adapt_image_tower=False))
+    assert all(name.startswith("text_model.encoder") for name in text_only)
+
+
+def test_lora_refuses_a_backbone_whose_module_names_it_does_not_recognize() -> None:
+    class _Renamed:
+        def named_modules(self) -> list[tuple[str, None]]:
+            return [("encoder.blocks.0.attn.qkv", None)]
+
+    with pytest.raises(ValueError, match="module names changed"):
+        lora_target_modules(_Renamed(), TrainConfig())

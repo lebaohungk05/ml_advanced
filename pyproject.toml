@@ -25,7 +25,7 @@ module = ["src.core.*", "src.adapters.*"]
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["yaml.*", "streamlit.*", "torch.*", "transformers.*", "peft.*", "qdrant_client.*", "rank_bm25.*", "open_clip.*", "sentence_transformers.*"]
+module = ["yaml.*", "streamlit.*", "torch.*", "torchvision.*", "transformers.*", "peft.*", "qdrant_client.*", "rank_bm25.*", "open_clip.*", "sentence_transformers.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

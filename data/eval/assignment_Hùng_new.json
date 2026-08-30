@@ -1,0 +1,5842 @@
+[
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-34272",
+  "image_path": "train\\images\\029844.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-9477",
+  "image_path": "train\\images\\008878.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-37987",
+  "image_path": "train\\images\\033465.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-29431",
+  "image_path": "train\\images\\025131.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-23077",
+  "image_path": "train\\images\\019008.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-37359",
+  "image_path": "train\\images\\032851.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-994",
+  "image_path": "train\\images\\000927.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-38298",
+  "image_path": "train\\images\\033771.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-18833",
+  "image_path": "val\\images\\000948.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-37024",
+  "image_path": "train\\images\\032520.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-26994",
+  "image_path": "train\\images\\022759.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-6832",
+  "image_path": "train\\images\\006543.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-22217",
+  "image_path": "train\\images\\018183.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-69",
+  "image_path": "train\\images\\000044.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-20411",
+  "image_path": "train\\images\\016519.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-30451",
+  "image_path": "train\\images\\026122.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-41530",
+  "image_path": "train\\images\\036909.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-27520",
+  "image_path": "train\\images\\023270.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-46500",
+  "image_path": "train\\images\\041705.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-43239",
+  "image_path": "train\\images\\038576.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-32106",
+  "image_path": "train\\images\\027725.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-33994",
+  "image_path": "train\\images\\029573.jpg",
+  "category": "Áo cardigan (áo len khoác ngoài cài nút)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-50500",
+  "image_path": "train\\images\\045594.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-38701",
+  "image_path": "train\\images\\034162.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-38701",
+  "image_path": "train\\images\\034162.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-2698",
+  "image_path": "train\\images\\002559.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-1573",
+  "image_path": "train\\images\\001473.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-43078",
+  "image_path": "train\\images\\038416.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-43097",
+  "image_path": "train\\images\\038435.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-41393",
+  "image_path": "train\\images\\036776.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-45625",
+  "image_path": "train\\images\\040870.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-27520",
+  "image_path": "train\\images\\023270.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-22746",
+  "image_path": "train\\images\\018694.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-23363",
+  "image_path": "train\\images\\019267.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-47132",
+  "image_path": "train\\images\\042322.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-11572",
+  "image_path": "val\\images\\000314.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-22041",
+  "image_path": "train\\images\\018017.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-34433",
+  "image_path": "train\\images\\030000.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-47470",
+  "image_path": "train\\images\\042653.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-25407",
+  "image_path": "train\\images\\021231.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-46782",
+  "image_path": "train\\images\\041982.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-6721",
+  "image_path": "train\\images\\006437.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-40747",
+  "image_path": "train\\images\\036149.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-30498",
+  "image_path": "train\\images\\026167.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-49163",
+  "image_path": "train\\images\\044293.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-49743",
+  "image_path": "train\\images\\044857.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-26578",
+  "image_path": "train\\images\\022362.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-23009",
+  "image_path": "train\\images\\018943.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-7259",
+  "image_path": "train\\images\\006945.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-38701",
+  "image_path": "train\\images\\034162.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-6370",
+  "image_path": "train\\images\\006100.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-41723",
+  "image_path": "train\\images\\037099.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-1244",
+  "image_path": "train\\images\\001164.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-36591",
+  "image_path": "train\\images\\032096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-14052",
+  "image_path": "train\\images\\012061.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-40878",
+  "image_path": "train\\images\\036277.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-48923",
+  "image_path": "train\\images\\044059.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-28162",
+  "image_path": "train\\images\\023893.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-50500",
+  "image_path": "train\\images\\045594.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-41520",
+  "image_path": "train\\images\\036899.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-38701",
+  "image_path": "train\\images\\034162.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-30451",
+  "image_path": "train\\images\\026122.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-7099",
+  "image_path": "train\\images\\006795.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-49887",
+  "image_path": "train\\images\\044999.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-10816",
+  "image_path": "train\\images\\009771.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-49849",
+  "image_path": "train\\images\\044962.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-27206",
+  "image_path": "train\\images\\022963.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-38701",
+  "image_path": "train\\images\\034162.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-33465",
+  "image_path": "train\\images\\029052.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-25558",
+  "image_path": "train\\images\\021378.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-48802",
+  "image_path": "train\\images\\043940.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-42239",
+  "image_path": "train\\images\\037598.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-21934",
+  "image_path": "train\\images\\017914.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-25781",
+  "image_path": "train\\images\\021597.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-12123",
+  "image_path": "train\\images\\010627.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-25390",
+  "image_path": "train\\images\\021214.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-25390",
+  "image_path": "train\\images\\021214.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-2709",
+  "image_path": "train\\images\\002569.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-45398",
+  "image_path": "train\\images\\040653.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-32111",
+  "image_path": "train\\images\\027730.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-37024",
+  "image_path": "train\\images\\032520.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-4549",
+  "image_path": "train\\images\\004338.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-26436",
+  "image_path": "train\\images\\022228.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-26717",
+  "image_path": "train\\images\\022495.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-17658",
+  "image_path": "val\\images\\000818.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-27306",
+  "image_path": "train\\images\\023060.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-45356",
+  "image_path": "train\\images\\040611.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-33745",
+  "image_path": "train\\images\\029329.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-48818",
+  "image_path": "train\\images\\043956.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-10803",
+  "image_path": "train\\images\\009761.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-4324",
+  "image_path": "train\\images\\004120.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-41986",
+  "image_path": "train\\images\\037355.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-48276",
+  "image_path": "train\\images\\043438.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-8402",
+  "image_path": "train\\images\\008031.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-43927",
+  "image_path": "train\\images\\039237.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-48119",
+  "image_path": "train\\images\\043285.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-33597",
+  "image_path": "train\\images\\029181.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-28333",
+  "image_path": "train\\images\\024058.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-46747",
+  "image_path": "train\\images\\041948.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-31198",
+  "image_path": "train\\images\\026842.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-5523",
+  "image_path": "train\\images\\005284.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-30696",
+  "image_path": "train\\images\\026357.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-19339",
+  "image_path": "train\\images\\015796.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-38836",
+  "image_path": "train\\images\\034293.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-34272",
+  "image_path": "train\\images\\029844.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-12833",
+  "image_path": "train\\images\\011111.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-48818",
+  "image_path": "train\\images\\043956.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-22194",
+  "image_path": "train\\images\\018163.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-29046",
+  "image_path": "train\\images\\024754.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-31752",
+  "image_path": "train\\images\\027381.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-44000",
+  "image_path": "train\\images\\039307.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-47014",
+  "image_path": "train\\images\\042208.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-1981",
+  "image_path": "train\\images\\001873.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-42396",
+  "image_path": "train\\images\\037749.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-30515",
+  "image_path": "train\\images\\026183.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-37414",
+  "image_path": "train\\images\\032906.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-32916",
+  "image_path": "train\\images\\028519.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-47734",
+  "image_path": "train\\images\\042910.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-23746",
+  "image_path": "train\\images\\019625.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-15058",
+  "image_path": "train\\images\\012988.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-35852",
+  "image_path": "train\\images\\031386.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-29431",
+  "image_path": "train\\images\\025131.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-36591",
+  "image_path": "train\\images\\032096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-33123",
+  "image_path": "train\\images\\028719.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-39898",
+  "image_path": "train\\images\\035336.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-29446",
+  "image_path": "train\\images\\025146.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-39198",
+  "image_path": "train\\images\\034647.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-40766",
+  "image_path": "train\\images\\036168.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-37311",
+  "image_path": "train\\images\\032803.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-28162",
+  "image_path": "train\\images\\023893.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-41393",
+  "image_path": "train\\images\\036776.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-31447",
+  "image_path": "train\\images\\027085.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-15058",
+  "image_path": "train\\images\\012988.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-35976",
+  "image_path": "train\\images\\031507.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-23746",
+  "image_path": "train\\images\\019625.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-49660",
+  "image_path": "train\\images\\044776.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-49118",
+  "image_path": "train\\images\\044248.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-41333",
+  "image_path": "train\\images\\036717.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-26405",
+  "image_path": "train\\images\\022199.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-24502",
+  "image_path": "train\\images\\020357.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-48693",
+  "image_path": "train\\images\\043837.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-38153",
+  "image_path": "train\\images\\033628.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-31113",
+  "image_path": "train\\images\\026759.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-24643",
+  "image_path": "train\\images\\020491.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-25908",
+  "image_path": "train\\images\\021720.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-8313",
+  "image_path": "train\\images\\007947.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-24848",
+  "image_path": "train\\images\\020690.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-41393",
+  "image_path": "train\\images\\036776.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-26361",
+  "image_path": "train\\images\\022155.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-33422",
+  "image_path": "train\\images\\029011.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-13884",
+  "image_path": "train\\images\\011904.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-28414",
+  "image_path": "train\\images\\024137.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-24731",
+  "image_path": "train\\images\\020576.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-25855",
+  "image_path": "train\\images\\021669.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-33736",
+  "image_path": "train\\images\\029320.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-48802",
+  "image_path": "train\\images\\043940.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-18264",
+  "image_path": "train\\images\\015083.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-41307",
+  "image_path": "train\\images\\036691.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-49705",
+  "image_path": "train\\images\\044821.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-35089",
+  "image_path": "train\\images\\030639.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-24573",
+  "image_path": "train\\images\\020424.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-13884",
+  "image_path": "train\\images\\011904.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-23077",
+  "image_path": "train\\images\\019008.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-38869",
+  "image_path": "train\\images\\034324.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-47835",
+  "image_path": "train\\images\\043011.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-14052",
+  "image_path": "train\\images\\012061.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-22041",
+  "image_path": "train\\images\\018017.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-10691",
+  "image_path": "val\\images\\000211.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-10243",
+  "image_path": "train\\images\\009389.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-32133",
+  "image_path": "train\\images\\027752.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-41981",
+  "image_path": "train\\images\\037350.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-23178",
+  "image_path": "train\\images\\019101.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-38788",
+  "image_path": "train\\images\\034245.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-36591",
+  "image_path": "train\\images\\032096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-31198",
+  "image_path": "train\\images\\026842.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-35788",
+  "image_path": "train\\images\\031322.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-7099",
+  "image_path": "train\\images\\006795.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-42478",
+  "image_path": "train\\images\\037830.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-44660",
+  "image_path": "train\\images\\039940.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-26999",
+  "image_path": "train\\images\\022764.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-31958",
+  "image_path": "train\\images\\027582.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-31959",
+  "image_path": "train\\images\\027583.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-30139",
+  "image_path": "train\\images\\025818.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-31049",
+  "image_path": "train\\images\\026699.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-32392",
+  "image_path": "train\\images\\028007.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-46174",
+  "image_path": "train\\images\\041390.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-26093",
+  "image_path": "train\\images\\021900.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-31195",
+  "image_path": "train\\images\\026839.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-9021",
+  "image_path": "train\\images\\008580.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-50329",
+  "image_path": "train\\images\\045430.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-29035",
+  "image_path": "train\\images\\024743.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-36591",
+  "image_path": "train\\images\\032096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-6832",
+  "image_path": "train\\images\\006543.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-28298",
+  "image_path": "train\\images\\024024.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-30451",
+  "image_path": "train\\images\\026122.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-25390",
+  "image_path": "train\\images\\021214.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-13257",
+  "image_path": "val\\images\\000478.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-17658",
+  "image_path": "val\\images\\000818.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-24360",
+  "image_path": "train\\images\\020219.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-379",
+  "image_path": "train\\images\\000340.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-31198",
+  "image_path": "train\\images\\026842.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-38513",
+  "image_path": "train\\images\\033977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-22041",
+  "image_path": "train\\images\\018017.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-2000",
+  "image_path": "train\\images\\001892.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-37578",
+  "image_path": "train\\images\\033065.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-37024",
+  "image_path": "train\\images\\032520.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-49103",
+  "image_path": "train\\images\\044235.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-45134",
+  "image_path": "train\\images\\040396.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-5336",
+  "image_path": "train\\images\\005100.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-24848",
+  "image_path": "train\\images\\020690.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-12123",
+  "image_path": "train\\images\\010627.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-38389",
+  "image_path": "train\\images\\033860.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-48802",
+  "image_path": "train\\images\\043940.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-27200",
+  "image_path": "train\\images\\022957.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-22217",
+  "image_path": "train\\images\\018183.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-23474",
+  "image_path": "train\\images\\019370.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-25390",
+  "image_path": "train\\images\\021214.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-5941",
+  "image_path": "train\\images\\005682.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-36960",
+  "image_path": "train\\images\\032458.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-23638",
+  "image_path": "train\\images\\019524.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-44000",
+  "image_path": "train\\images\\039307.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-38601",
+  "image_path": "train\\images\\034064.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-40878",
+  "image_path": "train\\images\\036277.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-13700",
+  "image_path": "train\\images\\011727.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-39716",
+  "image_path": "train\\images\\035158.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-36591",
+  "image_path": "train\\images\\032096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-45587",
+  "image_path": "train\\images\\040833.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-5564",
+  "image_path": "train\\images\\005324.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-19339",
+  "image_path": "train\\images\\015796.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-22217",
+  "image_path": "train\\images\\018183.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-28333",
+  "image_path": "train\\images\\024058.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-22217",
+  "image_path": "train\\images\\018183.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-40878",
+  "image_path": "train\\images\\036277.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-33929",
+  "image_path": "train\\images\\029509.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-35037",
+  "image_path": "train\\images\\030588.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-46617",
+  "image_path": "train\\images\\041821.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-4230",
+  "image_path": "train\\images\\004030.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-38448",
+  "image_path": "train\\images\\033916.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-21976",
+  "image_path": "train\\images\\017955.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-36243",
+  "image_path": "train\\images\\031768.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-19684",
+  "image_path": "train\\images\\016031.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-36901",
+  "image_path": "train\\images\\032402.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-36850",
+  "image_path": "train\\images\\032351.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-28162",
+  "image_path": "train\\images\\023893.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-29446",
+  "image_path": "train\\images\\025146.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-47132",
+  "image_path": "train\\images\\042322.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-17234",
+  "image_path": "train\\images\\014389.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-8082",
+  "image_path": "train\\images\\007724.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-35685",
+  "image_path": "train\\images\\031221.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-35586",
+  "image_path": "train\\images\\031125.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-31014",
+  "image_path": "train\\images\\026665.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-26436",
+  "image_path": "train\\images\\022228.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-21843",
+  "image_path": "train\\images\\017826.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-17234",
+  "image_path": "train\\images\\014389.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-22846",
+  "image_path": "train\\images\\018788.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-15058",
+  "image_path": "train\\images\\012988.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-34952",
+  "image_path": "train\\images\\030504.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-11436",
+  "image_path": "train\\images\\010169.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-16400",
+  "image_path": "train\\images\\013833.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-28433",
+  "image_path": "train\\images\\024156.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-24360",
+  "image_path": "train\\images\\020219.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-47194",
+  "image_path": "train\\images\\042381.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-41723",
+  "image_path": "train\\images\\037099.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-30657",
+  "image_path": "train\\images\\026319.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-33824",
+  "image_path": "train\\images\\029407.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-37374",
+  "image_path": "train\\images\\032866.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-42478",
+  "image_path": "train\\images\\037830.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-4737",
+  "image_path": "train\\images\\004520.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-12833",
+  "image_path": "train\\images\\011111.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-47206",
+  "image_path": "train\\images\\042393.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-7896",
+  "image_path": "train\\images\\007549.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-22194",
+  "image_path": "train\\images\\018163.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-22217",
+  "image_path": "train\\images\\018183.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-30478",
+  "image_path": "train\\images\\026148.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-30451",
+  "image_path": "train\\images\\026122.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-1452",
+  "image_path": "train\\images\\001359.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-48785",
+  "image_path": "train\\images\\043925.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-45105",
+  "image_path": "train\\images\\040369.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-27965",
+  "image_path": "train\\images\\023699.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-30859",
+  "image_path": "train\\images\\026516.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-27258",
+  "image_path": "train\\images\\023013.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-34341",
+  "image_path": "train\\images\\029910.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-27306",
+  "image_path": "train\\images\\023060.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-12833",
+  "image_path": "train\\images\\011111.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-32842",
+  "image_path": "train\\images\\028447.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-29431",
+  "image_path": "train\\images\\025131.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-17080",
+  "image_path": "train\\images\\014289.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-5386",
+  "image_path": "train\\images\\005148.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-37244",
+  "image_path": "train\\images\\032737.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-33465",
+  "image_path": "train\\images\\029052.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-48818",
+  "image_path": "train\\images\\043956.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-27199",
+  "image_path": "train\\images\\022956.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-50500",
+  "image_path": "train\\images\\045594.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-49705",
+  "image_path": "train\\images\\044821.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-2205",
+  "image_path": "train\\images\\002086.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-11460",
+  "image_path": "train\\images\\010185.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-7099",
+  "image_path": "train\\images\\006795.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-8325",
+  "image_path": "train\\images\\007959.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-18531",
+  "image_path": "val\\images\\000914.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-27256",
+  "image_path": "train\\images\\023011.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-50429",
+  "image_path": "train\\images\\045526.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-48119",
+  "image_path": "train\\images\\043285.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-4053",
+  "image_path": "train\\images\\003859.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-31958",
+  "image_path": "train\\images\\027582.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-37433",
+  "image_path": "train\\images\\032924.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-30451",
+  "image_path": "train\\images\\026122.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-9164",
+  "image_path": "train\\images\\008664.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-42631",
+  "image_path": "train\\images\\037981.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-37414",
+  "image_path": "train\\images\\032906.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-2234",
+  "image_path": "train\\images\\002112.jpg",
+  "category": "Quần bó / tất da chân",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-48818",
+  "image_path": "train\\images\\043956.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-38004",
+  "image_path": "train\\images\\033482.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-32015",
+  "image_path": "train\\images\\027639.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-30666",
+  "image_path": "train\\images\\026328.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-26691",
+  "image_path": "train\\images\\022469.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-46617",
+  "image_path": "train\\images\\041821.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-29581",
+  "image_path": "train\\images\\025275.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-28025",
+  "image_path": "train\\images\\023758.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-35337",
+  "image_path": "train\\images\\030884.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-31959",
+  "image_path": "train\\images\\027583.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-36615",
+  "image_path": "train\\images\\032120.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-1495",
+  "image_path": "train\\images\\001399.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-25407",
+  "image_path": "train\\images\\021231.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-48474",
+  "image_path": "train\\images\\043628.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-32508",
+  "image_path": "train\\images\\028121.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-13636",
+  "image_path": "train\\images\\011667.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-46249",
+  "image_path": "train\\images\\041463.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-4705",
+  "image_path": "train\\images\\004491.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-23746",
+  "image_path": "train\\images\\019625.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-39061",
+  "image_path": "train\\images\\034514.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-25176",
+  "image_path": "train\\images\\021005.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-23380",
+  "image_path": "train\\images\\019284.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-34346",
+  "image_path": "train\\images\\029915.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-46249",
+  "image_path": "train\\images\\041463.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-28649",
+  "image_path": "train\\images\\024367.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-46998",
+  "image_path": "train\\images\\042192.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-34433",
+  "image_path": "train\\images\\030000.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-19753",
+  "image_path": "train\\images\\016080.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-50227",
+  "image_path": "train\\images\\045332.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-39990",
+  "image_path": "train\\images\\035424.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-41408",
+  "image_path": "train\\images\\036791.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-22793",
+  "image_path": "train\\images\\018739.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-22041",
+  "image_path": "train\\images\\018017.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-6843",
+  "image_path": "train\\images\\006554.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-30505",
+  "image_path": "train\\images\\026173.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-41785",
+  "image_path": "train\\images\\037160.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-1724",
+  "image_path": "train\\images\\001620.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-38069",
+  "image_path": "train\\images\\033546.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-44072",
+  "image_path": "train\\images\\039376.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-43360",
+  "image_path": "train\\images\\038693.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-18792",
+  "image_path": "train\\images\\015444.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-35089",
+  "image_path": "train\\images\\030639.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-38153",
+  "image_path": "train\\images\\033628.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-29431",
+  "image_path": "train\\images\\025131.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-30859",
+  "image_path": "train\\images\\026516.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-42801",
+  "image_path": "train\\images\\038146.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-49705",
+  "image_path": "train\\images\\044821.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-38976",
+  "image_path": "train\\images\\034430.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "139",
+  "query_text": "đầm ren màu trắng ngà",
+  "query_group": "A",
+  "product_id": "fp-24848",
+  "image_path": "train\\images\\020690.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-42823",
+  "image_path": "train\\images\\038168.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-37414",
+  "image_path": "train\\images\\032906.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-2007",
+  "image_path": "train\\images\\001898.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-41279",
+  "image_path": "train\\images\\036664.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-15191",
+  "image_path": "train\\images\\013077.jpg",
+  "category": "Chân váy",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-47684",
+  "image_path": "train\\images\\042863.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-25390",
+  "image_path": "train\\images\\021214.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-581",
+  "image_path": "train\\images\\000528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-41908",
+  "image_path": "train\\images\\037279.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-23178",
+  "image_path": "train\\images\\019101.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-30076",
+  "image_path": "train\\images\\025758.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "1",
+  "query_text": "áo sơ mi nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-6528",
+  "image_path": "train\\images\\006251.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-5365",
+  "image_path": "train\\images\\005128.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-21616",
+  "image_path": "train\\images\\017602.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-39019",
+  "image_path": "train\\images\\034473.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-38583",
+  "image_path": "train\\images\\034046.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-27470",
+  "image_path": "train\\images\\023220.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-32392",
+  "image_path": "train\\images\\028007.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-32813",
+  "image_path": "train\\images\\028419.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-379",
+  "image_path": "train\\images\\000340.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-14052",
+  "image_path": "train\\images\\012061.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-16515",
+  "image_path": "train\\images\\013907.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-31198",
+  "image_path": "train\\images\\026842.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-10397",
+  "image_path": "train\\images\\009495.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-46747",
+  "image_path": "train\\images\\041948.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "2",
+  "query_text": "áo thun cổ tròn đen",
+  "query_group": "A",
+  "product_id": "fp-2732",
+  "image_path": "train\\images\\002592.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-23123",
+  "image_path": "train\\images\\019049.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-42722",
+  "image_path": "train\\images\\038072.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "126",
+  "query_text": "đồ mặc đi chơi lễ hội âm nhạc",
+  "query_group": "D",
+  "product_id": "fp-27258",
+  "image_path": "train\\images\\023013.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-45953",
+  "image_path": "train\\images\\041189.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "136",
+  "query_text": "áo khoác kaki màu vàng đất",
+  "query_group": "A",
+  "product_id": "fp-46651",
+  "image_path": "train\\images\\041852.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-29110",
+  "image_path": "train\\images\\024817.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-12833",
+  "image_path": "train\\images\\011111.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-24360",
+  "image_path": "train\\images\\020219.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-40747",
+  "image_path": "train\\images\\036149.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-3130",
+  "image_path": "train\\images\\002977.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "124",
+  "query_text": "outfit công sở mùa hè thoáng mát",
+  "query_group": "D",
+  "product_id": "fp-30539",
+  "image_path": "train\\images\\026205.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "123",
+  "query_text": "phong cách cá tính nổi bật",
+  "query_group": "D",
+  "product_id": "fp-49705",
+  "image_path": "train\\images\\044821.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "118",
+  "query_text": "đồ mặc đi làm mùa thu ấm áp",
+  "query_group": "D",
+  "product_id": "fp-5523",
+  "image_path": "train\\images\\005284.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "127",
+  "query_text": "phong cách thanh lịch quý phái",
+  "query_group": "D",
+  "product_id": "fp-43551",
+  "image_path": "train\\images\\038875.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-16521",
+  "image_path": "val\\images\\000695.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-23779",
+  "image_path": "train\\images\\019658.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "133",
+  "query_text": "trang phục dạo phố mùa xuân nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-27258",
+  "image_path": "train\\images\\023013.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "149",
+  "query_text": "áo peplum eo nhấn dáng xoè",
+  "query_group": "C",
+  "product_id": "fp-1845",
+  "image_path": "train\\images\\001740.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-46295",
+  "image_path": "train\\images\\041508.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-38505",
+  "image_path": "train\\images\\033971.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-33149",
+  "image_path": "train\\images\\028744.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-17837",
+  "image_path": "train\\images\\014803.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-39229",
+  "image_path": "train\\images\\034677.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-16423",
+  "image_path": "train\\images\\013849.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-15058",
+  "image_path": "train\\images\\012988.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-37570",
+  "image_path": "train\\images\\033057.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "120",
+  "query_text": "phong cách nữ tính nhẹ nhàng",
+  "query_group": "D",
+  "product_id": "fp-22041",
+  "image_path": "train\\images\\018017.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "117",
+  "query_text": "trang phục đi phỏng vấn lịch sự",
+  "query_group": "D",
+  "product_id": "fp-34042",
+  "image_path": "train\\images\\029620.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-35852",
+  "image_path": "train\\images\\031386.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "121",
+  "query_text": "trang phục dự đám cưới trang trọng",
+  "query_group": "D",
+  "product_id": "fp-31305",
+  "image_path": "train\\images\\026947.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-43343",
+  "image_path": "train\\images\\038676.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "129",
+  "query_text": "trang phục thể thao năng động hàng ngày",
+  "query_group": "D",
+  "product_id": "fp-6056",
+  "image_path": "train\\images\\005797.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-34462",
+  "image_path": "train\\images\\030028.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-26423",
+  "image_path": "train\\images\\022216.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "122",
+  "query_text": "đồ mặc đi du lịch tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-32466",
+  "image_path": "train\\images\\028079.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-34576",
+  "image_path": "train\\images\\030140.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-29009",
+  "image_path": "train\\images\\024718.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "131",
+  "query_text": "phong cách tomboy cá tính mạnh mẽ",
+  "query_group": "D",
+  "product_id": "fp-22363",
+  "image_path": "train\\images\\018324.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "125",
+  "query_text": "trang phục đi làm phong cách hiện đại",
+  "query_group": "D",
+  "product_id": "fp-26008",
+  "image_path": "train\\images\\021815.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "119",
+  "query_text": "outfit đi chơi cuối tuần năng động",
+  "query_group": "D",
+  "product_id": "fp-2535",
+  "image_path": "train\\images\\002405.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-30267",
+  "image_path": "train\\images\\025941.jpg",
+  "category": "Áo len",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-26133",
+  "image_path": "train\\images\\021939.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "134",
+  "query_text": "áo thun cổ tim nữ trắng",
+  "query_group": "A",
+  "product_id": "fp-29736",
+  "image_path": "train\\images\\025428.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "128",
+  "query_text": "outfit đi cà phê cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-48818",
+  "image_path": "train\\images\\043956.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-33597",
+  "image_path": "train\\images\\029181.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-47895",
+  "image_path": "train\\images\\043069.jpg",
+  "category": "Quần short",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-38422",
+  "image_path": "train\\images\\033891.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-30859",
+  "image_path": "train\\images\\026516.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "152",
+  "query_text": "outfit đi xem phim cuối tuần đơn giản",
+  "query_group": "D",
+  "product_id": "fp-35586",
+  "image_path": "train\\images\\031125.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "155",
+  "query_text": "đồ mặc leo núi dã ngoại tiện dụng",
+  "query_group": "D",
+  "product_id": "fp-17856",
+  "image_path": "val\\images\\000845.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "130",
+  "query_text": "đồ mặc mùa đông ấm áp mà vẫn thời trang",
+  "query_group": "D",
+  "product_id": "fp-41393",
+  "image_path": "train\\images\\036776.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "151",
+  "query_text": "trang phục đi làm remote thoải mái tại nhà",
+  "query_group": "D",
+  "product_id": "fp-24554",
+  "image_path": "train\\images\\020407.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "146",
+  "query_text": "áo vest nam form rộng dáng Hàn",
+  "query_group": "C",
+  "product_id": "fp-38965",
+  "image_path": "train\\images\\034419.jpg",
+  "category": "Áo gile / áo vest không tay",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "132",
+  "query_text": "outfit đi làm freelancer thoải mái",
+  "query_group": "D",
+  "product_id": "fp-10130",
+  "image_path": "train\\images\\009314.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-39403",
+  "image_path": "train\\images\\034849.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "153",
+  "query_text": "phong cách preppy trẻ trung học đường",
+  "query_group": "D",
+  "product_id": "fp-49705",
+  "image_path": "train\\images\\044821.jpg",
+  "category": "Quần dài",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-28333",
+  "image_path": "train\\images\\024058.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "154",
+  "query_text": "trang phục chụp ảnh kỷ yếu nữ tính",
+  "query_group": "D",
+  "product_id": "fp-14253",
+  "image_path": "train\\images\\012253.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-2010",
+  "image_path": "train\\images\\001901.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": null,
+  "graded_by": null
+ },
+ {
+  "query_id": "144",
+  "query_text": "áo khoác gió chống nước màu cam",
+  "query_group": "B",
+  "product_id": "fp-26994",
+  "image_path": "train\\images\\022759.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": null,
+  "graded_by": null
+ }
+]

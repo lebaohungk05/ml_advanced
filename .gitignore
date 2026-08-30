@@ -24,6 +24,11 @@ checkpoints/
 results/
 wandb/
 
+# packaged labeling kits (contain copies of dataset images) + HF dataset cache
+dist/
+.hf_cache/
+.local_tools/
+
 # secrets / env
 .env
 .env.*
