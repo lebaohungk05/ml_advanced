@@ -18,13 +18,17 @@ _P = {
     for pid in ("p1", "p2", "p3", "p4")
 }
 
+# What the ``run_and_labels`` fixture hands back: a run (query_id -> ranked hits)
+# plus the ground-truth labels for it.
+RunAndLabels = tuple[dict[str, list[SearchResult]], list[RelevanceLabel]]
+
 
 def _hit(pid: str, rank: int) -> SearchResult:
     return SearchResult(product=_P[pid], score=1.0 / rank, rank=rank)
 
 
 @pytest.fixture
-def run_and_labels() -> tuple[dict[str, list[SearchResult]], list[RelevanceLabel]]:
+def run_and_labels() -> RunAndLabels:
     run = {
         "q1": [_hit("p3", 1), _hit("p1", 2), _hit("p2", 3)],
         "q2": [_hit("p4", 1)],
@@ -38,7 +42,7 @@ def run_and_labels() -> tuple[dict[str, list[SearchResult]], list[RelevanceLabel
     return run, labels
 
 
-def test_recall_at_1_misses_when_the_top_hit_is_irrelevant(run_and_labels) -> None:
+def test_recall_at_1_misses_when_the_top_hit_is_irrelevant(run_and_labels: RunAndLabels) -> None:
     run, labels = run_and_labels
     metrics = RankingMetrics()
 
@@ -46,7 +50,7 @@ def test_recall_at_1_misses_when_the_top_hit_is_irrelevant(run_and_labels) -> No
     assert metrics.recall_at_k(run, labels, k=1) == pytest.approx(0.0)
 
 
-def test_recall_at_3_counts_the_deeper_hit(run_and_labels) -> None:
+def test_recall_at_3_counts_the_deeper_hit(run_and_labels: RunAndLabels) -> None:
     run, labels = run_and_labels
     metrics = RankingMetrics()
 
@@ -54,7 +58,7 @@ def test_recall_at_3_counts_the_deeper_hit(run_and_labels) -> None:
     assert metrics.recall_at_k(run, labels, k=3) == pytest.approx(0.5)
 
 
-def test_mrr_uses_the_first_relevant_ranks_reciprocal(run_and_labels) -> None:
+def test_mrr_uses_the_first_relevant_ranks_reciprocal(run_and_labels: RunAndLabels) -> None:
     run, labels = run_and_labels
     metrics = RankingMetrics()
 
@@ -63,7 +67,7 @@ def test_mrr_uses_the_first_relevant_ranks_reciprocal(run_and_labels) -> None:
 
 
 def test_ndcg_matches_hand_computed_value_and_excludes_zero_ceiling_queries(
-    run_and_labels,
+    run_and_labels: RunAndLabels,
 ) -> None:
     run, labels = run_and_labels
     metrics = RankingMetrics()
@@ -85,7 +89,7 @@ def test_ndcg_matches_hand_computed_value_and_excludes_zero_ceiling_queries(
     assert metrics.ndcg_at_k(run, labels, k=3) == pytest.approx(expected_q1)
 
 
-def test_summary_returns_all_five_headline_metrics(run_and_labels) -> None:
+def test_summary_returns_all_five_headline_metrics(run_and_labels: RunAndLabels) -> None:
     run, labels = run_and_labels
     scores = RankingMetrics().summary(run, labels)
 

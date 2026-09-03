@@ -103,6 +103,18 @@ class QdrantVectorStore:
             ),
         )
 
+    def recreate_collection(self) -> None:
+        """DESTRUCTIVE: drop the collection with all its points, then create it empty.
+
+        Only ever called from ``python -m src.index --recreate``; nothing on the
+        serving path may call this. Use it when the vectors already stored are no
+        longer comparable to what the current embedder produces (different model
+        or a different fine-tuned checkpoint).
+        """
+        if self._client.collection_exists(collection_name=self.collection):
+            self._client.delete_collection(collection_name=self.collection)
+        self.ensure_collection()
+
     def upsert(self, products: Sequence[Product], vectors: Matrix) -> None:
         if len(products) != len(vectors):
             raise ValueError(f"got {len(products)} products but {len(vectors)} vectors")

@@ -78,3 +78,19 @@ def test_category_filter_excludes_non_matching_products(store: QdrantVectorStore
 def test_upsert_is_idempotent_on_the_same_product_id(store: QdrantVectorStore) -> None:
     store.upsert([_product("P1", "áo khoác")], [VECTORS[0]])
     assert store.count() == 3
+
+
+def test_recreate_collection_drops_every_existing_point(store: QdrantVectorStore) -> None:
+    store.recreate_collection()
+
+    assert store.count() == 0
+    store.upsert(PRODUCTS, VECTORS)
+    assert store.count() == 3
+
+
+def test_recreate_collection_creates_a_missing_collection(store: QdrantVectorStore) -> None:
+    store._client.delete_collection(collection_name=store.collection)
+
+    store.recreate_collection()
+
+    assert store.count() == 0
