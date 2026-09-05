@@ -8,12 +8,27 @@ catalog images straight from this machine's data/raw/fashionpedia/.
 Each (query, product) row needs 2 DIFFERENT annotators (DeCuong Mục 3.4 điểm
 4). Every submitted grade is appended to data/eval/grades_<annotator>.jsonl
 (one file per person, append-only — safe if the server restarts or two people
-grade at once). /api/next picks, in order of priority:
-  1. a row this annotator hasn't graded yet AND already has exactly 1 grade
-     from someone else (finish the pair first)
-  2. a row with 0 grades yet
+grade at once).
+
+/api/next serves rows GROUPED BY QUERY: it finishes every row this annotator
+still owes for one query before moving to the next one, so the query text has
+to be read once per group instead of once per image. Group choice, in order:
+  1. the query the annotator is already working through
+  2. otherwise the query with the most rows that already have exactly 1 grade
+     from someone else (finishing pairs is what closes the pool)
+  3. otherwise the first query with untouched rows
 Never serves a row this same annotator already graded, and never serves a
 row that already has 2 grades from two different people.
+
+Grouping does NOT weaken the blind pooling of Mục 3.4. The shuffle baked into
+the template exists so an annotator cannot tell which retrieval system
+produced a hit from where it appears; the grouping below is *stable* over that
+shuffled order, so within one query the candidates stay in random order. Do
+not "tidy" this into a sort by product_id/rank — that would leak provenance.
+
+/api/undo removes the caller's most recent grade and hands the row back, for
+the very common case of hitting the wrong key. It rewrites that one annotator's
+file atomically (temp file + os.replace) and touches nobody else's grades.
 
 Product category is deliberately NOT shown in the UI — the point is a blind
 judgement of the image against the query text alone.
@@ -65,6 +80,42 @@ def _load_existing_grades() -> dict[tuple[str, str], list[str]]:
     return graders
 
 
+def _row_payload(row: dict[str, Any], pending: int, total: int, group_index: int) -> dict[str, Any]:
+    """One item as the UI wants it, plus where it sits in its query's group."""
+    return {
+        "done": False,
+        "query_id": row["query_id"],
+        "query_text": row["query_text"],
+        "product_id": row["product_id"],
+        "image_url": f"/image/{row['image_path'].replace(chr(92), '/')}",
+        # group_* let the UI show "câu 12/155 · ảnh 3/8" and flag a new query.
+        "group_index": group_index,
+        "group_total_queries": len({r["query_id"] for r in ROWS}),
+        "group_position": total - pending + 1,
+        "group_total": total,
+    }
+
+
+def _pending_by_query(annotator: str) -> tuple[dict[str, list[dict[str, Any]]], dict[str, int]]:
+    """Rows this annotator still owes, grouped by query, plus each group's half-done count.
+
+    Insertion order of both the groups and the rows inside them follows ROWS,
+    i.e. the template's shuffled order — see the module docstring on why that
+    must not be re-sorted.
+    """
+    graders = _load_existing_grades()
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    half_done: dict[str, int] = defaultdict(int)
+    for row in ROWS:
+        existing = graders.get((row["query_id"], row["product_id"]), [])
+        if annotator in existing or len(existing) >= 2:
+            continue
+        groups[row["query_id"]].append(row)
+        if len(existing) == 1:
+            half_done[row["query_id"]] += 1
+    return groups, half_done
+
+
 class GradeIn(BaseModel):
     query_id: str
     product_id: str
@@ -98,36 +149,41 @@ def progress() -> dict[str, Any]:
 
 
 @app.get("/api/next")
-def next_row(annotator: str) -> dict[str, Any]:
+def next_row(annotator: str, current_query: str | None = None) -> dict[str, Any]:
+    """Next row for this annotator, grouped by query (see module docstring).
+
+    ``current_query`` is the query the browser is already working through; it is
+    honoured while that group still has rows so the annotator is not bounced
+    between queries mid-group. It is a hint only — a group that is finished (or
+    was never theirs) falls through to normal group selection.
+    """
     if not annotator.strip():
         raise HTTPException(400, "annotator name required")
-    graders = _load_existing_grades()
 
-    half_done_by_others = []
-    fresh = []
-    for row in ROWS:
-        key = (row["query_id"], row["product_id"])
-        existing = graders.get(key, [])
-        if annotator in existing:
-            continue
-        if len(existing) >= 2:
-            continue
-        if len(existing) == 1:
-            half_done_by_others.append(row)
-        else:
-            fresh.append(row)
-
-    pick = half_done_by_others[0] if half_done_by_others else (fresh[0] if fresh else None)
-    if pick is None:
+    groups, half_done = _pending_by_query(annotator)
+    if not groups:
         return {"done": True}
 
-    return {
-        "done": False,
-        "query_id": pick["query_id"],
-        "query_text": pick["query_text"],
-        "product_id": pick["product_id"],
-        "image_url": f"/image/{pick['image_path'].replace(chr(92), '/')}",
-    }
+    query_order = list(groups)
+    if current_query in groups:
+        chosen = current_query
+    else:
+        # Most half-done rows first (closing pairs closes the pool); ties and
+        # the all-fresh case fall back to template order via the index key.
+        chosen = max(query_order, key=lambda q: (half_done.get(q, 0), -query_order.index(q)))
+    assert chosen is not None  # narrowed by the branches above
+
+    pending = groups[chosen]
+    # Group size = rows this annotator owes now + the ones they already did,
+    # so "ảnh 3/8" counts the whole query, not just what is left.
+    total_for_query = sum(1 for row in ROWS if row["query_id"] == chosen)
+    already_done = total_for_query - len(pending)
+    return _row_payload(
+        pending[0],
+        pending=len(pending),
+        total=len(pending) + already_done,
+        group_index=sorted({r["query_id"] for r in ROWS}).index(chosen) + 1,
+    )
 
 
 @app.post("/api/grade")
@@ -139,6 +195,79 @@ def submit_grade(payload: GradeIn) -> dict[str, str]:
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps(payload.model_dump(), ensure_ascii=False) + "\n")
     return {"status": "ok"}
+
+
+class UndoIn(BaseModel):
+    annotator: str
+
+
+@app.post("/api/undo")
+def undo_last(payload: UndoIn) -> dict[str, Any]:
+    """Drop this annotator's most recent grade and hand the row back for re-grading.
+
+    Only ever rewrites ``grades_<this annotator>.jsonl``, only ever drops ONE
+    line, and only a line whose ``annotator`` field is the caller — a shared
+    file is never touched and another person's judgement can never be deleted
+    from here. The rewrite goes through a temp file in the same directory plus
+    ``os.replace`` (atomic on Windows and POSIX), so an interrupted undo cannot
+    leave a truncated grade file behind; the surviving lines keep their exact
+    bytes and order.
+    """
+    annotator = payload.annotator.strip()
+    if not annotator:
+        raise HTTPException(400, "annotator name required")
+
+    path = GRADES_DIR / f"grades_{_safe_filename(annotator)}.jsonl"
+    if not path.exists():
+        return {"undone": False, "reason": "chưa chấm dòng nào để hoàn tác"}
+
+    with open(path, encoding="utf-8") as f:
+        lines = f.readlines()
+
+    target = None
+    for i in range(len(lines) - 1, -1, -1):
+        stripped = lines[i].strip()
+        if not stripped:
+            continue
+        if json.loads(stripped).get("annotator") == annotator:
+            target = i
+            break
+    if target is None:
+        return {"undone": False, "reason": "chưa chấm dòng nào để hoàn tác"}
+
+    record = json.loads(lines[target].strip())
+    remaining = lines[:target] + lines[target + 1 :]
+
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    try:
+        with open(tmp, "w", encoding="utf-8", newline="") as f:
+            f.writelines(remaining)
+        os.replace(tmp, path)
+    except BaseException:
+        tmp.unlink(missing_ok=True)  # never leave a half-written temp behind
+        raise
+
+    row = next(
+        (
+            r
+            for r in ROWS
+            if r["query_id"] == record["query_id"] and r["product_id"] == record["product_id"]
+        ),
+        None,
+    )
+    if row is None:  # graded against a different template than the one loaded now
+        return {"undone": True, "row": None, "previous_grade": record.get("grade")}
+
+    groups, _ = _pending_by_query(annotator)
+    pending = groups.get(row["query_id"], [])
+    total_for_query = sum(1 for r in ROWS if r["query_id"] == row["query_id"])
+    payload_row = _row_payload(
+        row,
+        pending=len(pending),
+        total=total_for_query,
+        group_index=sorted({r["query_id"] for r in ROWS}).index(row["query_id"]) + 1,
+    )
+    return {"undone": True, "row": payload_row, "previous_grade": record.get("grade")}
 
 
 @app.get("/image/{path:path}")
@@ -177,6 +306,22 @@ _PAGE = """<!doctype html>
   #progress { text-align:center; color:#999; font-size:14px; margin-top:16px; }
   #done { text-align:center; font-size:24px; margin-top:60px; }
   .hint { text-align:center; color:#777; font-size:13px; }
+  #group { text-align:center; color:#8ab; font-size:14px; margin-top:4px; }
+  #undo-row { text-align:center; margin-top:10px; }
+  #undo-btn { padding:8px 18px; font-size:15px; border-radius:6px; border:1px solid #555;
+              background:#222; color:#ddd; cursor:pointer; }
+  #undo-btn:disabled { opacity:.35; cursor:default; }
+  #undo-note { color:#c9a227; font-size:14px; min-height:20px; text-align:center; }
+  /* A new query must be impossible to miss: grouping means the annotator stops
+     re-reading the text, and silently changing it is how mislabels happen. */
+  #query.new-query { animation: flash 1.1s ease-out; border-radius:6px; }
+  @keyframes flash {
+    0%   { background:#1d4e6b; box-shadow:0 0 0 6px #1d4e6b; }
+    100% { background:transparent; box-shadow:none; }
+  }
+  #new-query-tag { display:none; text-align:center; color:#6cf; font-size:13px;
+                   letter-spacing:.5px; }
+  #new-query-tag.show { display:block; }
 </style>
 </head>
 <body>
@@ -185,14 +330,20 @@ _PAGE = """<!doctype html>
     <button onclick="startSession()">Bắt đầu</button>
   </div>
   <div id="work" style="display:none">
+    <div id="new-query-tag">CÂU HỎI MỚI — đọc lại đề</div>
     <div id="query"></div>
+    <div id="group"></div>
     <div id="img-wrap"><img id="img"></div>
     <div id="buttons">
       <button class="b0" onclick="grade(0)">0 — Không liên quan</button>
       <button class="b1" onclick="grade(1)">1 — Một phần</button>
       <button class="b2" onclick="grade(2)">2 — Đúng ý</button>
     </div>
-    <div class="hint">Phím tắt: 0 / 1 / 2 trên bàn phím</div>
+    <div class="hint">Phím tắt: 0 / 1 / 2 · quay lại sửa: Backspace</div>
+    <div id="undo-row">
+      <button id="undo-btn" onclick="undoLast()">← Quay lại (sửa)</button>
+    </div>
+    <div id="undo-note"></div>
     <div id="progress"></div>
   </div>
   <div id="done" style="display:none">🎉 Hết việc — không còn dòng nào cần bạn chấm nữa!</div>
@@ -200,6 +351,9 @@ _PAGE = """<!doctype html>
 <script>
 let annotator = localStorage.getItem("annotator") || "";
 let current = null;
+// Guards double-submits: holding a grade key or spamming Backspace would
+// otherwise fire overlapping requests and skip/undo more rows than intended.
+let busy = false;
 
 function startSession() {
   const v = document.getElementById("name-input").value.trim();
@@ -216,16 +370,43 @@ if (annotator) {
 }
 
 async function loadNext() {
-  const res = await fetch(`/api/next?annotator=${encodeURIComponent(annotator)}`);
+  let url = `/api/next?annotator=${encodeURIComponent(annotator)}`;
+  if (current) url += `&current_query=${encodeURIComponent(current.query_id)}`;
+  const res = await fetch(url);
   const data = await res.json();
   if (data.done) {
     document.getElementById("work").style.display = "none";
     document.getElementById("done").style.display = "block";
     return;
   }
+  showRow(data, null);
+}
+
+// Render one item. previousGrade != null means we just walked back to it.
+function showRow(data, previousGrade) {
+  const changedQuery = !current || current.query_id !== data.query_id;
   current = data;
-  document.getElementById("query").textContent = `"${data.query_text}"`;
+
+  const queryEl = document.getElementById("query");
+  queryEl.textContent = `"${data.query_text}"`;
+  const tag = document.getElementById("new-query-tag");
+  // Re-trigger the flash: removing and re-adding in one frame is a no-op.
+  queryEl.classList.remove("new-query");
+  tag.classList.remove("show");
+  if (changedQuery) {
+    void queryEl.offsetWidth;
+    queryEl.classList.add("new-query");
+    tag.classList.add("show");
+  }
+
+  document.getElementById("group").textContent =
+    `câu ${data.group_index}/${data.group_total_queries}` +
+    ` · ảnh ${data.group_position}/${data.group_total} của câu này`;
   document.getElementById("img").src = data.image_url;
+  document.getElementById("undo-note").textContent =
+    previousGrade === null || previousGrade === undefined
+      ? ""
+      : `đã lùi lại — trước đó bạn chấm ${previousGrade}, bấm lại để sửa`;
   loadProgress();
 }
 
@@ -238,24 +419,60 @@ async function loadProgress() {
 }
 
 async function grade(g) {
-  if (!current) return;
-  await fetch("/api/grade", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({
-      query_id: current.query_id,
-      product_id: current.product_id,
-      annotator: annotator,
-      grade: g,
-    }),
-  });
-  loadNext();
+  if (!current || busy) return;
+  busy = true;
+  try {
+    await fetch("/api/grade", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        query_id: current.query_id,
+        product_id: current.product_id,
+        annotator: annotator,
+        grade: g,
+      }),
+    });
+    await loadNext();
+  } finally {
+    busy = false;
+  }
+}
+
+async function undoLast() {
+  if (busy || !annotator) return;
+  busy = true;
+  const note = document.getElementById("undo-note");
+  try {
+    const res = await fetch("/api/undo", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({annotator: annotator}),
+    });
+    const data = await res.json();
+    if (!data.undone) {
+      note.textContent = data.reason || "không có gì để hoàn tác";
+      return;
+    }
+    // The row is gone from the loaded template (undone against another
+    // template) — fall back to the normal queue rather than showing nothing.
+    if (!data.row) {
+      note.textContent = "đã hoàn tác";
+      await loadNext();
+      return;
+    }
+    document.getElementById("work").style.display = "block";
+    document.getElementById("done").style.display = "none";
+    showRow(data.row, data.previous_grade);
+  } finally {
+    busy = false;
+  }
 }
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "0") grade(0);
   if (e.key === "1") grade(1);
   if (e.key === "2") grade(2);
+  if (e.key === "Backspace") { e.preventDefault(); undoLast(); }
 });
 </script>
 </body>

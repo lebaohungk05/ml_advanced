@@ -16,14 +16,13 @@ from __future__ import annotations
 
 import argparse
 import io
-import json
 import sys
 from pathlib import Path
-from typing import Any
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from src.adapters.training.lora_dora_trainer import TrainConfig, train  # noqa: E402
+from src.adapters.training.product_loading import load_training_products  # noqa: E402
 from src.core.models import Product  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -32,25 +31,7 @@ IMAGE_ROOT = ROOT / "data" / "raw" / "fashionpedia"
 
 
 def load_products(path: Path) -> list[Product]:
-    with open(path, encoding="utf-8") as f:
-        raw: list[dict[str, Any]] = json.load(f)
-
-    products: list[Product] = []
-    skipped = 0
-    for record in raw:
-        image_path = record.get("image_path")
-        if not image_path or not (IMAGE_ROOT / image_path).exists():
-            skipped += 1
-            continue
-        products.append(
-            Product(
-                product_id=record["product_id"],
-                title=record["title"],
-                category=record["category"],
-                image_path=image_path,
-                attributes=record.get("attributes") or {},
-            )
-        )
+    products, skipped = load_training_products(path, IMAGE_ROOT)
     if skipped:
         print(f"[{path.name}] bỏ qua {skipped} sản phẩm thiếu ảnh trên đĩa")
     return products

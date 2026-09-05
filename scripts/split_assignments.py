@@ -23,12 +23,14 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE_PATH = ROOT / "data" / "eval" / "relevance_template.json"
 GRADES_DIR = ROOT / "data" / "eval"
+
+# One row of a labeling template, straight out of JSON.
+Row = dict[str, Any]
 
 
 def load_existing_graders() -> dict[tuple[str, str], list[str]]:
@@ -44,18 +46,13 @@ def load_existing_graders() -> dict[tuple[str, str], list[str]]:
     return graders
 
 
-def main() -> None:
-    names = sys.argv[1:]
-    if len(names) < 2:
-        raise SystemExit(
-            "cần ít nhất 2 tên, ví dụ: python scripts/split_assignments.py Hùng Hiếu Hiệp"
-        )
-
-    with open(TEMPLATE_PATH, encoding="utf-8") as f:
-        rows = json.load(f)
-    existing = load_existing_graders()
-
-    assigned: dict[str, list[dict]] = {name: [] for name in names}
+def split_rows(
+    rows: list[Row],
+    names: list[str],
+    existing: dict[tuple[str, str], list[str]],
+) -> tuple[dict[str, list[Row]], int, int]:
+    """Greedy load-balanced assignment. Returns (per-person rows, fully covered, slots)."""
+    assigned: dict[str, list[Row]] = {name: [] for name in names}
     load_count: dict[str, int] = {name: 0 for name in names}
     fully_covered = 0
     already_needed_total = 0
@@ -75,11 +72,35 @@ def main() -> None:
             assigned[name].append(row)
             load_count[name] += 1
 
+    return assigned, fully_covered, already_needed_total
+
+
+def write_assignments(
+    assigned: dict[str, list[Row]], names: list[str], prefix: str = "assignment"
+) -> None:
     for name in names:
-        out_path = GRADES_DIR / f"assignment_{name}.json"
+        out_path = GRADES_DIR / f"{prefix}_{name}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(assigned[name], f, ensure_ascii=False, indent=1)
         print(f"{name}: {len(assigned[name])} dòng -> {out_path}")
+
+
+def main() -> None:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+    names = sys.argv[1:]
+    if len(names) < 2:
+        raise SystemExit(
+            "cần ít nhất 2 tên, ví dụ: python scripts/split_assignments.py Hùng Hiếu Hiệp"
+        )
+
+    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+        rows = json.load(f)
+
+    assigned, fully_covered, already_needed_total = split_rows(
+        rows, names, load_existing_graders()
+    )
+    write_assignments(assigned, names)
 
     print(f"\nTổng: {len(rows)} dòng | đã đủ 2 người chấm: {fully_covered} | "
           f"còn cần chấm: {already_needed_total} lượt, chia cho {len(names)} người")

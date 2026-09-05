@@ -47,6 +47,18 @@ README = """# Bộ chấm nhãn — Fashion Search
 Mở trình duyệt vào http://localhost:8001, gõ tên bạn, bấm "Bắt đầu".
 Chấm bằng phím 0 / 1 / 2 trên bàn phím.
 
+Lưu ý: phải chạy lệnh TỪ TRONG thư mục vừa giải nén (chỗ có file
+labeling_server.py), không phải từ thư mục khác — nếu không sẽ báo
+"can't open file ... No such file or directory".
+
+## Hai thứ giúp chấm nhanh hơn
+
+- **Bấm sai? Nhấn `Backspace`** (hoặc bấm nút "← Quay lại (sửa)") để lùi lại
+  ảnh vừa chấm và chấm lại. Lùi được nhiều bước liên tiếp.
+- **Các ảnh của cùng một câu hỏi đi liền nhau**, nên chỉ cần đọc đề 1 lần rồi
+  chấm liên tục. Dòng "câu 12/155 · ảnh 3/8 của câu này" cho biết đang ở đâu.
+  Khi sang câu mới, dòng đề sẽ nháy sáng kèm chữ "CÂU HỎI MỚI" — nhớ đọc lại đề.
+
 ## Tiêu chí chấm (3 mức)
 
 - 2 = đúng ý — sản phẩm khớp đúng những gì câu hỏi mô tả
@@ -69,7 +81,7 @@ nhất 1 dòng) — gửi qua nhóm chat, không cần gửi gì khác.
 """
 
 
-def build_kit(template_path: Path, kit_name: str) -> None:
+def build_kit(template_path: Path, kit_name: str) -> int:
     if not template_path.exists():
         raise SystemExit(f"{template_path} chưa có")
 
@@ -99,6 +111,8 @@ def build_kit(template_path: Path, kit_name: str) -> None:
             print(f"  ... {i + 1}/{len(unique_images)}")
     if missing:
         print(f"CẢNH BÁO: {missing} ảnh không tìm thấy trên đĩa, đã bỏ qua")
+    else:
+        print(f"[{kit_name}] Đủ ảnh: 0/{len(unique_images)} thiếu")
 
     shutil.copy2(template_path, build_dir / "data" / "eval" / "relevance_template.json")
 
@@ -122,17 +136,27 @@ def build_kit(template_path: Path, kit_name: str) -> None:
 
     size_mb = zip_path.stat().st_size / (1024 * 1024)
     print(f"[{kit_name}] Đã tạo: {zip_path} ({size_mb:.1f} MB), {len(rows)} dòng cần chấm\n")
+    return missing
 
 
 def main() -> None:
-    names = sys.argv[1:]
-    if not names:
+    args = sys.argv[1:]
+    # --ft: package the fine-tuned pool extension shares (assignment_ft_<name>.json)
+    # instead of the original ones, into dist/labeling_kit_ft_<name>.zip.
+    prefix = "assignment"
+    kit_prefix = "labeling_kit"
+    if args and args[0] == "--ft":
+        args = args[1:]
+        prefix = "assignment_ft"
+        kit_prefix = "labeling_kit_ft"
+
+    if not args:
         build_kit(DEFAULT_TEMPLATE_PATH, "labeling_kit")
         return
 
-    for name in names:
-        assignment_path = ROOT / "data" / "eval" / f"assignment_{name}.json"
-        build_kit(assignment_path, f"labeling_kit_{name}")
+    for name in args:
+        assignment_path = ROOT / "data" / "eval" / f"{prefix}_{name}.json"
+        build_kit(assignment_path, f"{kit_prefix}_{name}")
 
 
 if __name__ == "__main__":

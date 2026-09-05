@@ -30,33 +30,21 @@ from pathlib import Path
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from scripts.category_filter import (  # noqa: E402
+    garment_keyword_in_query,
+    is_category_mismatch,
+    load_garment_names,
+)
+
 POOL_PATH = ROOT / "data" / "eval" / "pool_top20.json"
 QUERIES_PATH = ROOT / "data" / "eval" / "queries.json"
 CATALOG_PATH = ROOT / "data" / "processed" / "test.json"
-CATEGORY_MAPPING_PATH = ROOT / "data" / "category_mapping.json"
 OUT_NEEDS_HUMAN = ROOT / "data" / "eval" / "relevance_template.json"
 OUT_AUTO_ZERO = ROOT / "data" / "eval" / "auto_zero_labels.json"
 TOP_K = 10
 SEED = 42
-
-
-def load_garment_names() -> list[str]:
-    with open(CATEGORY_MAPPING_PATH, encoding="utf-8") as f:
-        cats = json.load(f)["categories"]
-    return [
-        c["vi"].split("/")[0].strip().split("(")[0].strip()
-        for c in cats
-        if c["group"] in ("main_garment", "accessory")
-    ]
-
-
-def garment_keyword_in_query(qtext: str, garment_names: list[str]) -> str | None:
-    qtext = qtext.lower()
-    for name in garment_names:
-        for word in name.lower().split():
-            if len(word) > 2 and word in qtext:
-                return name
-    return None
 
 
 def main() -> None:
@@ -96,7 +84,7 @@ def main() -> None:
                 "image_path": product["image_path"],
                 "category": product["category"],
             }
-            if kw is not None and kw.lower().split()[0] not in product["category"].lower():
+            if is_category_mismatch(kw, product["category"]):
                 row["grade"] = 0
                 row["graded_by"] = "auto-filter:category-mismatch"
                 auto_zero.append(row)

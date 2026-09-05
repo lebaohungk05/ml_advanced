@@ -22,26 +22,36 @@ from pathlib import Path
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-from src.adapters.metrics.ranking_metrics import RankingMetrics, cohens_kappa  # noqa: E402
+from src.adapters.metrics.ranking_metrics import (  # noqa: E402
+    RankingMetrics,
+    cohens_kappa,
+    unlabelled_hits_at_k,
+)
 from src.core.models import Product, RelevanceLabel, SearchResult  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 EVAL_DIR = ROOT / "data" / "eval"
 
+# Systems whose top-20 built the relevance pool; anything else is post-pool.
+POOL_SOURCES = frozenset({"bm25", "clip", "siglip2", "visiglip_ot"})
+
 
 def load_labels() -> list[RelevanceLabel]:
     labels: list[RelevanceLabel] = []
 
-    with open(EVAL_DIR / "auto_zero_labels.json", encoding="utf-8") as f:
-        for row in json.load(f):
-            labels.append(
-                RelevanceLabel(
-                    query_id=str(row["query_id"]),
-                    product_id=str(row["product_id"]),
-                    grade=int(row["grade"]),
-                    annotator=row["graded_by"],
+    # Globbed, not hardcoded: pool extensions (e.g. auto_zero_labels_ft.json from
+    # scripts/build_ft_pool_extension.py) are picked up automatically.
+    for path in sorted(EVAL_DIR.glob("auto_zero_labels*.json")):
+        with open(path, encoding="utf-8") as f:
+            for row in json.load(f):
+                labels.append(
+                    RelevanceLabel(
+                        query_id=str(row["query_id"]),
+                        product_id=str(row["product_id"]),
+                        grade=int(row["grade"]),
+                        annotator=row["graded_by"],
+                    )
                 )
-            )
 
     for path in sorted(EVAL_DIR.glob("grades_*.jsonl")):
         with open(path, encoding="utf-8") as f:
@@ -113,6 +123,40 @@ def report_kappa(labels: list[RelevanceLabel]) -> None:
         print(f"  {a} vs {b}: kappa = {kappa:.3f} (trên {len(ga)} dòng chung)")
 
 
+def report_unlabelled(
+    runs: dict[str, dict[str, list[SearchResult]]], labels: list[RelevanceLabel]
+) -> None:
+    """Second table: top-K hits that carry no label at all, per system per K.
+
+    See unlabelled_hits_at_k's docstring for why this matters. The 4 Sprint 2
+    baselines defined the pool at top-20, so they must read 0 here; anything
+    else is flagged loudly because it would invalidate the metrics table above.
+    """
+    ks = (1, 5, 10)
+    header = f"{'Hệ thống':<14}" + "".join(f"{f'K={k} chưa gán nhãn':>24}" for k in ks)
+    print("\nSố cặp (truy vấn, sản phẩm) trong top-K KHÔNG có nhãn nào (bias do pooling)")
+    print(header)
+
+    suspicious: list[str] = []
+    for name, run in runs.items():
+        cells = []
+        for k in ks:
+            unlabelled, total = unlabelled_hits_at_k(run, labels, k)
+            pct = (100.0 * unlabelled / total) if total else 0.0
+            cells.append(f"{unlabelled}/{total} ({pct:.1f}%)")
+            if name in POOL_SOURCES and unlabelled > 0:
+                suspicious.append(f"{name} @K={k}: {unlabelled}/{total} cặp thiếu nhãn")
+        print(f"{name:<14}" + "".join(f"{c:>24}" for c in cells))
+
+    if suspicious:
+        print(
+            "\n!! CẢNH BÁO: hệ thống nguồn của pool lại có cặp thiếu nhãn — "
+            "pool và file run KHÔNG khớp, bảng kết quả trên không đáng tin:"
+        )
+        for line in suspicious:
+            print(f"  - {line}")
+
+
 def main() -> None:
     labels = load_labels()
     print(f"Tổng số nhãn (đã gộp mọi người + auto-zero): {len(labels)}")
@@ -136,6 +180,7 @@ def main() -> None:
             f"{scores['ndcg@10']:>10.4f}"
         )
 
+    report_unlabelled(runs, labels)
     report_kappa(labels)
 
 

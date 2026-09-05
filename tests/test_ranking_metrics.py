@@ -10,6 +10,7 @@ from src.adapters.metrics.ranking_metrics import (
     RankingMetrics,
     cohens_kappa,
     paired_bootstrap_test,
+    unlabelled_hits_at_k,
 )
 from src.core.models import Product, RelevanceLabel, SearchResult
 
@@ -125,6 +126,31 @@ def test_cohens_kappa_is_one_for_perfect_but_non_trivial_agreement() -> None:
     grades_b = [0, 1, 2, 0, 1, 2]
 
     assert cohens_kappa(grades_a, grades_b) == pytest.approx(1.0)
+
+
+def test_unlabelled_hits_is_zero_for_a_fully_pooled_system(run_and_labels: RunAndLabels) -> None:
+    run, labels = run_and_labels
+
+    # Every (query, product) pair this run returns has a label, incl. the
+    # grade-0 ones — a graded 0 is a judgement, not a missing label.
+    assert unlabelled_hits_at_k(run, labels, k=1) == (0, 2)
+    assert unlabelled_hits_at_k(run, labels, k=10) == (0, 4)
+
+
+def test_unlabelled_hits_counts_pairs_outside_the_pool(run_and_labels: RunAndLabels) -> None:
+    _pooled_run, labels = run_and_labels
+    # A post-pool system: (q1, p4) and (q2, p2) were never graded, the other
+    # three pairs were.
+    run = {
+        "q1": [_hit("p4", 1), _hit("p1", 2), _hit("p3", 3)],
+        "q2": [_hit("p2", 1), _hit("p4", 2)],
+    }
+
+    # K=1: (q1,p4) and (q2,p2) -> 2 of 2 pairs unlabelled.
+    assert unlabelled_hits_at_k(run, labels, k=1) == (2, 2)
+    # K=3: q1 contributes p4 (unlabelled) + p1, p3 (labelled), q2 contributes
+    # p2 (unlabelled) + p4 (labelled) -> 2 of 5 pairs, list length caps the total.
+    assert unlabelled_hits_at_k(run, labels, k=3) == (2, 5)
 
 
 def test_cohens_kappa_is_near_zero_for_chance_level_agreement() -> None:

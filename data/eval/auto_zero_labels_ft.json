@@ -1,0 +1,3052 @@
+[
+ {
+  "query_id": "5",
+  "query_text": "áo khoác jean bạc màu",
+  "query_group": "A",
+  "product_id": "fp-7751",
+  "image_path": "train\\images\\007411.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "6",
+  "query_text": "áo gile len không tay",
+  "query_group": "A",
+  "product_id": "fp-31367",
+  "image_path": "train\\images\\027006.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "8",
+  "query_text": "quần short denim xanh",
+  "query_group": "A",
+  "product_id": "fp-43045",
+  "image_path": "train\\images\\038383.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "8",
+  "query_text": "quần short denim xanh",
+  "query_group": "A",
+  "product_id": "fp-36748",
+  "image_path": "train\\images\\032251.jpg",
+  "category": "Áo len",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "9",
+  "query_text": "chân váy xếp ly đen",
+  "query_group": "A",
+  "product_id": "fp-17514",
+  "image_path": "train\\images\\014586.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "9",
+  "query_text": "chân váy xếp ly đen",
+  "query_group": "A",
+  "product_id": "fp-13469",
+  "image_path": "val\\images\\000496.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "9",
+  "query_text": "chân váy xếp ly đen",
+  "query_group": "A",
+  "product_id": "fp-45134",
+  "image_path": "train\\images\\040396.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "10",
+  "query_text": "áo khoác dạ màu nâu",
+  "query_group": "A",
+  "product_id": "fp-34097",
+  "image_path": "train\\images\\029675.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "11",
+  "query_text": "đầm suông màu đỏ",
+  "query_group": "A",
+  "product_id": "fp-38298",
+  "image_path": "train\\images\\033771.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "12",
+  "query_text": "áo liền quần màu trắng",
+  "query_group": "A",
+  "product_id": "fp-38601",
+  "image_path": "train\\images\\034064.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "13",
+  "query_text": "áo choàng không tay đen",
+  "query_group": "A",
+  "product_id": "fp-7018",
+  "image_path": "train\\images\\006718.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "13",
+  "query_text": "áo choàng không tay đen",
+  "query_group": "A",
+  "product_id": "fp-29009",
+  "image_path": "train\\images\\024718.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "13",
+  "query_text": "áo choàng không tay đen",
+  "query_group": "A",
+  "product_id": "fp-23132",
+  "image_path": "train\\images\\019057.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "13",
+  "query_text": "áo choàng không tay đen",
+  "query_group": "A",
+  "product_id": "fp-37420",
+  "image_path": "train\\images\\032912.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-34538",
+  "image_path": "train\\images\\030102.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-31719",
+  "image_path": "train\\images\\027348.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-22736",
+  "image_path": "train\\images\\018684.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-22583",
+  "image_path": "train\\images\\018539.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-13733",
+  "image_path": "train\\images\\011757.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "14",
+  "query_text": "kính mắt gọng tròn",
+  "query_group": "A",
+  "product_id": "fp-19717",
+  "image_path": "train\\images\\016055.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-40792",
+  "image_path": "train\\images\\036192.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-20918",
+  "image_path": "train\\images\\016935.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-38372",
+  "image_path": "train\\images\\033843.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-17253",
+  "image_path": "val\\images\\000773.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-17591",
+  "image_path": "val\\images\\000810.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-22124",
+  "image_path": "train\\images\\018095.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-23053",
+  "image_path": "train\\images\\018984.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-20761",
+  "image_path": "train\\images\\016780.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "16",
+  "query_text": "băng đô vải nhung",
+  "query_group": "A",
+  "product_id": "fp-1773",
+  "image_path": "train\\images\\001669.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-30443",
+  "image_path": "train\\images\\026114.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-3162",
+  "image_path": "train\\images\\003008.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-41450",
+  "image_path": "train\\images\\036831.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-30340",
+  "image_path": "train\\images\\026011.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-40514",
+  "image_path": "train\\images\\035921.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-40983",
+  "image_path": "train\\images\\036379.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-22098",
+  "image_path": "train\\images\\018071.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "17",
+  "query_text": "cà vạt kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-49780",
+  "image_path": "train\\images\\044894.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-6621",
+  "image_path": "train\\images\\006340.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-5044",
+  "image_path": "train\\images\\004818.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-32516",
+  "image_path": "train\\images\\028128.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-4385",
+  "image_path": "train\\images\\004179.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-15853",
+  "image_path": "train\\images\\013484.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "18",
+  "query_text": "găng tay da đen",
+  "query_group": "A",
+  "product_id": "fp-14130",
+  "image_path": "train\\images\\012137.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-43239",
+  "image_path": "train\\images\\038576.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-419",
+  "image_path": "train\\images\\000376.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-11188",
+  "image_path": "train\\images\\010006.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-14327",
+  "image_path": "train\\images\\012324.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-8321",
+  "image_path": "train\\images\\007955.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-47260",
+  "image_path": "train\\images\\042446.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-9666",
+  "image_path": "train\\images\\008996.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-30324",
+  "image_path": "train\\images\\025997.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "19",
+  "query_text": "đồng hồ dây da nâu",
+  "query_group": "A",
+  "product_id": "fp-46500",
+  "image_path": "train\\images\\041705.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-1155",
+  "image_path": "train\\images\\001077.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-12537",
+  "image_path": "train\\images\\010913.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-11704",
+  "image_path": "train\\images\\010353.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-48196",
+  "image_path": "train\\images\\043362.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-43500",
+  "image_path": "train\\images\\038824.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-26793",
+  "image_path": "train\\images\\022567.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "20",
+  "query_text": "dây nịt da đen",
+  "query_group": "A",
+  "product_id": "fp-50173",
+  "image_path": "train\\images\\045278.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "21",
+  "query_text": "quần bó tối màu",
+  "query_group": "A",
+  "product_id": "fp-36770",
+  "image_path": "train\\images\\032273.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-31361",
+  "image_path": "train\\images\\027000.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-23618",
+  "image_path": "train\\images\\019504.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-24448",
+  "image_path": "train\\images\\020305.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-4632",
+  "image_path": "train\\images\\004418.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-39578",
+  "image_path": "train\\images\\035022.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-16077",
+  "image_path": "train\\images\\013614.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-7831",
+  "image_path": "train\\images\\007486.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-2408",
+  "image_path": "train\\images\\002281.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-44757",
+  "image_path": "train\\images\\040034.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "23",
+  "query_text": "giày cao gót đen",
+  "query_group": "A",
+  "product_id": "fp-42639",
+  "image_path": "train\\images\\037989.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-4349",
+  "image_path": "train\\images\\004143.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-15972",
+  "image_path": "train\\images\\013557.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-3655",
+  "image_path": "train\\images\\003482.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-3706",
+  "image_path": "train\\images\\003526.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-17411",
+  "image_path": "train\\images\\014510.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-12200",
+  "image_path": "train\\images\\010679.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-33929",
+  "image_path": "train\\images\\029509.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "24",
+  "query_text": "túi xách da nâu",
+  "query_group": "A",
+  "product_id": "fp-34611",
+  "image_path": "train\\images\\030173.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "25",
+  "query_text": "khăn choàng len dài",
+  "query_group": "A",
+  "product_id": "fp-2160",
+  "image_path": "train\\images\\002044.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "25",
+  "query_text": "khăn choàng len dài",
+  "query_group": "A",
+  "product_id": "fp-17233",
+  "image_path": "train\\images\\014388.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "25",
+  "query_text": "khăn choàng len dài",
+  "query_group": "A",
+  "product_id": "fp-43020",
+  "image_path": "train\\images\\038360.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "25",
+  "query_text": "khăn choàng len dài",
+  "query_group": "A",
+  "product_id": "fp-304",
+  "image_path": "train\\images\\000269.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "28",
+  "query_text": "quần jean rách nhẹ",
+  "query_group": "A",
+  "product_id": "fp-9670",
+  "image_path": "train\\images\\008999.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "28",
+  "query_text": "quần jean rách nhẹ",
+  "query_group": "A",
+  "product_id": "fp-22621",
+  "image_path": "train\\images\\018576.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "29",
+  "query_text": "đầm hai dây màu đen",
+  "query_group": "A",
+  "product_id": "fp-28503",
+  "image_path": "train\\images\\024226.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "31",
+  "query_text": "chân váy chữ A ngắn",
+  "query_group": "A",
+  "product_id": "fp-29220",
+  "image_path": "train\\images\\024927.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "31",
+  "query_text": "chân váy chữ A ngắn",
+  "query_group": "A",
+  "product_id": "fp-45134",
+  "image_path": "train\\images\\040396.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "34",
+  "query_text": "áo len cổ lọ dày",
+  "query_group": "A",
+  "product_id": "fp-62",
+  "image_path": "train\\images\\000037.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "34",
+  "query_text": "áo len cổ lọ dày",
+  "query_group": "A",
+  "product_id": "fp-25936",
+  "image_path": "train\\images\\021748.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-46249",
+  "image_path": "train\\images\\041463.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-25482",
+  "image_path": "train\\images\\021304.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-38281",
+  "image_path": "train\\images\\033754.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-37888",
+  "image_path": "train\\images\\033368.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-33980",
+  "image_path": "train\\images\\029560.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-20050",
+  "image_path": "train\\images\\016273.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-40957",
+  "image_path": "train\\images\\036353.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "35",
+  "query_text": "ví cầm tay nhỏ",
+  "query_group": "A",
+  "product_id": "fp-34611",
+  "image_path": "train\\images\\030173.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-24409",
+  "image_path": "train\\images\\020267.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-48284",
+  "image_path": "train\\images\\043446.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-3871",
+  "image_path": "train\\images\\003682.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-23475",
+  "image_path": "train\\images\\019371.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-14793",
+  "image_path": "train\\images\\012753.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-22865",
+  "image_path": "train\\images\\018806.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-21718",
+  "image_path": "train\\images\\017703.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "36",
+  "query_text": "giày thể thao trắng",
+  "query_group": "A",
+  "product_id": "fp-15681",
+  "image_path": "train\\images\\013376.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "38",
+  "query_text": "quần tây kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-581",
+  "image_path": "train\\images\\000528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "38",
+  "query_text": "quần tây kẻ sọc",
+  "query_group": "A",
+  "product_id": "fp-42346",
+  "image_path": "train\\images\\037700.jpg",
+  "category": "Áo len",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "39",
+  "query_text": "áo khoác lông giả",
+  "query_group": "A",
+  "product_id": "fp-4866",
+  "image_path": "train\\images\\004644.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-31518",
+  "image_path": "train\\images\\027153.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-17502",
+  "image_path": "train\\images\\014576.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-25209",
+  "image_path": "train\\images\\021036.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-38564",
+  "image_path": "train\\images\\034028.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-48635",
+  "image_path": "train\\images\\043782.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-7018",
+  "image_path": "train\\images\\006718.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-24105",
+  "image_path": "train\\images\\019972.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "40",
+  "query_text": "khăn quàng cổ lụa",
+  "query_group": "A",
+  "product_id": "fp-5276",
+  "image_path": "train\\images\\005043.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-20879",
+  "image_path": "train\\images\\016898.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-30489",
+  "image_path": "train\\images\\026159.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-41807",
+  "image_path": "train\\images\\037181.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-22581",
+  "image_path": "train\\images\\018537.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-32735",
+  "image_path": "train\\images\\028343.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-10778",
+  "image_path": "train\\images\\009743.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-47037",
+  "image_path": "train\\images\\042230.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "41",
+  "query_text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+  "query_group": "B",
+  "product_id": "fp-22611",
+  "image_path": "train\\images\\018567.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "43",
+  "query_text": "quần jean ống rộng lưng cao màu xanh nhạt",
+  "query_group": "B",
+  "product_id": "fp-41408",
+  "image_path": "train\\images\\036791.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "43",
+  "query_text": "quần jean ống rộng lưng cao màu xanh nhạt",
+  "query_group": "B",
+  "product_id": "fp-4273",
+  "image_path": "train\\images\\004072.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "43",
+  "query_text": "quần jean ống rộng lưng cao màu xanh nhạt",
+  "query_group": "B",
+  "product_id": "fp-16191",
+  "image_path": "train\\images\\013686.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "45",
+  "query_text": "áo len cổ tim mỏng màu than mặc mùa thu",
+  "query_group": "B",
+  "product_id": "fp-7687",
+  "image_path": "train\\images\\007355.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "46",
+  "query_text": "quần tây ống đứng vải tuyết mưa màu đen công sở",
+  "query_group": "B",
+  "product_id": "fp-6316",
+  "image_path": "train\\images\\006049.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "46",
+  "query_text": "quần tây ống đứng vải tuyết mưa màu đen công sở",
+  "query_group": "B",
+  "product_id": "fp-24309",
+  "image_path": "train\\images\\020169.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "46",
+  "query_text": "quần tây ống đứng vải tuyết mưa màu đen công sở",
+  "query_group": "B",
+  "product_id": "fp-11089",
+  "image_path": "train\\images\\009945.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "47",
+  "query_text": "áo khoác dạ dáng dài màu camel cổ bẻ",
+  "query_group": "B",
+  "product_id": "fp-27482",
+  "image_path": "train\\images\\023232.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "48",
+  "query_text": "chân váy chữ A hoa nhỏ tay bồng đi dự tiệc",
+  "query_group": "B",
+  "product_id": "fp-39396",
+  "image_path": "train\\images\\034842.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "48",
+  "query_text": "chân váy chữ A hoa nhỏ tay bồng đi dự tiệc",
+  "query_group": "B",
+  "product_id": "fp-38468",
+  "image_path": "train\\images\\033935.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "48",
+  "query_text": "chân váy chữ A hoa nhỏ tay bồng đi dự tiệc",
+  "query_group": "B",
+  "product_id": "fp-28492",
+  "image_path": "train\\images\\024215.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "48",
+  "query_text": "chân váy chữ A hoa nhỏ tay bồng đi dự tiệc",
+  "query_group": "B",
+  "product_id": "fp-23687",
+  "image_path": "train\\images\\019569.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "48",
+  "query_text": "chân váy chữ A hoa nhỏ tay bồng đi dự tiệc",
+  "query_group": "B",
+  "product_id": "fp-2757",
+  "image_path": "train\\images\\002616.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-40835",
+  "image_path": "train\\images\\036235.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-15967",
+  "image_path": "val\\images\\000633.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-39785",
+  "image_path": "train\\images\\035226.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-10671",
+  "image_path": "train\\images\\009674.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-24657",
+  "image_path": "train\\images\\020504.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-22937",
+  "image_path": "train\\images\\018874.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-44202",
+  "image_path": "train\\images\\039499.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "50",
+  "query_text": "chân váy da bóng dáng bút chì màu đen dài gối",
+  "query_group": "B",
+  "product_id": "fp-22781",
+  "image_path": "train\\images\\018728.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "52",
+  "query_text": "quần jogger thể thao nữ màu xám lưng rút",
+  "query_group": "B",
+  "product_id": "fp-4273",
+  "image_path": "train\\images\\004072.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "52",
+  "query_text": "quần jogger thể thao nữ màu xám lưng rút",
+  "query_group": "B",
+  "product_id": "fp-14605",
+  "image_path": "train\\images\\012577.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "52",
+  "query_text": "quần jogger thể thao nữ màu xám lưng rút",
+  "query_group": "B",
+  "product_id": "fp-4549",
+  "image_path": "train\\images\\004338.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "55",
+  "query_text": "áo khoác denim nữ dáng oversize màu xanh nhạt",
+  "query_group": "B",
+  "product_id": "fp-7751",
+  "image_path": "train\\images\\007411.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "55",
+  "query_text": "áo khoác denim nữ dáng oversize màu xanh nhạt",
+  "query_group": "B",
+  "product_id": "fp-7273",
+  "image_path": "train\\images\\006957.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "56",
+  "query_text": "quần short kaki túi hộp màu xanh rêu",
+  "query_group": "B",
+  "product_id": "fp-35862",
+  "image_path": "train\\images\\031396.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "56",
+  "query_text": "quần short kaki túi hộp màu xanh rêu",
+  "query_group": "B",
+  "product_id": "fp-9001",
+  "image_path": "train\\images\\008565.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-29197",
+  "image_path": "train\\images\\024904.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-32599",
+  "image_path": "train\\images\\028209.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-38030",
+  "image_path": "train\\images\\033508.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-25013",
+  "image_path": "train\\images\\020850.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-48771",
+  "image_path": "train\\images\\043913.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-16275",
+  "image_path": "val\\images\\000670.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-26038",
+  "image_path": "train\\images\\021845.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "57",
+  "query_text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+  "query_group": "B",
+  "product_id": "fp-38708",
+  "image_path": "train\\images\\034169.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "58",
+  "query_text": "áo sơ mi nam trắng tay ngắn công sở vải cotton",
+  "query_group": "B",
+  "product_id": "fp-40793",
+  "image_path": "train\\images\\036193.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "58",
+  "query_text": "áo sơ mi nam trắng tay ngắn công sở vải cotton",
+  "query_group": "B",
+  "product_id": "fp-48803",
+  "image_path": "train\\images\\043941.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "59",
+  "query_text": "chân váy midi xếp ly màu beige đi làm",
+  "query_group": "B",
+  "product_id": "fp-49014",
+  "image_path": "train\\images\\044148.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "59",
+  "query_text": "chân váy midi xếp ly màu beige đi làm",
+  "query_group": "B",
+  "product_id": "fp-5944",
+  "image_path": "train\\images\\005685.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "59",
+  "query_text": "chân váy midi xếp ly màu beige đi làm",
+  "query_group": "B",
+  "product_id": "fp-45134",
+  "image_path": "train\\images\\040396.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "59",
+  "query_text": "chân váy midi xếp ly màu beige đi làm",
+  "query_group": "B",
+  "product_id": "fp-49834",
+  "image_path": "train\\images\\044947.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "59",
+  "query_text": "chân váy midi xếp ly màu beige đi làm",
+  "query_group": "B",
+  "product_id": "fp-18867",
+  "image_path": "train\\images\\015495.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "61",
+  "query_text": "quần culottes ống loe màu đen vải kaki",
+  "query_group": "B",
+  "product_id": "fp-581",
+  "image_path": "train\\images\\000528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "63",
+  "query_text": "áo len cổ lọ dệt kim màu rêu ôm dáng",
+  "query_group": "B",
+  "product_id": "fp-41071",
+  "image_path": "train\\images\\036463.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "63",
+  "query_text": "áo len cổ lọ dệt kim màu rêu ôm dáng",
+  "query_group": "B",
+  "product_id": "fp-25936",
+  "image_path": "train\\images\\021748.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "63",
+  "query_text": "áo len cổ lọ dệt kim màu rêu ôm dáng",
+  "query_group": "B",
+  "product_id": "fp-62",
+  "image_path": "train\\images\\000037.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-43646",
+  "image_path": "train\\images\\038966.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-31418",
+  "image_path": "train\\images\\027057.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-49143",
+  "image_path": "train\\images\\044273.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-25908",
+  "image_path": "train\\images\\021720.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-1968",
+  "image_path": "train\\images\\001860.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-36529",
+  "image_path": "train\\images\\032036.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-4867",
+  "image_path": "train\\images\\004645.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "64",
+  "query_text": "váy hai dây lụa satin màu vàng ánh kim",
+  "query_group": "B",
+  "product_id": "fp-12694",
+  "image_path": "train\\images\\011028.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "66",
+  "query_text": "quần tây baggy màu đen công sở nam",
+  "query_group": "B",
+  "product_id": "fp-27029",
+  "image_path": "train\\images\\022791.jpg",
+  "category": "Áo len",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "66",
+  "query_text": "quần tây baggy màu đen công sở nam",
+  "query_group": "B",
+  "product_id": "fp-12273",
+  "image_path": "val\\images\\000381.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "66",
+  "query_text": "quần tây baggy màu đen công sở nam",
+  "query_group": "B",
+  "product_id": "fp-49926",
+  "image_path": "train\\images\\045036.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "67",
+  "query_text": "áo croptop len dệt kim màu trắng ngắn tay",
+  "query_group": "B",
+  "product_id": "fp-38661",
+  "image_path": "train\\images\\034123.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "67",
+  "query_text": "áo croptop len dệt kim màu trắng ngắn tay",
+  "query_group": "B",
+  "product_id": "fp-62",
+  "image_path": "train\\images\\000037.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-39578",
+  "image_path": "train\\images\\035022.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-4632",
+  "image_path": "train\\images\\004418.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-30425",
+  "image_path": "train\\images\\026096.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-16077",
+  "image_path": "train\\images\\013614.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-10362",
+  "image_path": "val\\images\\000177.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-2139",
+  "image_path": "train\\images\\002023.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-11345",
+  "image_path": "train\\images\\010112.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-9797",
+  "image_path": "train\\images\\009072.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "71",
+  "query_text": "giày cao gót mũi nhọn màu đen da bóng",
+  "query_group": "B",
+  "product_id": "fp-5877",
+  "image_path": "train\\images\\005624.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-2431",
+  "image_path": "train\\images\\002304.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-6589",
+  "image_path": "train\\images\\006310.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-40251",
+  "image_path": "train\\images\\035678.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-42559",
+  "image_path": "train\\images\\037910.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-38204",
+  "image_path": "train\\images\\033678.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-30743",
+  "image_path": "train\\images\\026403.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-14723",
+  "image_path": "train\\images\\012686.jpg",
+  "category": "Chân váy",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-12706",
+  "image_path": "train\\images\\011037.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "72",
+  "query_text": "túi xách nhỏ đeo chéo màu đen da mềm",
+  "query_group": "B",
+  "product_id": "fp-25393",
+  "image_path": "train\\images\\021217.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "73",
+  "query_text": "mũ len bo tròn màu xám đội mùa đông",
+  "query_group": "B",
+  "product_id": "fp-8109",
+  "image_path": "train\\images\\007749.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-31719",
+  "image_path": "train\\images\\027348.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-13733",
+  "image_path": "train\\images\\011757.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-34387",
+  "image_path": "train\\images\\029954.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-22736",
+  "image_path": "train\\images\\018684.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-24360",
+  "image_path": "train\\images\\020219.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-19717",
+  "image_path": "train\\images\\016055.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-28873",
+  "image_path": "train\\images\\024585.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "74",
+  "query_text": "kính mắt gọng vuông màu đen dáng cổ điển",
+  "query_group": "B",
+  "product_id": "fp-34538",
+  "image_path": "train\\images\\030102.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "75",
+  "query_text": "khăn choàng len dày màu đỏ đô mùa lạnh",
+  "query_group": "B",
+  "product_id": "fp-24213",
+  "image_path": "train\\images\\020077.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "75",
+  "query_text": "khăn choàng len dày màu đỏ đô mùa lạnh",
+  "query_group": "B",
+  "product_id": "fp-43020",
+  "image_path": "train\\images\\038360.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "77",
+  "query_text": "quần baggy ống rộng màu đen",
+  "query_group": "C",
+  "product_id": "fp-581",
+  "image_path": "train\\images\\000528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "77",
+  "query_text": "quần baggy ống rộng màu đen",
+  "query_group": "C",
+  "product_id": "fp-11089",
+  "image_path": "train\\images\\009945.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "77",
+  "query_text": "quần baggy ống rộng màu đen",
+  "query_group": "C",
+  "product_id": "fp-18498",
+  "image_path": "train\\images\\015246.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "79",
+  "query_text": "đầm y2k dáng ôm màu hồng",
+  "query_group": "C",
+  "product_id": "fp-38559",
+  "image_path": "train\\images\\034023.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "81",
+  "query_text": "quần culottes ống loe kiểu Hàn",
+  "query_group": "C",
+  "product_id": "fp-14837",
+  "image_path": "train\\images\\012792.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "81",
+  "query_text": "quần culottes ống loe kiểu Hàn",
+  "query_group": "C",
+  "product_id": "fp-44060",
+  "image_path": "train\\images\\039364.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-4390",
+  "image_path": "train\\images\\004184.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-40868",
+  "image_path": "train\\images\\036267.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-5944",
+  "image_path": "train\\images\\005685.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-6916",
+  "image_path": "train\\images\\006623.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-49014",
+  "image_path": "train\\images\\044148.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-3687",
+  "image_path": "train\\images\\003510.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "83",
+  "query_text": "váy tomboy cá tính năng động",
+  "query_group": "C",
+  "product_id": "fp-22887",
+  "image_path": "train\\images\\018826.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "85",
+  "query_text": "quần jean rách gối cá tính",
+  "query_group": "C",
+  "product_id": "fp-9670",
+  "image_path": "train\\images\\008999.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "85",
+  "query_text": "quần jean rách gối cá tính",
+  "query_group": "C",
+  "product_id": "fp-4769",
+  "image_path": "train\\images\\004550.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "85",
+  "query_text": "quần jean rách gối cá tính",
+  "query_group": "C",
+  "product_id": "fp-22676",
+  "image_path": "train\\images\\018627.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "85",
+  "query_text": "quần jean rách gối cá tính",
+  "query_group": "C",
+  "product_id": "fp-36748",
+  "image_path": "train\\images\\032251.jpg",
+  "category": "Áo len",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "88",
+  "query_text": "áo turtleneck cổ lọ dệt kim",
+  "query_group": "C",
+  "product_id": "fp-25936",
+  "image_path": "train\\images\\021748.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "89",
+  "query_text": "quần wide leg ống suông rộng",
+  "query_group": "C",
+  "product_id": "fp-17437",
+  "image_path": "train\\images\\014528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-44100",
+  "image_path": "train\\images\\039403.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-49014",
+  "image_path": "train\\images\\044148.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-37796",
+  "image_path": "train\\images\\033278.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-49834",
+  "image_path": "train\\images\\044947.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-33497",
+  "image_path": "train\\images\\029084.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-39414",
+  "image_path": "train\\images\\034860.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "91",
+  "query_text": "váy midi dáng A-line",
+  "query_group": "C",
+  "product_id": "fp-33474",
+  "image_path": "train\\images\\029061.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-48721",
+  "image_path": "train\\images\\043864.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-10191",
+  "image_path": "train\\images\\009355.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-36204",
+  "image_path": "train\\images\\031731.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-13145",
+  "image_path": "train\\images\\011318.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-36770",
+  "image_path": "train\\images\\032273.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-665",
+  "image_path": "train\\images\\000610.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-5803",
+  "image_path": "train\\images\\005553.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "93",
+  "query_text": "quần jean skinny bó sát",
+  "query_group": "C",
+  "product_id": "fp-18615",
+  "image_path": "train\\images\\015332.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "95",
+  "query_text": "đầm slip dress dáng suông",
+  "query_group": "C",
+  "product_id": "fp-28503",
+  "image_path": "train\\images\\024226.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "97",
+  "query_text": "quần cargo nhiều túi hộp",
+  "query_group": "C",
+  "product_id": "fp-23292",
+  "image_path": "train\\images\\019210.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "97",
+  "query_text": "quần cargo nhiều túi hộp",
+  "query_group": "C",
+  "product_id": "fp-35862",
+  "image_path": "train\\images\\031396.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "97",
+  "query_text": "quần cargo nhiều túi hộp",
+  "query_group": "C",
+  "product_id": "fp-21074",
+  "image_path": "train\\images\\017086.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "97",
+  "query_text": "quần cargo nhiều túi hộp",
+  "query_group": "C",
+  "product_id": "fp-4549",
+  "image_path": "train\\images\\004338.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-23475",
+  "image_path": "train\\images\\019371.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-24409",
+  "image_path": "train\\images\\020267.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-21718",
+  "image_path": "train\\images\\017703.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-37009",
+  "image_path": "train\\images\\032505.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-14699",
+  "image_path": "train\\images\\012664.jpg",
+  "category": "Áo liền quần (jumpsuit)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "99",
+  "query_text": "giày sneaker trắng basic",
+  "query_group": "C",
+  "product_id": "fp-15681",
+  "image_path": "train\\images\\013376.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-7014",
+  "image_path": "train\\images\\006714.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-33815",
+  "image_path": "train\\images\\029398.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-24791",
+  "image_path": "train\\images\\020635.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-5447",
+  "image_path": "train\\images\\005209.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-20754",
+  "image_path": "train\\images\\016773.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-3655",
+  "image_path": "train\\images\\003482.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-7385",
+  "image_path": "train\\images\\007064.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-15413",
+  "image_path": "train\\images\\013208.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "100",
+  "query_text": "túi tote vải canvas basic",
+  "query_group": "C",
+  "product_id": "fp-19895",
+  "image_path": "train\\images\\016169.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "103",
+  "query_text": "chân váy pleated skirt xếp ly",
+  "query_group": "C",
+  "product_id": "fp-13469",
+  "image_path": "val\\images\\000496.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "103",
+  "query_text": "chân váy pleated skirt xếp ly",
+  "query_group": "C",
+  "product_id": "fp-45134",
+  "image_path": "train\\images\\040396.jpg",
+  "category": "Quần short",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "103",
+  "query_text": "chân váy pleated skirt xếp ly",
+  "query_group": "C",
+  "product_id": "fp-2311",
+  "image_path": "train\\images\\002187.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "103",
+  "query_text": "chân váy pleated skirt xếp ly",
+  "query_group": "C",
+  "product_id": "fp-3605",
+  "image_path": "train\\images\\003435.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-27871",
+  "image_path": "train\\images\\023606.jpg",
+  "category": "Áo khoác (jacket)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "135",
+  "query_text": "quần âu nam màu xanh navy",
+  "query_group": "A",
+  "product_id": "fp-49840",
+  "image_path": "train\\images\\044953.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-7450",
+  "image_path": "train\\images\\007128.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-17543",
+  "image_path": "train\\images\\014604.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-43360",
+  "image_path": "train\\images\\038693.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "137",
+  "query_text": "chân váy da lộn màu nâu",
+  "query_group": "A",
+  "product_id": "fp-49884",
+  "image_path": "train\\images\\044996.jpg",
+  "category": "Áo khoác dạ / áo choàng dài (coat)",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "138",
+  "query_text": "áo len tay dài màu tím",
+  "query_group": "A",
+  "product_id": "fp-36868",
+  "image_path": "train\\images\\032369.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "140",
+  "query_text": "áo khoác nỉ có mũ màu đen",
+  "query_group": "B",
+  "product_id": "fp-48739",
+  "image_path": "train\\images\\043882.jpg",
+  "category": "Quần dài",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-36748",
+  "image_path": "train\\images\\032251.jpg",
+  "category": "Áo len",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-43045",
+  "image_path": "train\\images\\038383.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-2912",
+  "image_path": "train\\images\\002765.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-30859",
+  "image_path": "train\\images\\026516.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "141",
+  "query_text": "quần short jean lưng cao ống loe nhẹ",
+  "query_group": "B",
+  "product_id": "fp-7907",
+  "image_path": "train\\images\\007560.jpg",
+  "category": "Áo sơ mi / áo kiểu",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "142",
+  "query_text": "áo sơ mi voan hoa nhỏ tay phồng",
+  "query_group": "B",
+  "product_id": "fp-42490",
+  "image_path": "train\\images\\037842.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "143",
+  "query_text": "đầm babydoll tay bồng màu xanh mint",
+  "query_group": "B",
+  "product_id": "fp-26154",
+  "image_path": "train\\images\\021957.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "145",
+  "query_text": "quần legging tập gym màu đen bó sát",
+  "query_group": "B",
+  "product_id": "fp-36770",
+  "image_path": "train\\images\\032273.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-16191",
+  "image_path": "train\\images\\013686.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-41408",
+  "image_path": "train\\images\\036791.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-46830",
+  "image_path": "train\\images\\042028.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "147",
+  "query_text": "quần jean mom fit lưng cao",
+  "query_group": "C",
+  "product_id": "fp-15137",
+  "image_path": "train\\images\\013040.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-19813",
+  "image_path": "train\\images\\016113.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-35592",
+  "image_path": "train\\images\\031131.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-3605",
+  "image_path": "train\\images\\003435.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-10282",
+  "image_path": "val\\images\\000173.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-7912",
+  "image_path": "train\\images\\007565.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-1652",
+  "image_path": "train\\images\\001551.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-43646",
+  "image_path": "train\\images\\038966.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-8279",
+  "image_path": "train\\images\\007915.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "148",
+  "query_text": "đầm maxi dáng dài thướt tha",
+  "query_group": "C",
+  "product_id": "fp-11311",
+  "image_path": "train\\images\\010090.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-10282",
+  "image_path": "val\\images\\000173.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-14837",
+  "image_path": "train\\images\\012792.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-17437",
+  "image_path": "train\\images\\014528.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-48416",
+  "image_path": "train\\images\\043571.jpg",
+  "category": "Áo phông / áo thun / áo nỉ",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ },
+ {
+  "query_id": "150",
+  "query_text": "quần palazzo ống rộng bay bổng",
+  "query_group": "C",
+  "product_id": "fp-11311",
+  "image_path": "train\\images\\010090.jpg",
+  "category": "Váy đầm / đầm",
+  "grade": 0,
+  "graded_by": "auto-filter:category-mismatch"
+ }
+]

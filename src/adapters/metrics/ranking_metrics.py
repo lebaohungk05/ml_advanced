@@ -201,6 +201,33 @@ class RankingMetrics:
         }
 
 
+def unlabelled_hits_at_k(
+    run: RunResults, labels: Sequence[RelevanceLabel], k: int
+) -> tuple[int, int]:
+    """``(unlabelled, total)`` (query, product) pairs in the run's top-k.
+
+    Quantifies the pooling bias. The relevance pool was built from the top-20 of
+    the Sprint 2 baselines only, so any *later* system (e.g. the fine-tuned
+    checkpoint) can surface products nobody ever graded for that query. Those
+    pairs are treated as grade 0 by every metric above — which systematically
+    UNDERSTATES a post-pool system relative to the systems that defined the pool.
+    The pool sources themselves should report ~0 here at k <= 20; a nonzero count
+    for them means the pool and the run files have drifted apart.
+
+    A pair counts as unlabelled when no annotator (human or auto-filter) produced
+    any label for it — a graded 0 is a real judgement and is NOT counted here.
+    """
+    labelled = {(label.query_id, label.product_id) for label in labels}
+    unlabelled = 0
+    total = 0
+    for query_id, results in run.items():
+        for hit in results[:k]:
+            total += 1
+            if (query_id, hit.product_id) not in labelled:
+                unlabelled += 1
+    return unlabelled, total
+
+
 def cohens_kappa(grades_a: Sequence[int], grades_b: Sequence[int]) -> float:
     """Inter-annotator agreement on the 0/1/2 scale (DeCuong Mục 3.4).
 
