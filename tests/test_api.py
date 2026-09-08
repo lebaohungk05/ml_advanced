@@ -14,6 +14,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.api import (
+    _DEMO_PAGE,
     API_KEY_ENV,
     MAX_IMAGE_BYTES,
     _indexed_count,
@@ -66,6 +67,14 @@ def test_demo_page_is_served_at_the_root(client: TestClient) -> None:
     assert response.status_code == 200
     assert response.headers["content-type"].startswith("text/html")
     assert "<title>" in response.text
+
+
+def test_root_still_serves_the_inline_demo_page_not_the_static_one(
+    client: TestClient,
+) -> None:
+    # The /ui mount must not shadow or replace "/": the inline page is the one
+    # documented as the zero-asset fallback.
+    assert client.get("/").text == _DEMO_PAGE
 
 
 def test_catalog_image_is_served_from_the_images_root(
@@ -330,3 +339,50 @@ def test_a_qdrant_api_error_is_not_disguised_as_an_unreachable_store() -> None:
     )
 
     assert _is_store_unavailable(unexpected) is False
+
+
+def test_ui_mount_serves_the_static_demo_page(client: TestClient) -> None:
+    response = client.get("/ui/")
+
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("text/html")
+    assert 'src="app.js"' in response.text
+
+
+@pytest.mark.parametrize(
+    ("path", "content_type", "needle"),
+    [
+        ("/ui/app.js", "text/javascript", "/search"),
+        ("/ui/styles.css", "text/css", "{"),
+    ],
+)
+def test_ui_mount_serves_its_assets(
+    client: TestClient, path: str, content_type: str, needle: str
+) -> None:
+    response = client.get(path)
+
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith(content_type)
+    assert needle in response.text
+
+
+@pytest.mark.parametrize(
+    "path",
+    [
+        # httpx collapses this one to "/api.py" before it leaves the client, so it
+        # asserts the weaker "no route serves the source tree at all".
+        "/ui/../api.py",
+        # These survive encoding and really do reach the StaticFiles mount, which
+        # is what pins the mount to app/static and nothing above it.
+        "/ui/%2e%2e/api.py",
+        "/ui/%2E%2E%2Fapi.py",
+        "/ui/..%2Fapi.py",
+        "/ui/%2e%2e/%2e%2e/pyproject.toml",
+    ],
+)
+def test_ui_mount_never_escapes_its_directory(client: TestClient, path: str) -> None:
+    response = client.get(path)
+
+    assert response.status_code == 404
+    assert "FastAPI" not in response.text
+    assert "[project]" not in response.text

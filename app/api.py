@@ -17,6 +17,7 @@ from typing import Annotated
 
 from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Request, UploadFile, status
 from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from src.core.models import Product, Query, SearchResult
@@ -24,6 +25,7 @@ from src.core.ports import Retriever
 from src.registry import build_retriever_from_config, load_config, products_from_config
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+STATIC_DIR = Path(__file__).resolve().parent / "static"
 DEFAULT_CONFIG_PATH = REPO_ROOT / "configs" / "default.yaml"
 API_KEY_ENV = "FASHION_SEARCH_API_KEY"
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
@@ -300,6 +302,10 @@ async def search_image(
         filters=dict(filters),
     )
     return _run(retriever, query)
+
+
+# PUBLIC like /image: static assets only, the key is forwarded to /search client-side.
+app.mount("/ui", StaticFiles(directory=STATIC_DIR, html=True), name="ui")
 
 
 def _causes(exc: BaseException) -> Iterator[BaseException]:

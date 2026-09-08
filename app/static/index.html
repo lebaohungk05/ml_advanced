@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tìm kiếm thời trang đa mô thức</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Tìm kiếm thời trang đa mô thức</h1>
+  <p class="subtitle">Tìm sản phẩm trong catalog bằng mô tả tiếng Việt hoặc bằng một ảnh mẫu.</p>
+  <p id="status" class="pill">Đang kiểm tra hệ thống...</p>
+</header>
+
+<main>
+  <form id="search-form" class="panel" autocomplete="off">
+    <div class="field grow">
+      <label for="q">Mô tả sản phẩm</label>
+      <input id="q" name="q" type="text" maxlength="512"
+             placeholder="vd: váy đầm dự tiệc màu đỏ" autofocus>
+    </div>
+
+    <div class="field">
+      <label for="top-k">Số kết quả</label>
+      <input id="top-k" name="top_k" type="number" min="1" max="100" value="12">
+    </div>
+
+    <div class="field">
+      <label for="category">Danh mục (tuỳ chọn)</label>
+      <input id="category" name="category" type="text" list="category-options"
+             placeholder="tất cả danh mục">
+      <datalist id="category-options">
+        <option value="Váy đầm / đầm"></option>
+        <option value="Áo phông / áo thun / áo nỉ"></option>
+        <option value="Quần dài"></option>
+        <option value="Áo khoác (jacket)"></option>
+        <option value="Áo sơ mi / áo kiểu"></option>
+        <option value="Chân váy"></option>
+        <option value="Áo khoác dạ / áo choàng dài (coat)"></option>
+        <option value="Quần short"></option>
+        <option value="Áo len"></option>
+        <option value="Áo liền quần (jumpsuit)"></option>
+        <option value="Áo cardigan (áo len khoác ngoài cài nút)"></option>
+        <option value="Áo gile / áo vest không tay"></option>
+        <option value="Áo choàng không tay (cape/poncho)"></option>
+        <option value="Khăn choàng"></option>
+        <option value="Quần bó / tất da chân"></option>
+        <option value="Mũ / nón"></option>
+      </datalist>
+    </div>
+
+    <div class="field">
+      <label for="api-key">API key</label>
+      <input id="api-key" name="api_key" type="password" placeholder="nếu server bật xác thực">
+    </div>
+
+    <button id="submit" type="submit">Tìm</button>
+  </form>
+
+  <section id="drop-zone" class="panel dropzone">
+    <div class="dropzone-text">
+      <strong>Tìm bằng ảnh</strong>
+      <p>Kéo ảnh vào đây hoặc chọn tệp. Khi đã chọn ảnh, nút “Tìm” sẽ tìm theo ảnh
+        thay vì theo văn bản.</p>
+      <input id="file" type="file" accept=".jpg,.jpeg,.png,.webp">
+      <button id="clear-file" type="button" hidden>Bỏ ảnh</button>
+    </div>
+    <figure id="preview-wrap" hidden>
+      <img id="preview" alt="Ảnh truy vấn">
+      <figcaption id="preview-name"></figcaption>
+    </figure>
+  </section>
+
+  <section id="feedback" role="status" aria-live="polite"></section>
+
+  <section id="grid" class="grid"></section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
