@@ -1,9 +1,13 @@
-"""Sprint 3 deliverable: evaluate the fine-tuned SigLIP2+DoRA checkpoint on the
-same 155-query eval set as the Sprint 2 baselines, and merge its top-20 run into
-data/eval/pool_top20.json under the key ``siglip2_lora``.
+"""Evaluate one SigLIP-family system on the same 155-query eval set as the Sprint 2
+baselines and merge its top-20 run into data/eval/pool_top20.json.
+
+Sprint 3 used it for the fine-tuned SigLIP2+DoRA checkpoint (key ``siglip2_lora``,
+the defaults below); Sprint 4 axis 7 (SigLIP 1 vs SigLIP 2) reuses it unchanged
+via ``--model-id`` / ``--system-name`` / ``--no-adapter``, because that axis is
+answerable by a zero-shot inference pass and needs no training.
 
 Deliberately a copy of scripts/run_sprint2_baselines.py's mechanics rather than a
-refactor of it: the comparison is only apples-to-apples if the fine-tuned system
+refactor of it: the comparison is only apples-to-apples if the evaluated system
 is indexed exactly the way the baselines were —
 
 * same catalog: data/processed/test.json (6,963 held-out products, never seen in
@@ -13,11 +17,21 @@ is indexed exactly the way the baselines were —
   in-memory store, and swapping the store would confound the comparison),
 * same 155 queries, same top-20 depth.
 
-The only difference from the ``siglip2`` row is ``adapter_path``.
+So the only difference from the ``siglip2`` row is the flags passed here.
+
+!! Systems evaluated through this script are POST-POOL: the relevance pool was
+built from the top-20 of bm25/clip/siglip2/visiglip_ot (plus a second round on
+the fine-tuned system's top-10). Their top-K can therefore contain pairs nobody
+graded, which every metric scores as 0, so their numbers are a LOWER BOUND until
+the pool is extended. Always read the ``unlabelled_hits_at_k`` table printed by
+scripts/compute_baseline_results.py before quoting a result from here.
 
 Usage:
     python -m scripts.run_finetuned_eval --limit 200   # cheap smoke, no write
     python -m scripts.run_finetuned_eval               # full run, merges result
+    # Sprint 4 axis 7 (SigLIP 1, zero-shot):
+    python -m scripts.run_finetuned_eval --no-adapter --system-name siglip1
+        --model-id google/siglip-base-patch16-256
 """
 
 from __future__ import annotations
@@ -30,12 +44,13 @@ import time
 from pathlib import Path
 from typing import Any
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.adapters.embedders.siglip2_adapter import Siglip2Embedder  # noqa: E402
+from src.adapters.embedders.siglip2_adapter import (  # noqa: E402
+    DEFAULT_MODEL_ID,
+    Siglip2Embedder,
+)
 from src.adapters.vectorstore.inmemory_adapter import InMemoryVectorStore  # noqa: E402
 from src.core.dense_retriever import DenseRetriever  # noqa: E402
 from src.core.models import Product, Query, SearchResult  # noqa: E402
@@ -45,7 +60,7 @@ CATALOG_PATH = ROOT / "data" / "processed" / "test.json"
 QUERIES_PATH = ROOT / "data" / "eval" / "queries.json"
 POOL_PATH = ROOT / "data" / "eval" / "pool_top20.json"
 ADAPTER_PATH = ROOT / "checkpoints" / "hung-run1" / "best"
-SYSTEM_KEY = "siglip2_lora"
+DEFAULT_SYSTEM_KEY = "siglip2_lora"
 TOP_K = 20
 
 
@@ -106,23 +121,25 @@ def run_system(
     return results
 
 
-def merge_into_pool(run: dict[str, list[dict[str, Any]]]) -> None:
-    """Add ``siglip2_lora`` to pool_top20.json, leaving the 4 baselines untouched.
+def merge_into_pool(
+    run: dict[str, list[dict[str, Any]]], system_key: str, pool_path: Path
+) -> None:
+    """Add ``system_key`` to pool_top20.json, leaving every other system untouched.
 
     Read-modify-write on the parsed dict: the existing systems' entries are the
     same objects that came out of json.load, so their content round-trips
     unchanged (same dump options as run_sprint2_baselines.py).
     """
-    with open(POOL_PATH, encoding="utf-8") as f:
+    with open(pool_path, encoding="utf-8") as f:
         pool = json.load(f)
-    existing = [k for k in pool if k != SYSTEM_KEY]
-    pool[SYSTEM_KEY] = run
-    with open(POOL_PATH, "w", encoding="utf-8") as f:
+    existing = [k for k in pool if k != system_key]
+    pool[system_key] = run
+    with open(pool_path, "w", encoding="utf-8") as f:
         json.dump(pool, f, ensure_ascii=False)
-    print(f"Đã ghi '{SYSTEM_KEY}' vào {POOL_PATH} (giữ nguyên: {', '.join(existing)})")
+    print(f"Đã ghi '{system_key}' vào {pool_path} (giữ nguyên: {', '.join(existing)})")
 
 
-def main() -> None:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--limit",
@@ -136,24 +153,68 @@ def main() -> None:
         default=32,
         help="batch ảnh khi encode (giảm xuống nếu CUDA OOM; Sprint 2 dùng 32)",
     )
-    args = parser.parse_args()
+    parser.add_argument(
+        "--model-id",
+        default=DEFAULT_MODEL_ID,
+        help="backbone HuggingFace; trục 7 dùng google/siglip-base-patch16-256",
+    )
+    parser.add_argument(
+        "--system-name",
+        default=DEFAULT_SYSTEM_KEY,
+        help=f"key ghi vào {POOL_PATH.name} (mặc định {DEFAULT_SYSTEM_KEY})",
+    )
+    adapter = parser.add_mutually_exclusive_group()
+    adapter.add_argument(
+        "--adapter-path",
+        default=str(ADAPTER_PATH),
+        help="checkpoint LoRA/DoRA chồng lên backbone",
+    )
+    adapter.add_argument(
+        "--no-adapter",
+        action="store_true",
+        help="chạy zero-shot, không nạp adapter (trục 7)",
+    )
+    return parser
 
+
+def resolve_adapter_path(args: argparse.Namespace) -> str | None:
+    """``None`` means zero-shot; anything else is a LoRA/DoRA checkpoint to stack on.
+
+    Getting this wrong is silent: SigLIP 1 loaded with the SigLIP 2 DoRA adapter
+    would still produce a full run file, just a meaningless one.
+    """
+    return None if args.no_adapter else str(args.adapter_path)
+
+
+def main() -> None:
+    # reconfigure, not a fresh wrapper: see measure_latency.force_utf8_stdout.
+    if isinstance(sys.stdout, io.TextIOWrapper):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+    args = build_parser().parse_args()
+
+    adapter_path = resolve_adapter_path(args)
     products = load_catalog(args.limit)
     queries = load_queries()
     print(
         f"Catalog: {len(products)} sản phẩm | Truy vấn: {len(queries)} "
-        f"| adapter: {ADAPTER_PATH}"
+        f"| adapter: {adapter_path or 'zero-shot'}"
     )
 
-    embedder = Siglip2Embedder(adapter_path=str(ADAPTER_PATH), batch_size=args.batch_size)
-    print(f"\n== {SYSTEM_KEY} == ({embedder.name}, {embedder.dim}-d, batch={embedder.batch_size})")
+    embedder = Siglip2Embedder(
+        model_id=args.model_id, adapter_path=adapter_path, batch_size=args.batch_size
+    )
+    print(
+        f"\n== {args.system_name} == "
+        f"({embedder.name}, {embedder.dim}-d, batch={embedder.batch_size})"
+    )
 
     t0 = time.time()
     retriever = index_by_image(embedder, products)
     encode_seconds = time.time() - t0
     print(f"  index xong trong {encode_seconds:.1f}s ({encode_seconds / 60:.1f} phút)")
 
-    run = run_system(SYSTEM_KEY, retriever, queries)
+    run = run_system(args.system_name, retriever, queries)
 
     if args.limit is not None:
         print(
@@ -161,14 +222,14 @@ def main() -> None:
             "Chạy lại không có --limit để lấy số thật."
         )
     else:
-        merge_into_pool(run)
+        merge_into_pool(run, args.system_name, POOL_PATH)
 
     catalog_by_id = {p.product_id: p for p in products}
     for q in queries[:5]:
         top3 = run[str(q["id"])][:3]
         titles = [catalog_by_id[h["product_id"]].title for h in top3]
         print(f"\nTruy vấn: \"{q['text']}\" (nhóm {q['group']})")
-        print(f"  {SYSTEM_KEY:14s}: {titles}")
+        print(f"  {args.system_name:14s}: {titles}")
 
 
 if __name__ == "__main__":
