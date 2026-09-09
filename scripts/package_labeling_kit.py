@@ -141,14 +141,16 @@ def build_kit(template_path: Path, kit_name: str) -> int:
 
 def main() -> None:
     args = sys.argv[1:]
-    # --ft: package the fine-tuned pool extension shares (assignment_ft_<name>.json)
-    # instead of the original ones, into dist/labeling_kit_ft_<name>.zip.
+    # A round flag packages that round's shares (assignment_<round>_<name>.json)
+    # instead of the original ones, into dist/labeling_kit_<round>_<name>.zip.
+    rounds = {"--ft": "ft", "--axis2siglip1": "axis2siglip1"}
     prefix = "assignment"
     kit_prefix = "labeling_kit"
-    if args and args[0] == "--ft":
+    if args and args[0] in rounds:
+        round_name = rounds[args[0]]
         args = args[1:]
-        prefix = "assignment_ft"
-        kit_prefix = "labeling_kit_ft"
+        prefix = f"assignment_{round_name}"
+        kit_prefix = f"labeling_kit_{round_name}"
 
     if not args:
         build_kit(DEFAULT_TEMPLATE_PATH, "labeling_kit")
