@@ -4,9 +4,13 @@
     "clip",
     "siglip2",
     "visiglip_ot",
-    "siglip2_lora"
+    "siglip2_lora",
+    "axis1_lora_no_dora",
+    "axis2_no_hard_negatives"
   ],
-  "excluded": {},
+  "excluded": {
+    "siglip1": "67% cặp trong top-10 chưa có nhãn (1039/1550), 49% ở K=1 — bootstrap không sửa được lỗ hổng gán nhãn hệ thống"
+  },
   "n_queries": 155,
   "iterations": 10000,
   "seed": 42,
@@ -19,7 +23,9 @@
         "clip": 0.16774193548387098,
         "siglip2": 0.49032258064516127,
         "visiglip_ot": 0.08387096774193549,
-        "siglip2_lora": 0.6967741935483871
+        "siglip2_lora": 0.6967741935483871,
+        "axis1_lora_no_dora": 0.6903225806451613,
+        "axis2_no_hard_negatives": 0.6967741935483871
       },
       "pairs": {
         "bm25": {
@@ -36,6 +42,14 @@
             "mean_diff": 0.11612903225806452
           },
           "siglip2_lora": {
+            "p_value": 0.0,
+            "mean_diff": -0.4967741935483871
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.49032258064516127
+          },
+          "axis2_no_hard_negatives": {
             "p_value": 0.0,
             "mean_diff": -0.4967741935483871
           }
@@ -56,6 +70,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.5290322580645161
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.5225806451612903
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.5290322580645161
           }
         },
         "siglip2": {
@@ -72,6 +94,14 @@
             "mean_diff": 0.4064516129032258
           },
           "siglip2_lora": {
+            "p_value": 0.0,
+            "mean_diff": -0.20645161290322583
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.2
+          },
+          "axis2_no_hard_negatives": {
             "p_value": 0.0,
             "mean_diff": -0.20645161290322583
           }
@@ -92,6 +122,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.6129032258064516
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.6064516129032258
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.6129032258064516
           }
         },
         "siglip2_lora": {
@@ -110,6 +148,66 @@
           "visiglip_ot": {
             "p_value": 0.0,
             "mean_diff": 0.6129032258064516
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.8228,
+            "mean_diff": 0.006451612903225823
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 1.0,
+            "mean_diff": 0.0
+          }
+        },
+        "axis1_lora_no_dora": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.49032258064516127
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.5225806451612903
+          },
+          "siglip2": {
+            "p_value": 0.0,
+            "mean_diff": 0.2
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.6064516129032258
+          },
+          "siglip2_lora": {
+            "p_value": 0.8228,
+            "mean_diff": -0.006451612903225823
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.8724,
+            "mean_diff": -0.006451612903225823
+          }
+        },
+        "axis2_no_hard_negatives": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.4967741935483871
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.5290322580645161
+          },
+          "siglip2": {
+            "p_value": 0.0,
+            "mean_diff": 0.20645161290322583
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.6129032258064516
+          },
+          "siglip2_lora": {
+            "p_value": 1.0,
+            "mean_diff": 0.0
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.8724,
+            "mean_diff": 0.006451612903225823
           }
         }
       }
@@ -120,7 +218,9 @@
         "clip": 0.4258064516129032,
         "siglip2": 0.864516129032258,
         "visiglip_ot": 0.27741935483870966,
-        "siglip2_lora": 0.8838709677419355
+        "siglip2_lora": 0.8838709677419355,
+        "axis1_lora_no_dora": 0.8838709677419355,
+        "axis2_no_hard_negatives": 0.8580645161290322
       },
       "pairs": {
         "bm25": {
@@ -139,6 +239,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.31612903225806455
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.31612903225806455
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.29032258064516125
           }
         },
         "clip": {
@@ -157,6 +265,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.4580645161290323
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.4580645161290323
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.432258064516129
           }
         },
         "siglip2": {
@@ -175,6 +291,14 @@
           "siglip2_lora": {
             "p_value": 0.2402,
             "mean_diff": -0.01935483870967747
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.2402,
+            "mean_diff": -0.01935483870967747
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.8456,
+            "mean_diff": 0.006451612903225823
           }
         },
         "visiglip_ot": {
@@ -193,6 +317,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.6064516129032258
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.6064516129032258
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.5806451612903225
           }
         },
         "siglip2_lora": {
@@ -211,6 +343,66 @@
           "visiglip_ot": {
             "p_value": 0.0,
             "mean_diff": 0.6064516129032258
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 1.0,
+            "mean_diff": 0.0
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0372,
+            "mean_diff": 0.02580645161290329
+          }
+        },
+        "axis1_lora_no_dora": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.31612903225806455
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.4580645161290323
+          },
+          "siglip2": {
+            "p_value": 0.2402,
+            "mean_diff": 0.01935483870967747
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.6064516129032258
+          },
+          "siglip2_lora": {
+            "p_value": 1.0,
+            "mean_diff": 0.0
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0372,
+            "mean_diff": 0.02580645161290329
+          }
+        },
+        "axis2_no_hard_negatives": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.29032258064516125
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.432258064516129
+          },
+          "siglip2": {
+            "p_value": 0.8456,
+            "mean_diff": -0.006451612903225823
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.5806451612903225
+          },
+          "siglip2_lora": {
+            "p_value": 0.0372,
+            "mean_diff": -0.02580645161290329
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0372,
+            "mean_diff": -0.02580645161290329
           }
         }
       }
@@ -221,7 +413,9 @@
         "clip": 0.2516493479112075,
         "siglip2": 0.6061623143881208,
         "visiglip_ot": 0.14497183819764464,
-        "siglip2_lora": 0.765931899641577
+        "siglip2_lora": 0.765931899641577,
+        "axis1_lora_no_dora": 0.7598822324628777,
+        "axis2_no_hard_negatives": 0.7629107451688097
       },
       "pairs": {
         "bm25": {
@@ -240,6 +434,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.4484467335321225
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.44239706635342313
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.4454255790593552
           }
         },
         "clip": {
@@ -258,6 +460,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.5142825517303695
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.5082328845516701
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.5112613972576022
           }
         },
         "siglip2": {
@@ -276,6 +486,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.1597695852534562
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.15371991807475682
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.1567484307806889
           }
         },
         "visiglip_ot": {
@@ -294,6 +512,14 @@
           "siglip2_lora": {
             "p_value": 0.0,
             "mean_diff": -0.6209600614439323
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.0,
+            "mean_diff": -0.614910394265233
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.0,
+            "mean_diff": -0.6179389069711652
           }
         },
         "siglip2_lora": {
@@ -312,6 +538,66 @@
           "visiglip_ot": {
             "p_value": 0.0,
             "mean_diff": 0.6209600614439323
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.4076,
+            "mean_diff": 0.006049667178699369
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.7406,
+            "mean_diff": 0.0030211544727672957
+          }
+        },
+        "axis1_lora_no_dora": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.44239706635342313
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.5082328845516701
+          },
+          "siglip2": {
+            "p_value": 0.0,
+            "mean_diff": 0.15371991807475682
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.614910394265233
+          },
+          "siglip2_lora": {
+            "p_value": 0.4076,
+            "mean_diff": -0.006049667178699369
+          },
+          "axis2_no_hard_negatives": {
+            "p_value": 0.7614,
+            "mean_diff": -0.0030285127059320738
+          }
+        },
+        "axis2_no_hard_negatives": {
+          "bm25": {
+            "p_value": 0.0,
+            "mean_diff": 0.4454255790593552
+          },
+          "clip": {
+            "p_value": 0.0,
+            "mean_diff": 0.5112613972576022
+          },
+          "siglip2": {
+            "p_value": 0.0,
+            "mean_diff": 0.1567484307806889
+          },
+          "visiglip_ot": {
+            "p_value": 0.0,
+            "mean_diff": 0.6179389069711652
+          },
+          "siglip2_lora": {
+            "p_value": 0.7406,
+            "mean_diff": -0.0030211544727672957
+          },
+          "axis1_lora_no_dora": {
+            "p_value": 0.7614,
+            "mean_diff": 0.0030285127059320738
           }
         }
       }

@@ -20,9 +20,16 @@ change the p-values.
 siglip2_lora was excluded while its top-10 was mostly unlabelled (the pool came
 from the 4 baselines' top-20 only), because a bootstrap resamples queries and
 cannot repair a systematic labelling gap. The pool extension has since been
-graded by 2 annotators — ``unlabelled_hits_at_k`` now reports 0/1550 at K=10 for
-every system — so it is included and ``EXCLUDED`` is empty. Re-check that table
-before trusting any p-value here.
+graded by 2 annotators — it reports 0/1550 at K=10 — so it is included.
+
+Sprint 4's three post-pool systems were gated on the same table. axis1 (0/155 at
+K=1, 111/1550 at K=10) and axis2 (0/155, 229/1550) are included: their Recall@1
+is computed on fully graded pairs, and their MRR moves at most +0.013/+0.018 if
+every unlabelled pair were maximally relevant. siglip1 is EXCLUDED — 1039/1550
+unlabelled at K=10 and 76/155 at K=1 leave Recall@1 anywhere in [0.316, 0.807],
+so a p-value against it would describe the pool's shape, not the system's.
+Re-check ``unlabelled_hits_at_k`` before trusting any p-value here; note that
+axis2's recall@10 row in particular rests on 14.8% ungraded pairs.
 
 Usage:
     python -m scripts.significance_tests --limit 20   # fast smoke run
@@ -51,8 +58,21 @@ from src.adapters.metrics.ranking_metrics import (  # noqa: E402
 from src.core.models import RelevanceLabel, SearchResult  # noqa: E402
 
 OUT_PATH = ROOT / "data" / "eval" / "significance_results.json"
-SYSTEMS = ("bm25", "clip", "siglip2", "visiglip_ot", "siglip2_lora")
-EXCLUDED: dict[str, str] = {}
+SYSTEMS = (
+    "bm25",
+    "clip",
+    "siglip2",
+    "visiglip_ot",
+    "siglip2_lora",
+    "axis1_lora_no_dora",
+    "axis2_no_hard_negatives",
+)
+EXCLUDED: dict[str, str] = {
+    "siglip1": (
+        "67% cặp trong top-10 chưa có nhãn (1039/1550), 49% ở K=1 — "
+        "bootstrap không sửa được lỗ hổng gán nhãn hệ thống"
+    )
+}
 MIN_RELEVANT_GRADE = 1
 RECALL_K = 10
 

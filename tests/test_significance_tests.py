@@ -159,8 +159,21 @@ def test_the_finetuned_system_is_tested_now_that_its_pool_is_labelled() -> None:
     # It was excluded while ~80% of its top-10 was unlabelled; the pool
     # extension has since been graded, so a bootstrap over it is valid.
     assert "siglip2_lora" in sig.SYSTEMS
-    assert set(sig.SYSTEMS) == {"bm25", "clip", "siglip2", "visiglip_ot", "siglip2_lora"}
-    assert sig.EXCLUDED == {}
+    assert set(sig.SYSTEMS) == {
+        "bm25",
+        "clip",
+        "siglip2",
+        "visiglip_ot",
+        "siglip2_lora",
+        "axis1_lora_no_dora",
+        "axis2_no_hard_negatives",
+    }
+
+
+def test_siglip1_stays_excluded_while_two_thirds_of_its_top_10_is_unlabelled() -> None:
+    assert "siglip1" not in sig.SYSTEMS
+    assert "siglip1" in sig.EXCLUDED
+    assert sig.EXCLUDED["siglip1"].strip()
 
 
 def test_numeric_query_ids_sort_numerically_not_lexicographically() -> None:
