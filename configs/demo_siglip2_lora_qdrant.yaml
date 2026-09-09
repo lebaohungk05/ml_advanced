@@ -1,0 +1,27 @@
+# Real demo, fine-tuned: SigLIP 2 + DoRA (checkpoints/hung-run1/best) + Qdrant.
+#
+# Same catalog as demo_siglip2_qdrant.yaml but a SEPARATE collection: vectors from
+# a different checkpoint are not comparable with the zero-shot ones, so the two
+# must never share a collection. Index it once with:
+#
+#   python -m src.index --config configs/demo_siglip2_lora_qdrant.yaml \
+#       --products data/processed/test.json --modality image --batch-size 16 --recreate
+
+name: demo-siglip2-lora-qdrant
+
+retriever:
+  type: dense
+  name: siglip2-lora-qdrant
+  embedder:
+    type: siglip2
+    params:
+      model_id: google/siglip2-base-patch16-224
+      adapter_path: checkpoints/hung-run1/best
+      batch_size: 16
+      dtype: bfloat16
+  store:
+    type: qdrant
+    params: {collection: fashion_demo_siglip2_lora, distance: cosine}
+
+demo:
+  images_root: data/raw/fashionpedia

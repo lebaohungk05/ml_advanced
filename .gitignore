@@ -29,6 +29,10 @@ dist/
 .hf_cache/
 .local_tools/
 
+# local Qdrant data dir, written next to qdrant.exe's working directory
+storage/
+.qdrant-initialized
+
 # secrets / env
 .env
 .env.*
