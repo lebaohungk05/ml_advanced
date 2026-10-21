@@ -154,7 +154,15 @@ function setStatus(level, text) {
   el.status.textContent = text;
 }
 
+let keyedMessage = null;
+
+function showKeyedMessage(key, level, detail) {
+  showMessage(COPY[key], level, detail);
+  keyedMessage = { key: key, level: level, detail: detail };
+}
+
 function showMessage(text, level, detail) {
+  keyedMessage = null;
   const box = document.createElement("div");
   box.className = `message ${level}`;
   const primary = document.createElement("div");
@@ -170,6 +178,7 @@ function showMessage(text, level, detail) {
 }
 
 function clearMessage() {
+  keyedMessage = null;
   el.feedback.replaceChildren();
 }
 
@@ -310,7 +319,7 @@ function selectFile(file) {
   if (!file) return;
   if (file.size > MAX_IMAGE_BYTES) {
     clearFileSelection();
-    showMessage(COPY.tooLarge, "bad");
+    showKeyedMessage("tooLarge", "bad");
     return;
   }
   clearMessage();
@@ -354,7 +363,7 @@ function buildRequest(signal) {
 async function runSearch(event) {
   event.preventDefault();
   if (!selectedFile && !el.query.value.trim()) {
-    showMessage(COPY.noQuery, "info");
+    showKeyedMessage("noQuery", "info");
     return;
   }
 
@@ -374,7 +383,7 @@ async function runSearch(event) {
   } catch (err) {
     if (controller.signal.aborted) return;
     el.grid.replaceChildren();
-    showMessage(COPY.network, "bad");
+    showKeyedMessage("network", "bad");
     setBusy(false);
     inFlight = null;
     refreshStatus();
@@ -402,7 +411,7 @@ async function runSearch(event) {
   const cards = cardsFrom(body);
   if (!cards.length) {
     el.grid.replaceChildren();
-    showMessage(COPY.empty, "info");
+    showKeyedMessage("empty", "info");
     return;
   }
   renderCards(cards);
@@ -440,12 +449,12 @@ el.dropZone.addEventListener("drop", (event) => {
   if (files && files.length) selectFile(files[0]);
 });
 
-showMessage(COPY.idle, "info");
+showKeyedMessage("idle", "info");
 refreshStatus();
 
 document.addEventListener("langchange", () => {
   refreshStatus();
-  if (el.feedback.querySelector(".message.info") && !el.grid.children.length) {
-    showMessage(COPY.idle, "info");
+  if (keyedMessage) {
+    showKeyedMessage(keyedMessage.key, keyedMessage.level, keyedMessage.detail);
   }
 });
