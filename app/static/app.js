@@ -4,21 +4,53 @@ const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
 const API_KEY_STORAGE = "fashion_api_key";
 const SKELETON_COUNT = 8;
 
-const COPY = {
-  idle: 'Nhập mô tả sản phẩm để bắt đầu, vd: "váy đầm dự tiệc màu đỏ"',
-  loading: "Đang tìm...",
-  empty: "Không tìm thấy sản phẩm nào phù hợp. Thử mô tả khác hoặc bỏ lọc danh mục.",
-  network: "Không kết nối được tới API. Kiểm tra xem uvicorn còn chạy không.",
-  unauthorized: 'API key không đúng — nhập lại ở ô "API key".',
-  tooLarge: "Ảnh quá lớn (tối đa 8 MB). Chọn ảnh nhỏ hơn.",
-  invalid: "Truy vấn hoặc ảnh không hợp lệ.",
-  notImplemented: "Hệ thống đang dùng adapter chưa cài đặt — kiểm tra FASHION_SEARCH_CONFIG.",
-  unavailable: "Vector store (Qdrant) không phản hồi — hãy khởi động qdrant.exe rồi thử lại.",
-  degraded: "Hệ thống suy giảm — Qdrant không trả lời, tìm kiếm sẽ lỗi.",
-  healthUnreachable: "Không gọi được /health — API chưa chạy?",
-  brokenImage: "ảnh không tải được",
-  noQuery: "Nhập mô tả sản phẩm hoặc chọn một ảnh trước khi tìm.",
-};
+const COPY = new Proxy({}, { get: (_, key) => window.I18N.t(String(key)) });
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+const SWATCH_COUNT = 5;
+
+const GARMENT_RULES = [
+  ["skirt", /chân váy/i],
+  ["dress", /váy|đầm/i],
+  ["trousers", /quần|short|tất/i],
+  ["coat", /khoác|coat|cardigan|gile|vest|choàng|cape|poncho/i],
+  ["tee", /áo/i],
+];
+
+function garmentFor(category) {
+  const rule = GARMENT_RULES.find(([, pattern]) => pattern.test(category || ""));
+  return rule ? rule[0] : "hanger";
+}
+
+function swatchFor(seed) {
+  let sum = 0;
+  for (const char of seed || "") sum += char.charCodeAt(0);
+  return (sum % SWATCH_COUNT) + 1;
+}
+
+function svgNode(name, attributes) {
+  const node = document.createElementNS(SVG_NS, name);
+  Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
+  return node;
+}
+
+function placeholderThumb(category, productId) {
+  const wrap = document.createElement("div");
+  wrap.className = "thumb blank";
+  const svg = svgNode("svg", {
+    viewBox: "0 0 120 160",
+    preserveAspectRatio: "xMidYMid slice",
+    "aria-hidden": "true",
+  });
+  svg.append(
+    svgNode("rect", { width: "120", height: "160", fill: `url(#sw${swatchFor(productId || category)})` }),
+    svgNode("circle", { cx: "60", cy: "84", r: "40", class: "disc" }),
+    svgNode("use", { href: `#g-${garmentFor(category)}`, x: "24", y: "48", width: "72", height: "72", class: "gm" }),
+  );
+  wrap.appendChild(svg);
+  return wrap;
+}
 
 function imageUrl(path) {
   if (typeof path !== "string" || !path) return null;
@@ -61,7 +93,7 @@ function errorMessage(status) {
   if (status === 422) return COPY.invalid;
   if (status === 501) return COPY.notImplemented;
   if (status === 503) return COPY.unavailable;
-  return `API trả về lỗi HTTP ${status}.`;
+  return window.I18N.t("http_error", { status: status });
 }
 
 function detailText(body) {
@@ -86,12 +118,12 @@ function healthPill(payload) {
   const retriever = typeof payload.retriever === "string" ? payload.retriever : "?";
   const count = Number.isFinite(payload.indexed_products) ? payload.indexed_products : 0;
   if (payload.status === "ok") {
-    return { level: "ok", text: `${retriever} · ${count} sản phẩm đã index` };
+    return { level: "ok", text: window.I18N.t("indexed", { retriever: retriever, count: count }) };
   }
   if (payload.status === "degraded") {
     return { level: "warn", text: COPY.degraded };
   }
-  return { level: "warn", text: `Trạng thái lạ "${payload.status}" · ${retriever}` };
+  return { level: "warn", text: window.I18N.t("strange", { status: payload.status, retriever: retriever }) };
 }
 
 const el = {
@@ -117,6 +149,7 @@ let previewObjectUrl = null;
 let inFlight = null;
 
 function setStatus(level, text) {
+  delete el.status.dataset.i18n;
   el.status.className = `pill ${level}`;
   el.status.textContent = text;
 }
@@ -177,6 +210,8 @@ function buildCard(card) {
       node.prepend(fallback);
     });
     node.appendChild(img);
+  } else {
+    node.appendChild(placeholderThumb(card.category, card.productId));
   }
 
   const badge = document.createElement("span");
@@ -189,7 +224,7 @@ function buildCard(card) {
 
   const headline = document.createElement("div");
   headline.className = "headline";
-  headline.textContent = card.category || card.productId || "(không rõ danh mục)";
+  headline.textContent = card.category || card.productId || COPY.unknown_category;
   meta.appendChild(headline);
 
   if (card.title) {
@@ -231,7 +266,7 @@ function renderCards(cards) {
 
 function setBusy(busy) {
   el.submit.disabled = busy;
-  el.submit.textContent = busy ? COPY.loading : "Tìm";
+  el.submit.textContent = busy ? COPY.loading : COPY.submit;
   [el.query, el.topK, el.category, el.apiKey, el.file, el.clearFile].forEach((input) => {
     input.disabled = busy;
   });
@@ -375,6 +410,18 @@ async function runSearch(event) {
 
 el.apiKey.value = sessionStorage.getItem(API_KEY_STORAGE) || "";
 el.form.addEventListener("submit", runSearch);
+document.querySelectorAll(".cat").forEach((button) => {
+  button.addEventListener("click", () => {
+    el.category.value = button.dataset.category;
+    document.querySelectorAll(".cat").forEach((other) => {
+      other.setAttribute("aria-pressed", String(other === button && Boolean(button.dataset.category)));
+    });
+    if (!selectedFile && !el.query.value.trim() && button.dataset.category) {
+      el.query.value = button.textContent.trim();
+    }
+    if (selectedFile || el.query.value.trim()) el.form.requestSubmit();
+  });
+});
 el.file.addEventListener("change", () => selectFile(el.file.files[0]));
 el.clearFile.addEventListener("click", clearFileSelection);
 
@@ -395,3 +442,10 @@ el.dropZone.addEventListener("drop", (event) => {
 
 showMessage(COPY.idle, "info");
 refreshStatus();
+
+document.addEventListener("langchange", () => {
+  refreshStatus();
+  if (el.feedback.querySelector(".message.info") && !el.grid.children.length) {
+    showMessage(COPY.idle, "info");
+  }
+});
