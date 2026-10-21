@@ -1,0 +1,2324 @@
+{
+  "_meta": {
+    "final_system": "siglip2_lora",
+    "reference_system": "siglip2",
+    "k": 10,
+    "min_relevant_grade": 1,
+    "n_queries": 155,
+    "selection_rule": "Ưu tiên rổ 1 'final_truot_zeroshot_dung' (final Recall@10=0, zero-shot có hit), rổ 2 'ca_hai_truot' (cả hai Recall@10=0), rổ 3 'tut_hang' (final có hit nhưng rr thấp hơn zero-shot); trong mỗi rổ xếp theo rr(zero-shot) giảm dần rồi rr(final) tăng dần rồi id.",
+    "generated_by": "python -m scripts.error_analysis"
+  },
+  "bucket_counts": {
+    "tut_hang": 15,
+    "ca_hai_truot": 17,
+    "final_truot_zeroshot_dung": 1
+  },
+  "cases": [
+    {
+      "query_id": "41",
+      "query": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+      "group": "B",
+      "bucket": "final_truot_zeroshot_dung",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 1.0,
+      "zeroshot_reciprocal_rank": 0.125,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-42397",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu",
+          "image_path": "train\\images\\037750.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-20879",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo sơ mi / áo kiểu",
+          "image_path": "train\\images\\016898.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-30489",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu",
+          "image_path": "train\\images\\026159.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-47037",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ",
+          "image_path": "train\\images\\042230.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-10778",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu",
+          "image_path": "train\\images\\009743.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-42397",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu",
+          "image_path": "train\\images\\037750.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-9021",
+          "grade": 0.5,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo cardigan (áo len khoác ngoài cài nút), Áo phông / áo thun / áo nỉ, Giày, Túi / ví",
+          "image_path": "train\\images\\008580.jpg",
+          "annotator_disagreement": {
+            "Hiệp": 0,
+            "Hùng": 1
+          }
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-34042",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Chân váy, Giày",
+          "image_path": "train\\images\\029620.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-40783",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Đồng hồ",
+          "image_path": "train\\images\\036184.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-26793",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Dây nịt / thắt lưng, Đồng hồ",
+          "image_path": "train\\images\\022567.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "14",
+      "query": "kính mắt gọng tròn",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-22583",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ",
+          "image_path": "train\\images\\018539.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-45187",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt",
+          "image_path": "train\\images\\040448.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-34538",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt",
+          "image_path": "train\\images\\030102.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-13733",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt",
+          "image_path": "train\\images\\011757.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-3978",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác dạ / áo choàng dài (coat), Kính mắt",
+          "image_path": "train\\images\\003784.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-33046",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Dây nịt / thắt lưng, Kính mắt",
+          "image_path": "train\\images\\028644.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-12534",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ",
+          "image_path": "val\\images\\000407.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-45187",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt",
+          "image_path": "train\\images\\040448.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-3978",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác dạ / áo choàng dài (coat), Kính mắt",
+          "image_path": "train\\images\\003784.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-10112",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Áo khoác dạ / áo choàng dài (coat), Kính mắt",
+          "image_path": "train\\images\\009300.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "16",
+      "query": "băng đô vải nhung",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-5276",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\005043.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-20761",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\016780.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-23053",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Áo khoác dạ / áo choàng dài (coat)",
+          "image_path": "train\\images\\018984.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-17591",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "val\\images\\000810.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-17253",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "val\\images\\000773.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-32752",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Băng đô / khăn trùm đầu / phụ kiện tóc, Kính mắt",
+          "image_path": "train\\images\\028359.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-35586",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Áo phông / áo thun / áo nỉ, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\031125.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-47153",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Băng đô / khăn trùm đầu / phụ kiện tóc, Kính mắt",
+          "image_path": "train\\images\\042340.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-3155",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\003001.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-2535",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Quần dài, Giày, Kính mắt, Mũ / nón",
+          "image_path": "train\\images\\002405.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "17",
+      "query": "cà vạt kẻ sọc",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-27258",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Cà vạt",
+          "image_path": "train\\images\\023013.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-30443",
+          "grade": 0.0,
+          "category": "Áo khoác (jacket)",
+          "items_in_image": "Áo khoác (jacket), Áo sơ mi / áo kiểu, Cà vạt, Đồng hồ",
+          "image_path": "train\\images\\026114.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-33736",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo khoác (jacket), Áo sơ mi / áo kiểu, Dây nịt / thắt lưng, Cà vạt",
+          "image_path": "train\\images\\029320.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-30340",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Áo khoác (jacket), Cà vạt",
+          "image_path": "train\\images\\026011.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-40514",
+          "grade": 0.0,
+          "category": "Áo khoác (jacket)",
+          "items_in_image": "Áo khoác (jacket), Áo sơ mi / áo kiểu, Cà vạt, Kính mắt",
+          "image_path": "train\\images\\035921.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-26578",
+          "grade": 0.0,
+          "category": "Áo khoác dạ / áo choàng dài (coat)",
+          "items_in_image": "Áo khoác dạ / áo choàng dài (coat), Áo cardigan (áo len khoác ngoài cài nút), Áo sơ mi / áo kiểu, Cà vạt",
+          "image_path": "train\\images\\022362.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-50407",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\045506.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-30498",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Quần dài, Dây nịt / thắt lưng, Đồng hồ",
+          "image_path": "train\\images\\026167.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-17779",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Áo khoác dạ / áo choàng dài (coat), Cà vạt, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\014761.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-2535",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Quần dài, Giày, Kính mắt, Mũ / nón",
+          "image_path": "train\\images\\002405.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "19",
+      "query": "đồng hồ dây da nâu",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-419",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\000376.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-11188",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Đồng hồ",
+          "image_path": "train\\images\\010006.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-43239",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Đồng hồ",
+          "image_path": "train\\images\\038576.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-46500",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Đồng hồ, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\041705.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-30324",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Đồng hồ",
+          "image_path": "train\\images\\025997.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-31195",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Dây nịt / thắt lưng, Đồng hồ",
+          "image_path": "train\\images\\026839.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-18007",
+          "grade": 0.0,
+          "category": "Áo khoác dạ / áo choàng dài (coat)",
+          "items_in_image": "Áo khoác dạ / áo choàng dài (coat), Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ, Túi / ví, Cà vạt",
+          "image_path": "train\\images\\014913.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-17343",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Đồng hồ",
+          "image_path": "train\\images\\014460.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-16515",
+          "grade": 0.0,
+          "category": "Áo gile / áo vest không tay",
+          "items_in_image": "Áo gile / áo vest không tay, Áo phông / áo thun / áo nỉ, Quần dài, Giày",
+          "image_path": "train\\images\\013907.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-25315",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo liền quần (jumpsuit), Túi / ví, Đồng hồ, Kính mắt",
+          "image_path": "train\\images\\021141.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "20",
+      "query": "dây nịt da đen",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-48196",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\043362.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-29046",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\024754.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-50173",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\045278.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-39190",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Đồng hồ, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\034639.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-12537",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\010913.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-31195",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Dây nịt / thắt lưng, Đồng hồ",
+          "image_path": "train\\images\\026839.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-29046",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\024754.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-33465",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Áo khoác (jacket), Đồng hồ, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\029052.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-21976",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Dây nịt / thắt lưng, Túi / ví, Giày, Đồng hồ",
+          "image_path": "train\\images\\017955.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-41981",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Áo khoác (jacket), Dây nịt / thắt lưng, Đồng hồ",
+          "image_path": "train\\images\\037350.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "23",
+      "query": "giày cao gót đen",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-39578",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\035022.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-42639",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo sơ mi / áo kiểu, Giày",
+          "image_path": "train\\images\\037989.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-4632",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\004418.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-16077",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\013614.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-44757",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\040034.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-22846",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Giày",
+          "image_path": "train\\images\\018788.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-379",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Giày, Mũ / nón",
+          "image_path": "train\\images\\000340.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-810",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\000749.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-7099",
+          "grade": 0.0,
+          "category": "Áo khoác (jacket)",
+          "items_in_image": "Áo khoác (jacket), Quần dài, Giày, Túi / ví",
+          "image_path": "train\\images\\006795.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "24",
+      "query": "túi xách da nâu",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-12338",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví",
+          "image_path": "train\\images\\010774.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-3655",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví",
+          "image_path": "train\\images\\003482.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-34611",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví, Đồng hồ",
+          "image_path": "train\\images\\030173.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-17411",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví",
+          "image_path": "train\\images\\014510.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-15972",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo sơ mi / áo kiểu, Đồng hồ, Túi / ví",
+          "image_path": "train\\images\\013557.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-12833",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Túi / ví, Giày",
+          "image_path": "train\\images\\011111.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-22217",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Váy đầm / đầm, Áo phông / áo thun / áo nỉ, Giày, Túi / ví, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\018183.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-18792",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo khoác (jacket), Áo sơ mi / áo kiểu, Giày, Túi / ví",
+          "image_path": "train\\images\\015444.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-37987",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo khoác dạ / áo choàng dài (coat), Giày, Túi / ví",
+          "image_path": "train\\images\\033465.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-16991",
+          "grade": 0.0,
+          "category": "Áo khoác (jacket)",
+          "items_in_image": "Áo khoác (jacket), Áo phông / áo thun / áo nỉ, Quần short, Túi / ví, Giày, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\014221.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "36",
+      "query": "giày thể thao trắng",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-18998",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Giày, Kính mắt",
+          "image_path": "train\\images\\015575.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-15681",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Giày, Găng tay",
+          "image_path": "train\\images\\013376.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-24409",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Giày, Vớ / tất",
+          "image_path": "train\\images\\020267.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-14793",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ, Giày, Vớ / tất",
+          "image_path": "train\\images\\012753.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-21718",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Đồng hồ, Giày, Vớ / tất",
+          "image_path": "train\\images\\017703.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-18998",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Giày, Kính mắt",
+          "image_path": "train\\images\\015575.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-8313",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày, Mũ / nón",
+          "image_path": "train\\images\\007947.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-18763",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Kính mắt, Giày, Túi / ví",
+          "image_path": "train\\images\\015425.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-3497",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Áo cardigan (áo len khoác ngoài cài nút), Giày",
+          "image_path": "train\\images\\003330.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-22746",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Vớ / tất, Giày",
+          "image_path": "train\\images\\018694.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "40",
+      "query": "khăn quàng cổ lụa",
+      "group": "A",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-40320",
+          "grade": 0.5,
+          "category": "Khăn choàng",
+          "items_in_image": "Khăn choàng",
+          "image_path": "train\\images\\035747.jpg",
+          "annotator_disagreement": {
+            "Hùng": 0,
+            "Hưng": 1
+          }
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-48635",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\043782.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-38564",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Khăn choàng",
+          "image_path": "train\\images\\034028.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-31518",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Đồng hồ, Khăn choàng",
+          "image_path": "train\\images\\027153.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-5276",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\005043.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-9021",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo cardigan (áo len khoác ngoài cài nút), Áo phông / áo thun / áo nỉ, Giày, Túi / ví",
+          "image_path": "train\\images\\008580.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-46862",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Áo cardigan (áo len khoác ngoài cài nút), Giày",
+          "image_path": "train\\images\\042059.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-41986",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\037355.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-29167",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Áo khoác dạ / áo choàng dài (coat), Kính mắt, Túi / ví",
+          "image_path": "train\\images\\024874.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-23009",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo khoác dạ / áo choàng dài (coat), Áo phông / áo thun / áo nỉ, Kính mắt, Khăn choàng, Quần bó / tất da chân, Giày, Túi / ví",
+          "image_path": "train\\images\\018943.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "57",
+      "query": "đầm dạ hội đen dài tay ren dự tiệc tối",
+      "group": "B",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-13293",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Chân váy",
+          "image_path": "train\\images\\011419.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-16275",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "val\\images\\000670.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-25013",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\020850.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-38708",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\034169.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-38030",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\033508.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-13293",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Chân váy",
+          "image_path": "train\\images\\011419.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-49494",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Quần bó / tất da chân, Đồng hồ, Túi / ví, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\044616.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-31229",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\026872.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-8356",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví, Giày",
+          "image_path": "train\\images\\007987.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "64",
+      "query": "váy hai dây lụa satin màu vàng ánh kim",
+      "group": "B",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-1968",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\001860.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-1794",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\001690.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-18837",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\015473.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-49143",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\044273.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-4867",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\004645.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-32466",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\028079.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-1794",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\001690.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-28867",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\024579.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-46370",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\041579.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-48753",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\043896.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "71",
+      "query": "giày cao gót mũi nhọn màu đen da bóng",
+      "group": "B",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-39578",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\035022.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-4632",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\004418.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-10362",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "val\\images\\000177.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-2139",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\002023.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-14173",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Đồng hồ, Mũ / nón, Giày",
+          "image_path": "train\\images\\012177.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-47596",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\042778.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-379",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Giày, Mũ / nón",
+          "image_path": "train\\images\\000340.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-14173",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Đồng hồ, Mũ / nón, Giày",
+          "image_path": "train\\images\\012177.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-42239",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày, Dây nịt / thắt lưng, Túi / ví",
+          "image_path": "train\\images\\037598.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "72",
+      "query": "túi xách nhỏ đeo chéo màu đen da mềm",
+      "group": "B",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-2431",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví",
+          "image_path": "train\\images\\002304.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-14723",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày, Túi / ví, Kính mắt, Đồng hồ",
+          "image_path": "train\\images\\012686.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-12706",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví",
+          "image_path": "train\\images\\011037.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-30743",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví, Giày, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\026403.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-5027",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Túi / ví",
+          "image_path": "train\\images\\004801.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-16991",
+          "grade": 0.0,
+          "category": "Áo khoác (jacket)",
+          "items_in_image": "Áo khoác (jacket), Áo phông / áo thun / áo nỉ, Quần short, Túi / ví, Giày, Dây nịt / thắt lưng",
+          "image_path": "train\\images\\014221.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-585",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo khoác (jacket), Áo phông / áo thun / áo nỉ, Túi / ví, Kính mắt",
+          "image_path": "train\\images\\000532.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-22217",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Váy đầm / đầm, Áo phông / áo thun / áo nỉ, Giày, Túi / ví, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\018183.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-25207",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Quần bó / tất da chân, Kính mắt, Túi / ví, Đồng hồ",
+          "image_path": "train\\images\\021034.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "74",
+      "query": "kính mắt gọng vuông màu đen dáng cổ điển",
+      "group": "B",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-12534",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ",
+          "image_path": "val\\images\\000407.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-31719",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt",
+          "image_path": "train\\images\\027348.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-22736",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ",
+          "image_path": "train\\images\\018684.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-34387",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Áo len, Kính mắt",
+          "image_path": "train\\images\\029954.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-17658",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Túi / ví",
+          "image_path": "val\\images\\000818.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-32752",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần dài, Băng đô / khăn trùm đầu / phụ kiện tóc, Kính mắt",
+          "image_path": "train\\images\\028359.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-28217",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Kính mắt, Túi / ví, Giày",
+          "image_path": "train\\images\\023945.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-12534",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Kính mắt, Đồng hồ",
+          "image_path": "val\\images\\000407.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-6848",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Kính mắt, Mũ / nón, Túi / ví",
+          "image_path": "train\\images\\006558.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "99",
+      "query": "giày sneaker trắng basic",
+      "group": "C",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-18998",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Giày, Kính mắt",
+          "image_path": "train\\images\\015575.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-15681",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Giày, Găng tay",
+          "image_path": "train\\images\\013376.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-48284",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày",
+          "image_path": "train\\images\\043446.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-21718",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Đồng hồ, Giày, Vớ / tất",
+          "image_path": "train\\images\\017703.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-3497",
+          "grade": 0.0,
+          "category": "Quần short",
+          "items_in_image": "Quần short, Áo phông / áo thun / áo nỉ, Áo cardigan (áo len khoác ngoài cài nút), Giày",
+          "image_path": "train\\images\\003330.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-18998",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Giày, Kính mắt",
+          "image_path": "train\\images\\015575.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-32508",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo len, Giày",
+          "image_path": "train\\images\\028121.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-27510",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày",
+          "image_path": "train\\images\\023260.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-8313",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày, Mũ / nón",
+          "image_path": "train\\images\\007947.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-22746",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Vớ / tất, Giày",
+          "image_path": "train\\images\\018694.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "100",
+      "query": "túi tote vải canvas basic",
+      "group": "C",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-7385",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Túi / ví",
+          "image_path": "train\\images\\007064.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-20754",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Túi / ví",
+          "image_path": "train\\images\\016773.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-48098",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Túi / ví",
+          "image_path": "train\\images\\043264.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-24791",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Túi / ví",
+          "image_path": "train\\images\\020635.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-15413",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Túi / ví, Giày",
+          "image_path": "train\\images\\013208.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-22217",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Váy đầm / đầm, Áo phông / áo thun / áo nỉ, Giày, Túi / ví, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\018183.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-12833",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Túi / ví, Giày",
+          "image_path": "train\\images\\011111.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-22463",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác dạ / áo choàng dài (coat), Khăn choàng, Túi / ví",
+          "image_path": "train\\images\\018423.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-48098",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Quần short, Túi / ví",
+          "image_path": "train\\images\\043264.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-18292",
+          "grade": 0.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Dây nịt / thắt lưng, Băng đô / khăn trùm đầu / phụ kiện tóc, Kính mắt, Túi / ví, Giày",
+          "image_path": "train\\images\\015104.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "148",
+      "query": "đầm maxi dáng dài thướt tha",
+      "group": "C",
+      "bucket": "ca_hai_truot",
+      "final_recall@10": 0.0,
+      "final_reciprocal_rank": 0.0,
+      "zeroshot_recall@10": 0.0,
+      "zeroshot_reciprocal_rank": 0.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-43646",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\038966.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-10282",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "val\\images\\000173.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-3605",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\003435.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-11366",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo phông / áo thun / áo nỉ, Túi / ví",
+          "image_path": "train\\images\\010129.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-1652",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\001551.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-46862",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Áo cardigan (áo len khoác ngoài cài nút), Giày",
+          "image_path": "train\\images\\042059.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-32466",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\028079.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-34867",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\030424.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-39318",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\034765.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-48753",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Giày",
+          "image_path": "train\\images\\043896.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "83",
+      "query": "váy tomboy cá tính năng động",
+      "group": "C",
+      "bucket": "tut_hang",
+      "final_recall@10": 1.0,
+      "final_reciprocal_rank": 0.1111111111111111,
+      "zeroshot_recall@10": 1.0,
+      "zeroshot_reciprocal_rank": 1.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-40868",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Mũ / nón, Vớ / tất, Giày",
+          "image_path": "train\\images\\036267.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-8720",
+          "grade": 0.5,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Giày, Đồng hồ",
+          "image_path": "train\\images\\008321.jpg",
+          "annotator_disagreement": {
+            "Hiệp": 0,
+            "Hùng": 1
+          }
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-22887",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo sơ mi / áo kiểu, Vớ / tất, Đồng hồ, Giày",
+          "image_path": "train\\images\\018826.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-6916",
+          "grade": 0.0,
+          "category": "Áo sơ mi / áo kiểu",
+          "items_in_image": "Áo sơ mi / áo kiểu, Chân váy",
+          "image_path": "train\\images\\006623.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-5944",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm",
+          "image_path": "train\\images\\005685.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-38701",
+          "grade": 2.0,
+          "category": "Chân váy",
+          "items_in_image": "Chân váy, Áo phông / áo thun / áo nỉ, Mũ / nón, Túi / ví, Vớ / tất, Giày",
+          "image_path": "train\\images\\034162.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-25558",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Giày, Đồng hồ",
+          "image_path": "train\\images\\021378.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-13372",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Váy đầm / đầm, Giày, Vớ / tất, Quần bó / tất da chân, Kính mắt, Mũ / nón, Túi / ví",
+          "image_path": "train\\images\\011476.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-42722",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Chân váy, Mũ / nón, Kính mắt, Túi / ví, Đồng hồ, Giày",
+          "image_path": "train\\images\\038072.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-34538",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt",
+          "image_path": "train\\images\\030102.jpg"
+        }
+      ]
+    },
+    {
+      "query_id": "18",
+      "query": "găng tay da đen",
+      "group": "A",
+      "bucket": "tut_hang",
+      "final_recall@10": 1.0,
+      "final_reciprocal_rank": 0.2,
+      "zeroshot_recall@10": 1.0,
+      "zeroshot_reciprocal_rank": 1.0,
+      "final_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-9417",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Găng tay, Băng đô / khăn trùm đầu / phụ kiện tóc",
+          "image_path": "train\\images\\008832.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-5044",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Găng tay",
+          "image_path": "train\\images\\004818.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-4385",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Găng tay",
+          "image_path": "train\\images\\004179.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-6621",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Găng tay, Khăn choàng",
+          "image_path": "train\\images\\006340.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-32624",
+          "grade": 2.0,
+          "category": "Áo khoác dạ / áo choàng dài (coat)",
+          "items_in_image": "Áo khoác dạ / áo choàng dài (coat), Dây nịt / thắt lưng, Găng tay, Quần bó / tất da chân",
+          "image_path": "train\\images\\028233.jpg"
+        }
+      ],
+      "zeroshot_top5": [
+        {
+          "rank": 1,
+          "product_id": "fp-32624",
+          "grade": 2.0,
+          "category": "Áo khoác dạ / áo choàng dài (coat)",
+          "items_in_image": "Áo khoác dạ / áo choàng dài (coat), Dây nịt / thắt lưng, Găng tay, Quần bó / tất da chân",
+          "image_path": "train\\images\\028233.jpg"
+        },
+        {
+          "rank": 2,
+          "product_id": "fp-47107",
+          "grade": 2.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Găng tay",
+          "image_path": "train\\images\\042299.jpg"
+        },
+        {
+          "rank": 3,
+          "product_id": "fp-26325",
+          "grade": 0.0,
+          "category": "Áo phông / áo thun / áo nỉ",
+          "items_in_image": "Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Kính mắt",
+          "image_path": "train\\images\\022120.jpg"
+        },
+        {
+          "rank": 4,
+          "product_id": "fp-26008",
+          "grade": 0.0,
+          "category": "Quần dài",
+          "items_in_image": "Quần dài, Áo khoác dạ / áo choàng dài (coat), Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày, Túi / ví",
+          "image_path": "train\\images\\021815.jpg"
+        },
+        {
+          "rank": 5,
+          "product_id": "fp-27306",
+          "grade": 0.0,
+          "category": "Váy đầm / đầm",
+          "items_in_image": "Váy đầm / đầm, Kính mắt, Băng đô / khăn trùm đầu / phụ kiện tóc, Giày",
+          "image_path": "train\\images\\023060.jpg"
+        }
+      ]
+    }
+  ],
+  "cases_by_group": {
+    "B": 6,
+    "A": 10,
+    "C": 4
+  },
+  "group_sizes": {
+    "A": 46,
+    "B": 41,
+    "C": 33,
+    "D": 35
+  },
+  "group_breakdown": {
+    "bm25": {
+      "A": {
+        "recall@10": 0.6521739130434783,
+        "ndcg@10": 0.23426746370361856,
+        "n_queries": 46.0,
+        "n_ndcg_eligible": 38.0
+      },
+      "B": {
+        "recall@10": 0.4146341463414634,
+        "ndcg@10": 0.12908284664083236,
+        "n_queries": 41.0,
+        "n_ndcg_eligible": 36.0
+      },
+      "C": {
+        "recall@10": 0.21212121212121213,
+        "ndcg@10": 0.09311172415473563,
+        "n_queries": 33.0,
+        "n_ndcg_eligible": 30.0
+      },
+      "D": {
+        "recall@10": 0.9714285714285714,
+        "ndcg@10": 0.24211574003365946,
+        "n_queries": 35.0,
+        "n_ndcg_eligible": 35.0
+      }
+    },
+    "clip": {
+      "A": {
+        "recall@10": 0.13043478260869565,
+        "ndcg@10": 0.027388861935413466,
+        "n_queries": 46.0,
+        "n_ndcg_eligible": 38.0
+      },
+      "B": {
+        "recall@10": 0.2926829268292683,
+        "ndcg@10": 0.0711510914284694,
+        "n_queries": 41.0,
+        "n_ndcg_eligible": 36.0
+      },
+      "C": {
+        "recall@10": 0.5454545454545454,
+        "ndcg@10": 0.1600228186825422,
+        "n_queries": 33.0,
+        "n_ndcg_eligible": 30.0
+      },
+      "D": {
+        "recall@10": 0.8571428571428571,
+        "ndcg@10": 0.3133677504769829,
+        "n_queries": 35.0,
+        "n_ndcg_eligible": 35.0
+      }
+    },
+    "siglip2": {
+      "A": {
+        "recall@10": 0.8043478260869565,
+        "ndcg@10": 0.4591217538408253,
+        "n_queries": 46.0,
+        "n_ndcg_eligible": 38.0
+      },
+      "B": {
+        "recall@10": 0.8292682926829268,
+        "ndcg@10": 0.3747400449117365,
+        "n_queries": 41.0,
+        "n_ndcg_eligible": 36.0
+      },
+      "C": {
+        "recall@10": 0.8484848484848485,
+        "ndcg@10": 0.34207579669504395,
+        "n_queries": 33.0,
+        "n_ndcg_eligible": 30.0
+      },
+      "D": {
+        "recall@10": 1.0,
+        "ndcg@10": 0.6042834686886877,
+        "n_queries": 35.0,
+        "n_ndcg_eligible": 35.0
+      }
+    },
+    "visiglip_ot": {
+      "A": {
+        "recall@10": 0.08695652173913043,
+        "ndcg@10": 0.012119958131040987,
+        "n_queries": 46.0,
+        "n_ndcg_eligible": 38.0
+      },
+      "B": {
+        "recall@10": 0.14634146341463414,
+        "ndcg@10": 0.02575949491034146,
+        "n_queries": 41.0,
+        "n_ndcg_eligible": 36.0
+      },
+      "C": {
+        "recall@10": 0.09090909090909091,
+        "ndcg@10": 0.011470321683591944,
+        "n_queries": 33.0,
+        "n_ndcg_eligible": 30.0
+      },
+      "D": {
+        "recall@10": 0.8571428571428571,
+        "ndcg@10": 0.21341969084618323,
+        "n_queries": 35.0,
+        "n_ndcg_eligible": 35.0
+      }
+    },
+    "siglip2_lora": {
+      "A": {
+        "recall@10": 0.8043478260869565,
+        "ndcg@10": 0.6350530242401513,
+        "n_queries": 46.0,
+        "n_ndcg_eligible": 38.0
+      },
+      "B": {
+        "recall@10": 0.8536585365853658,
+        "ndcg@10": 0.6245667796627478,
+        "n_queries": 41.0,
+        "n_ndcg_eligible": 36.0
+      },
+      "C": {
+        "recall@10": 0.9090909090909091,
+        "ndcg@10": 0.6647865290487012,
+        "n_queries": 33.0,
+        "n_ndcg_eligible": 30.0
+      },
+      "D": {
+        "recall@10": 1.0,
+        "ndcg@10": 0.815885409609981,
+        "n_queries": 35.0,
+        "n_ndcg_eligible": 35.0
+      }
+    }
+  },
+  "target_axis_breakdown": {
+    "bm25": {
+      "phu_kien": {
+        "recall@10": 0.34782608695652173,
+        "ndcg@10": 0.31009770564475797,
+        "n_queries": 23.0
+      },
+      "trang_phuc_chinh": {
+        "recall@10": 0.6060606060606061,
+        "ndcg@10": 0.16833776487736463,
+        "n_queries": 132.0
+      }
+    },
+    "clip": {
+      "phu_kien": {
+        "recall@10": 0.043478260869565216,
+        "ndcg@10": 0.044399784859704736,
+        "n_queries": 23.0
+      },
+      "trang_phuc_chinh": {
+        "recall@10": 0.49242424242424243,
+        "ndcg@10": 0.14671917847708707,
+        "n_queries": 132.0
+      }
+    },
+    "siglip2": {
+      "phu_kien": {
+        "recall@10": 0.391304347826087,
+        "ndcg@10": 0.4303140001181257,
+        "n_queries": 23.0
+      },
+      "trang_phuc_chinh": {
+        "recall@10": 0.946969696969697,
+        "ndcg@10": 0.44997150051587587,
+        "n_queries": 132.0
+      }
+    },
+    "visiglip_ot": {
+      "phu_kien": {
+        "recall@10": 0.043478260869565216,
+        "ndcg@10": 0.004851345580379329,
+        "n_queries": 23.0
+      },
+      "trang_phuc_chinh": {
+        "recall@10": 0.3181818181818182,
+        "ndcg@10": 0.07095492713234286,
+        "n_queries": 132.0
+      }
+    },
+    "siglip2_lora": {
+      "phu_kien": {
+        "recall@10": 0.391304347826087,
+        "ndcg@10": 0.45260549456389637,
+        "n_queries": 23.0
+      },
+      "trang_phuc_chinh": {
+        "recall@10": 0.9696969696969697,
+        "ndcg@10": 0.7022476686136128,
+        "n_queries": 132.0
+      }
+    }
+  },
+  "zero_ceiling_queries": {
+    "count": 16,
+    "by_group": {
+      "A": 8,
+      "B": 5,
+      "C": 3
+    },
+    "accessory_head_count": 13,
+    "query_ids": [
+      "14",
+      "16",
+      "17",
+      "19",
+      "20",
+      "23",
+      "24",
+      "36",
+      "57",
+      "64",
+      "71",
+      "72",
+      "74",
+      "99",
+      "100",
+      "148"
+    ]
+  },
+  "accessory_target_queries": {
+    "count": 23,
+    "queries": {
+      "14": {
+        "text": "kính mắt gọng tròn",
+        "group": "A",
+        "head_term": "kính",
+        "fashionpedia_category_id": "14"
+      },
+      "15": {
+        "text": "mũ lưỡi trai đen",
+        "group": "A",
+        "head_term": "mũ",
+        "fashionpedia_category_id": "15"
+      },
+      "16": {
+        "text": "băng đô vải nhung",
+        "group": "A",
+        "head_term": "băng đô",
+        "fashionpedia_category_id": "16"
+      },
+      "17": {
+        "text": "cà vạt kẻ sọc",
+        "group": "A",
+        "head_term": "cà vạt",
+        "fashionpedia_category_id": "17"
+      },
+      "18": {
+        "text": "găng tay da đen",
+        "group": "A",
+        "head_term": "găng tay",
+        "fashionpedia_category_id": "18"
+      },
+      "19": {
+        "text": "đồng hồ dây da nâu",
+        "group": "A",
+        "head_term": "đồng hồ",
+        "fashionpedia_category_id": "19"
+      },
+      "20": {
+        "text": "dây nịt da đen",
+        "group": "A",
+        "head_term": "dây nịt",
+        "fashionpedia_category_id": "20"
+      },
+      "22": {
+        "text": "vớ cổ cao trắng",
+        "group": "A",
+        "head_term": "vớ",
+        "fashionpedia_category_id": "23"
+      },
+      "23": {
+        "text": "giày cao gót đen",
+        "group": "A",
+        "head_term": "giày",
+        "fashionpedia_category_id": "24"
+      },
+      "24": {
+        "text": "túi xách da nâu",
+        "group": "A",
+        "head_term": "túi",
+        "fashionpedia_category_id": "25"
+      },
+      "25": {
+        "text": "khăn choàng len dài",
+        "group": "A",
+        "head_term": "khăn",
+        "fashionpedia_category_id": "26"
+      },
+      "26": {
+        "text": "dù gấp gọn nhỏ",
+        "group": "A",
+        "head_term": "dù",
+        "fashionpedia_category_id": "27"
+      },
+      "35": {
+        "text": "ví cầm tay nhỏ",
+        "group": "A",
+        "head_term": "ví",
+        "fashionpedia_category_id": "25"
+      },
+      "36": {
+        "text": "giày thể thao trắng",
+        "group": "A",
+        "head_term": "giày",
+        "fashionpedia_category_id": "24"
+      },
+      "40": {
+        "text": "khăn quàng cổ lụa",
+        "group": "A",
+        "head_term": "khăn",
+        "fashionpedia_category_id": "26"
+      },
+      "71": {
+        "text": "giày cao gót mũi nhọn màu đen da bóng",
+        "group": "B",
+        "head_term": "giày",
+        "fashionpedia_category_id": "24"
+      },
+      "72": {
+        "text": "túi xách nhỏ đeo chéo màu đen da mềm",
+        "group": "B",
+        "head_term": "túi",
+        "fashionpedia_category_id": "25"
+      },
+      "73": {
+        "text": "mũ len bo tròn màu xám đội mùa đông",
+        "group": "B",
+        "head_term": "mũ",
+        "fashionpedia_category_id": "15"
+      },
+      "74": {
+        "text": "kính mắt gọng vuông màu đen dáng cổ điển",
+        "group": "B",
+        "head_term": "kính",
+        "fashionpedia_category_id": "14"
+      },
+      "75": {
+        "text": "khăn choàng len dày màu đỏ đô mùa lạnh",
+        "group": "B",
+        "head_term": "khăn",
+        "fashionpedia_category_id": "26"
+      },
+      "99": {
+        "text": "giày sneaker trắng basic",
+        "group": "C",
+        "head_term": "giày",
+        "fashionpedia_category_id": "24"
+      },
+      "100": {
+        "text": "túi tote vải canvas basic",
+        "group": "C",
+        "head_term": "túi",
+        "fashionpedia_category_id": "25"
+      },
+      "101": {
+        "text": "mũ bucket hat vải kaki",
+        "group": "C",
+        "head_term": "mũ",
+        "fashionpedia_category_id": "15"
+      }
+    }
+  },
+  "unrepresentable_queries": {},
+  "needs_review_categories": [
+    {
+      "id": "1",
+      "en": "Shirt, blouse",
+      "vi": "Áo sơ mi / áo kiểu",
+      "note": "Gốc gộp 2 khái niệm — có thể tách 'áo sơ mi' (nam/công sở) và 'áo kiểu' (nữ) nếu cần lọc chi tiết hơn"
+    },
+    {
+      "id": "2",
+      "en": "Top, t-shirt, sweatshirt",
+      "vi": "Áo phông / áo thun / áo nỉ",
+      "note": "Gốc gộp 3 khái niệm — cân nhắc tách nếu tập truy vấn có phân biệt rõ 'áo thun' vs 'áo nỉ'"
+    },
+    {
+      "id": "10",
+      "en": "Coat",
+      "vi": "Áo khoác dạ / áo choàng dài (coat)",
+      "note": "Phân biệt với 'Jacket' (#5) — coat thường dài hơn, dày hơn; cần thống nhất ranh giới khi gán nhãn"
+    },
+    {
+      "id": "16",
+      "en": "Headband, head covering, hair accessory",
+      "vi": "Băng đô / khăn trùm đầu / phụ kiện tóc",
+      "note": "Gốc gộp 3 khái niệm khác nhau — cân nhắc tách nếu có truy vấn riêng cho khăn trùm đầu"
+    },
+    {
+      "id": "22",
+      "en": "Tights, stockings",
+      "vi": "Quần bó / tất da chân",
+      "note": "Gốc gộp 2 khái niệm — 'tights' (quần bó dày) khác 'stockings' (tất da mỏng)"
+    },
+    {
+      "id": "25",
+      "en": "Bag, wallet",
+      "vi": "Túi / ví",
+      "note": "Gốc gộp 2 khái niệm — tách nếu cần phân biệt túi xách và ví"
+    }
+  ]
+}

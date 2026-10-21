@@ -6,7 +6,7 @@
 -r requirements.txt
 
 torch>=2.4
-transformers>=4.45
+transformers>=4.56    # from_pretrained(dtype=...) replaced torch_dtype= in 4.56
 peft>=0.18            # DoRA (use_dora=True) needs >= 0.18
 open_clip_torch>=2.24
 sentence-transformers>=3.0

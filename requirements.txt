@@ -9,3 +9,5 @@ pyyaml>=6.0
 python-multipart>=0.0.9
 pytest>=8.0
 httpx>=0.27
+# Sprint 5 demo UI (app/streamlit_app.py); it only speaks HTTP to app/api.py.
+streamlit>=1.40

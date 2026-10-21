@@ -1,0 +1,30 @@
+
+Truy vấn: "áo sơ mi nữ trắng" (nhóm A)
+  bm25        : ['Áo sơ mi / áo kiểu', 'Áo sơ mi / áo kiểu, Giày', 'Áo sơ mi / áo kiểu']
+  clip        : ['Quần short, Áo phông / áo thun / áo nỉ, Vớ / tất', 'Áo phông / áo thun / áo nỉ, Chân váy, Giày', 'Quần dài, Áo phông / áo thun / áo nỉ, Túi / ví, Giày']
+  siglip2     : ['Áo sơ mi / áo kiểu, Chân váy, Giày', 'Quần dài, Áo cardigan (áo len khoác ngoài cài nút), Áo phông / áo thun / áo nỉ, Giày, Túi / ví', 'Áo sơ mi / áo kiểu']
+  visiglip_ot : ['Áo phông / áo thun / áo nỉ, Quần dài, Mũ / nón', 'Quần dài, Váy đầm / đầm, Giày', 'Áo sơ mi / áo kiểu']
+
+Truy vấn: "áo thun cổ tròn đen" (nhóm A)
+  bm25        : ['Áo phông / áo thun / áo nỉ', 'Áo phông / áo thun / áo nỉ', 'Áo phông / áo thun / áo nỉ']
+  clip        : ['Áo khoác (jacket), Áo phông / áo thun / áo nỉ, Quần short, Băng đô / khăn trùm đầu / phụ kiện tóc', 'Váy đầm / đầm, Túi / ví', 'Áo phông / áo thun / áo nỉ, Quần short, Giày']
+  siglip2     : ['Áo phông / áo thun / áo nỉ', 'Áo phông / áo thun / áo nỉ', 'Áo phông / áo thun / áo nỉ, Quần dài, Đồng hồ, Dây nịt / thắt lưng']
+  visiglip_ot : ['Áo sơ mi / áo kiểu', 'Áo khoác (jacket), Áo sơ mi / áo kiểu', 'Áo sơ mi / áo kiểu']
+
+Truy vấn: "áo len dệt kim xám" (nhóm A)
+  bm25        : ['Quần short, Áo phông / áo thun / áo nỉ, Áo cardigan (áo len khoác ngoài cài nút), Giày, Vớ / tất, Kính mắt', 'Áo len', 'Áo len']
+  clip        : ['Váy đầm / đầm, Túi / ví', 'Áo phông / áo thun / áo nỉ, Quần short, Đồng hồ', 'Váy đầm / đầm']
+  siglip2     : ['Áo len', 'Chân váy, Áo phông / áo thun / áo nỉ, Giày', 'Áo phông / áo thun / áo nỉ, Quần dài, Mũ / nón']
+  visiglip_ot : ['Áo sơ mi / áo kiểu', 'Áo khoác (jacket), Áo sơ mi / áo kiểu', 'Áo sơ mi / áo kiểu']
+
+Truy vấn: "áo cardigan màu kem" (nhóm A)
+  bm25        : ['Áo cardigan (áo len khoác ngoài cài nút)', 'Áo cardigan (áo len khoác ngoài cài nút)', 'Áo cardigan (áo len khoác ngoài cài nút)']
+  clip        : ['Áo phông / áo thun / áo nỉ, Áo khoác (jacket)', 'Quần short, Áo phông / áo thun / áo nỉ', 'Áo khoác (jacket)']
+  siglip2     : ['Váy đầm / đầm, Băng đô / khăn trùm đầu / phụ kiện tóc, Túi / ví', 'Váy đầm / đầm, Áo cardigan (áo len khoác ngoài cài nút), Giày', 'Áo phông / áo thun / áo nỉ, Quần dài, Áo cardigan (áo len khoác ngoài cài nút), Dây nịt / thắt lưng']
+  visiglip_ot : ['Áo phông / áo thun / áo nỉ', 'Váy đầm / đầm, Dây nịt / thắt lưng, Mũ / nón', 'Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Quần dài, Dây nịt / thắt lưng, Giày']
+
+Truy vấn: "áo khoác jean bạc màu" (nhóm A)
+  bm25        : ['Áo khoác (jacket)', 'Áo khoác (jacket)', 'Áo khoác (jacket)']
+  clip        : ['Váy đầm / đầm, Túi / ví', 'Áo phông / áo thun / áo nỉ, Quần short, Đồng hồ', 'Váy đầm / đầm']
+  siglip2     : ['Váy đầm / đầm, Áo khoác (jacket)', 'Áo khoác (jacket), Áo phông / áo thun / áo nỉ, Quần dài, Giày, Kính mắt', 'Quần dài, Áo phông / áo thun / áo nỉ, Áo khoác (jacket), Túi / ví, Dây nịt / thắt lưng']
+  visiglip_ot : ['Áo sơ mi / áo kiểu', 'Áo sơ mi / áo kiểu', 'Áo phông / áo thun / áo nỉ, Chân váy, Áo cardigan (áo len khoác ngoài cài nút), Giày']

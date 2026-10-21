@@ -1,0 +1,29 @@
+# Real demo: SigLIP 2 zero-shot + Qdrant, catalog = data/processed/test.json.
+#
+# No inline `products:` block on purpose — the catalog is pre-indexed into Qdrant
+# once by `python -m src.index ... --modality image`, and app/api.py must not
+# re-index (nor wipe) it on every startup.
+#
+# Sprint 3 fine-tuned checkpoint: add `adapter_path: <path to LoRA/DoRA ckpt>`
+# under embedder.params AND change `collection` to a new name — vectors produced
+# by a different checkpoint are not comparable with those already in an existing
+# collection, so they must never share one.
+#
+# store.params.dim is deliberately absent: src/registry.py inherits it from the
+# embedder (768 here). A hardcoded literal would trip DenseRetriever's dim guard
+# the moment the backbone changes.
+
+name: demo-siglip2-qdrant
+
+retriever:
+  type: dense
+  name: siglip2-qdrant
+  embedder:
+    type: siglip2
+    params: {model_id: google/siglip2-base-patch16-224, batch_size: 16, dtype: bfloat16}
+  store:
+    type: qdrant
+    params: {collection: fashion_demo_siglip2, distance: cosine}
+
+demo:
+  images_root: data/raw/fashionpedia
