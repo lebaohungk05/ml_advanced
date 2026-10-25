@@ -1,0 +1,82 @@
+{
+ "label_scale": {
+  "human_rows": 10201,
+  "human_rows_by_annotator": {
+   "Hiệp": 4470,
+   "Hùng": 4029,
+   "Hưng": 1702
+  },
+  "human_pairs": 4951,
+  "pairs_by_annotator_count": {
+   "2": 4655,
+   "3": 296
+  },
+  "repeated_rows": 3,
+  "auto_pairs": {
+   "auto_zero_labels": 2068,
+   "auto_zero_labels_ft": 305,
+   "auto_zero_labels_axis2_siglip1": 403
+  }
+ },
+ "acceptance_when_item_secondary": {
+  "item_is_main_category": [
+   2,
+   4
+  ],
+  "item_is_secondary": [
+   80,
+   134
+  ],
+  "per_query_secondary": {
+   "15": [
+    18,
+    25
+   ],
+   "18": [
+    6,
+    7
+   ],
+   "22": [
+    7,
+    18
+   ],
+   "25": [
+    9,
+    9
+   ],
+   "26": [
+    8,
+    11
+   ],
+   "35": [
+    2,
+    6
+   ],
+   "73": [
+    11,
+    19
+   ],
+   "75": [
+    5,
+    10
+   ],
+   "101": [
+    14,
+    29
+   ]
+  }
+ },
+ "failures_inside_affected": {
+  "affected": 35,
+  "spurious": 21,
+  "accessory_filter": 14,
+  "siglip2": {
+   "failed": 21,
+   "failed_inside_affected": 19
+  },
+  "siglip2_lora": {
+   "failed": 18,
+   "failed_inside_affected": 18
+  }
+ }
+}

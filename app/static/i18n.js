@@ -56,6 +56,7 @@
       strange: 'Trạng thái lạ "{status}" · {retriever}',
       http_error: "API trả về lỗi HTTP {status}.",
       unknown_category: "(không rõ danh mục)",
+      similarity: "Độ tương đồng",
     },
     en: {
       title: "Multimodal Fashion Search",
@@ -108,6 +109,7 @@
       strange: 'Unexpected status "{status}" · {retriever}',
       http_error: "The API returned HTTP error {status}.",
       unknown_category: "(unknown category)",
+      similarity: "Similarity",
     },
   };
 

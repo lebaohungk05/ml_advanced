@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+    box/.style={draw, rounded corners=2pt, fill=blue!6, minimum width=2.7cm, minimum height=1.05cm, font=\footnotesize, align=center},
+    vec/.style={draw, rounded corners=2pt, fill=green!10, minimum width=2.7cm, minimum height=1.05cm, font=\footnotesize, align=center},
+    io/.style={draw, rounded corners=2pt, fill=gray!10, minimum width=2.7cm, minimum height=1.05cm, font=\footnotesize, align=center},
+    store/.style={draw, rounded corners=2pt, fill=orange!14, minimum width=2.7cm, minimum height=1.05cm, font=\footnotesize, align=center},
+    arr/.style={-{Stealth[length=2mm]}, thick},
+    phase/.style={font=\footnotesize\itshape, anchor=south west}
+]
+\node[io] (a1) at (0,0) {Ảnh sản phẩm\\trong catalog};
+\node[box] (a2) at (3.3,0) {Bộ mã hoá ảnh};
+\node[vec] (a3) at (6.6,0) {Vector ảnh\\$g(I)$};
+\node[store] (a4) at (9.9,0) {Kho vector\\(chỉ mục HNSW)};
+\draw[arr] (a1) -- (a2);
+\draw[arr] (a2) -- (a3);
+\draw[arr] (a3) -- (a4);
+\node[phase] at ([yshift=0.25cm]a1.north west) {Giai đoạn lập chỉ mục, chạy một lần};
+
+\node[io] (b1) at (0,-3.4) {Truy vấn\\tiếng Việt $T$};
+\node[box] (b2) at (3.3,-3.4) {Bộ mã hoá văn bản};
+\node[vec] (b3) at (6.6,-3.4) {Vector truy vấn\\$f(T)$};
+\node[box] (b4) at (9.9,-3.4) {Tìm top-$K$\\theo cosine};
+\node[io] (b5) at (13.2,-3.4) {Danh sách\\$K$ ảnh xếp hạng};
+\draw[arr] (b1) -- (b2);
+\draw[arr] (b2) -- (b3);
+\draw[arr] (b3) -- (b4);
+\draw[arr] (b4) -- (b5);
+\draw[arr] (a4) -- node[right, font=\scriptsize] {tra cứu} (b4);
+\node[phase] at ([yshift=0.25cm]b1.north west) {Giai đoạn truy vấn, chạy mỗi lần người dùng tìm};
+\end{tikzpicture}

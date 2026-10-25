@@ -1,0 +1,8 @@
+\chapter*{MỞ ĐẦU}
+\addcontentsline{toc}{chapter}{MỞ ĐẦU}
+
+Người tìm đồ thời trang thường mô tả thứ mình muốn bằng màu sắc, dáng áo và phong cách, ít khi gọi đúng tên sản phẩm. Tìm kiếm theo từ khoá chỉ khớp khi câu truy vấn và văn bản mô tả dùng cùng từ. Với tiếng Việt, khó khăn tăng lên vì cách nói về thời trang trộn từ thuần Việt, từ mượn tiếng Anh và từ mới. Một hướng khác là tìm thẳng trên ảnh, dùng các mô hình học chung biểu diễn của ảnh và văn bản.
+
+Đồ án xây dựng một hệ thống tìm ảnh sản phẩm thời trang bằng truy vấn tiếng Việt, rồi đo xem mô hình biểu diễn chung nào cho kết quả tốt hơn BM25, phương pháp xếp hạng theo từ khoá, và chênh bao nhiêu. Mỗi ảnh trong catalog được mã hoá thành vector một lần; khi tìm, câu truy vấn được mã hoá vào cùng không gian và hệ thống lấy các ảnh có vector gần nhất. Ba mô hình dùng sẵn là CLIP, SigLIP~2 và ViSigLIP-OT được đối chiếu với BM25. Sau đó nhóm tinh chỉnh SigLIP~2 bằng DoRA, một phương pháp chỉ huấn luyện một phần nhỏ tham số bổ sung.
+
+Đánh giá dùng ảnh công khai của Fashionpedia và một bộ 155 truy vấn tiếng Việt tự soạn; mỗi mô hình được so với BM25 bằng kiểm định bootstrap ghép cặp. Vì nhãn do người chấm và một bộ lọc tự động gán nên có thể sai, nhóm rà lại từng truy vấn mà mô hình trả sai ở top-10 để xác định lỗi thuộc về mô hình hay về nhãn. Báo cáo gồm năm chương: Chương~\ref{chap:tong_quan} đặt bài toán, mục tiêu và phạm vi; Chương~\ref{chap:co_so_ly_thuyet} điểm lại cơ sở lý thuyết; Chương~\ref{chap:thiet_ke} và \ref{chap:cai_dat} trình bày thiết kế và cài đặt; Chương~\ref{chap:danh_gia} nêu kết quả đo, phân tích lỗi và trả lời các câu hỏi nghiên cứu.

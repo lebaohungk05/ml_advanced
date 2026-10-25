@@ -1,0 +1,37 @@
+\begin{tikzpicture}[
+  ifc/.style={draw, line width=0.7pt, append after command={\pgfextra{\draw[line width=0.7pt] (\tikzlastnode.north west) rectangle (\tikzlastnode.south east);}}, rectangle split, rectangle split parts=3, rectangle split part fill={orange!14,white,white}, text width=4.0cm, align=left, font=\scriptsize, inner sep=2.5pt},
+  cls/.style={draw, line width=0.7pt, append after command={\pgfextra{\draw[line width=0.7pt] (\tikzlastnode.north west) rectangle (\tikzlastnode.south east);}}, rectangle split, rectangle split parts=2, rectangle split part fill={blue!8,white}, text width=4.0cm, align=left, font=\scriptsize, inner sep=2.5pt},
+  imp/.style={draw, line width=0.7pt, append after command={\pgfextra{\draw[line width=0.7pt] (\tikzlastnode.north west) rectangle (\tikzlastnode.south east);}}, rectangle split, rectangle split parts=2, rectangle split part fill={blue!8,white}, text width=4.0cm, align=left, font=\scriptsize, inner sep=2pt},
+  core/.style={draw, line width=0.7pt, append after command={\pgfextra{\draw[line width=0.7pt] (\tikzlastnode.north west) rectangle (\tikzlastnode.south east);}}, rectangle split, rectangle split parts=2, rectangle split part fill={green!16,white}, text width=4.0cm, align=left, font=\scriptsize, inner sep=2.5pt},
+  comp/.style={{Diamond[open,length=2.6mm,width=1.8mm]}-},
+  real/.style={-{Triangle[open,length=2.6mm,width=2.4mm]}, dashed},
+  lbl/.style={font=\scriptsize, inner sep=1.5pt, fill=white, align=center}
+]
+\node[core, anchor=north] (dense) at (4.9,0) {\centering$\ll$lõi$\gg$\\ \textbf{DenseRetriever}\nodepart{second}embedder: Embedder\\store: VectorStore\\name: str\\+ index(products)\\+ search(query)};
+\node[ifc, anchor=north] (retr) at (13.4,0) {\centering$\ll$interface$\gg$\\\textbf{Retriever}\nodepart{second}name: str\nodepart{third}+ index(products)\\+ search(query)};
+\node[ifc, anchor=north] (emb) at (2.1,-4.0) {\centering$\ll$interface$\gg$\\\textbf{Embedder}\nodepart{second}name: str\\dim: int\nodepart{third}+ encode\_text(texts)\\+ encode\_image(images)};
+\node[ifc, anchor=north] (vs) at (7.7,-4.0) {\centering$\ll$interface$\gg$\\\textbf{VectorStore}\nodepart{second}dim: int\nodepart{third}+ upsert(products, vectors)\\+ search(vector, top\_k, filters)\\+ count()};
+\node[cls, anchor=north] (bm) at (13.4,-4.0) {\centering\textbf{BM25Retriever}\nodepart{second}k1 = 1,5\\b = 0,75};
+\node[ifc, anchor=north] (mp) at (13.4,-6.6) {\centering$\ll$interface$\gg$\\\textbf{MetricsPort}\nodepart{second}\nodepart{third}+ recall\_at\_k(run, labels, k)\\+ mrr(run, labels)\\+ ndcg\_at\_k(run, labels, k)};
+\node[cls, anchor=north] (rm) at (13.4,-9.6) {\centering\textbf{RankingMetrics}\nodepart{second}min\_relevant\_grade: int\\+ summary(run, labels)};
+\node[imp, anchor=north] (e1) at (2.1,-7.7) {\centering\textbf{FakeEmbedder}\nodepart{second}dim = 64};
+\node[imp, anchor=north, below=0.2cm of e1] (e2) {\centering\textbf{ClipEmbedder}\nodepart{second}dim = 512};
+\node[imp, anchor=north, below=0.2cm of e2] (e3) {\centering\textbf{Siglip2Embedder}\nodepart{second}dim = 768\\nạp SigLIP 1 và 2\\adapter\_path (tuỳ chọn)};
+\node[imp, anchor=north, below=0.2cm of e3] (e4) {\centering\textbf{ViSiglipEmbedder}\nodepart{second}dim = 768};
+\node[imp, anchor=north, below=0.2cm of e4] (e5) {\centering\textbf{ResnetImageEmbedder}\nodepart{second}dim = 2048\\không mã hoá được chữ};
+\node[imp, anchor=north] (v1) at (7.7,-8.0) {\centering\textbf{InMemoryVectorStore}\nodepart{second}tìm chính xác, cosine};
+\node[imp, anchor=north, below=0.2cm of v1] (v2) {\centering\textbf{QdrantVectorStore}\nodepart{second}collection: str\\distance: str = cosine\\+ ensure\_collection()\\+ recreate\_collection()};
+\coordinate (busE) at ($(e1.west)+(-0.4,0)$);
+\foreach \e in {e1,e2,e3,e4,e5}{\draw (\e.west) -- (\e.west -| busE);}
+\draw[real] (e5.west -| busE) -- (busE |- emb.west) -- (emb.west);
+\coordinate (busV) at ($(v1.west)+(-0.4,0)$);
+\foreach \v in {v1,v2}{\draw (\v.west) -- (\v.west -| busV);}
+\draw[real] (v2.west -| busV) -- (busV |- vs.west) -- (vs.west);
+\draw[real] (dense.east) -- node[lbl] {cài đặt} (retr.west);
+\draw[real] (bm.north) -- (retr.south);
+\draw[real] (rm.north) -- (mp.south);
+\coordinate (pE) at (3.3,0);
+\coordinate (pV) at (6.4,0);
+\draw[comp] (pE |- dense.south) -- node[lbl, pos=0.5] {bộ mã hoá} (pE |- emb.north);
+\draw[comp] (pV |- dense.south) -- node[lbl, pos=0.5] {kho vector} (pV |- vs.north);
+\end{tikzpicture}

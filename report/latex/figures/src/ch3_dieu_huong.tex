@@ -1,0 +1,21 @@
+\begin{tikzpicture}[
+  font=\small,
+  n/.style={draw, rounded corners, fill=blue!6, align=center, text width=4.4cm, minimum height=1cm},
+  s/.style={draw, rounded corners, fill=white, align=left, text width=4.4cm, font=\footnotesize, anchor=north},
+  arr/.style={-{Stealth[length=2mm]}},
+  lbl/.style={font=\footnotesize, inner sep=1.5pt, fill=white, align=left}
+]
+\node[n, fill=gray!15, text width=6cm] (top) at (5.4,0) {Màn hình tìm kiếm duy nhất\\(không chuyển trang)};
+\node[n, fill=green!10] (t1) at (0,-2.0) {Thanh trên};
+\node[n] (t2) at (5.4,-2.0) {Tìm bằng chữ};
+\node[n, fill=orange!12] (t3) at (10.8,-2.0) {Tìm bằng ảnh};
+\node[s] (s1) at (0,-3.1) {trạng thái hệ thống};
+\node[s] (s2) at (5.4,-3.1) {ô nhập mô tả\\ô danh mục\\ô số kết quả\\ô khoá API};
+\node[s] (s3) at (10.8,-3.1) {vùng kéo thả hoặc\\chọn tệp ảnh\\xem trước ảnh\\nút bỏ ảnh};
+\node[n, fill=purple!8, text width=6cm] (res) at (5.4,-7.6) {Lưới kết quả và thông báo};
+\node[s, text width=10.6cm, align=left] (s4) at (5.4,-8.7) {thẻ kết quả theo hạng: ảnh, tiêu đề, danh mục, độ tương đồng, chi tiết bộ phận\\thông báo khi thiếu khoá API, kho vector không phản hồi hoặc không có kết quả};
+\foreach \t in {t1,t2,t3}{\draw[arr] (top.south) -- (\t.north);}
+\foreach \t/\s in {t1/s1,t2/s2,t3/s3}{\draw (\t.south) -- (\s.north);}
+\draw[arr] (s2.south) -- node[lbl, right] {nút Tìm,\\tìm chữ} (s2.south |- res.north);
+\draw[arr] (s3.south) -- node[lbl, right] {nút Tìm,\\tìm ảnh} (s3.south |- res.east) -- (res.east);
+\end{tikzpicture}

@@ -1,0 +1,677 @@
+{
+ "sensitivity": {
+  "mean_ge_1": {
+   "bm25": {
+    "r1": 0.2,
+    "r5": 0.47096774193548385,
+    "r10": 0.567741935483871,
+    "mrr": 0.3153072196620585
+   },
+   "clip": {
+    "r1": 0.16774193548387098,
+    "r5": 0.38064516129032255,
+    "r10": 0.4258064516129032,
+    "mrr": 0.25126984126984125
+   },
+   "visiglip_ot": {
+    "r1": 0.08387096774193549,
+    "r5": 0.22580645161290322,
+    "r10": 0.27741935483870966,
+    "mrr": 0.1444342037890425
+   },
+   "siglip2": {
+    "r1": 0.49032258064516127,
+    "r5": 0.7741935483870968,
+    "r10": 0.864516129032258,
+    "mrr": 0.6061623143881208
+   },
+   "siglip2_lora": {
+    "r1": 0.6967741935483871,
+    "r5": 0.8516129032258064,
+    "r10": 0.8838709677419355,
+    "mrr": 0.765931899641577
+   }
+  },
+  "any_ge_1": {
+   "bm25": {
+    "r1": 0.33548387096774196,
+    "r5": 0.632258064516129,
+    "r10": 0.6903225806451613,
+    "mrr": 0.46372759856630824
+   },
+   "clip": {
+    "r1": 0.2129032258064516,
+    "r5": 0.43870967741935485,
+    "r10": 0.5032258064516129,
+    "mrr": 0.3012775217613927
+   },
+   "visiglip_ot": {
+    "r1": 0.13548387096774195,
+    "r5": 0.3225806451612903,
+    "r10": 0.4,
+    "mrr": 0.21655657962109576
+   },
+   "siglip2": {
+    "r1": 0.567741935483871,
+    "r5": 0.8193548387096774,
+    "r10": 0.8709677419354839,
+    "mrr": 0.6755888376856121
+   },
+   "siglip2_lora": {
+    "r1": 0.7483870967741936,
+    "r5": 0.8709677419354839,
+    "r10": 0.8903225806451613,
+    "mrr": 0.8048387096774193
+   }
+  },
+  "all_ge_1": {
+   "bm25": {
+    "r1": 0.12258064516129032,
+    "r5": 0.33548387096774196,
+    "r10": 0.4967741935483871,
+    "mrr": 0.21918842805939584
+   },
+   "clip": {
+    "r1": 0.11612903225806452,
+    "r5": 0.2838709677419355,
+    "r10": 0.3419354838709677,
+    "mrr": 0.18647721454173063
+   },
+   "visiglip_ot": {
+    "r1": 0.03225806451612903,
+    "r5": 0.12903225806451613,
+    "r10": 0.2064516129032258,
+    "mrr": 0.07473630312339989
+   },
+   "siglip2": {
+    "r1": 0.3935483870967742,
+    "r5": 0.7096774193548387,
+    "r10": 0.8129032258064516,
+    "mrr": 0.5209984639016898
+   },
+   "siglip2_lora": {
+    "r1": 0.632258064516129,
+    "r5": 0.8258064516129032,
+    "r10": 0.864516129032258,
+    "mrr": 0.7132411674347157
+   }
+  },
+  "mean_ge_1_5": {
+   "bm25": {
+    "r1": 0.10967741935483871,
+    "r5": 0.23870967741935484,
+    "r10": 0.3935483870967742,
+    "mrr": 0.17522273425499232
+   },
+   "clip": {
+    "r1": 0.1032258064516129,
+    "r5": 0.23225806451612904,
+    "r10": 0.2967741935483871,
+    "mrr": 0.15406554019457241
+   },
+   "visiglip_ot": {
+    "r1": 0.025806451612903226,
+    "r5": 0.11612903225806452,
+    "r10": 0.18064516129032257,
+    "mrr": 0.06321300563236046
+   },
+   "siglip2": {
+    "r1": 0.3548387096774194,
+    "r5": 0.6774193548387096,
+    "r10": 0.7935483870967742,
+    "mrr": 0.47751152073732733
+   },
+   "siglip2_lora": {
+    "r1": 0.535483870967742,
+    "r5": 0.7935483870967742,
+    "r10": 0.8516129032258064,
+    "mrr": 0.645847414234511
+   }
+  }
+ },
+ "accessory_queries": [
+  {
+   "query_id": "14",
+   "text": "kính mắt gọng tròn",
+   "human_pairs": 0,
+   "auto_pairs": 46,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "15",
+   "text": "mũ lưỡi trai đen",
+   "human_pairs": 48,
+   "auto_pairs": 0,
+   "lora_top10_auto": 0,
+   "lora_top10_human": 10,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "16",
+   "text": "băng đô vải nhung",
+   "human_pairs": 0,
+   "auto_pairs": 49,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "17",
+   "text": "cà vạt kẻ sọc",
+   "human_pairs": 1,
+   "auto_pairs": 47,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "18",
+   "text": "găng tay da đen",
+   "human_pairs": 19,
+   "auto_pairs": 28,
+   "lora_top10_auto": 8,
+   "lora_top10_human": 2,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "19",
+   "text": "đồng hồ dây da nâu",
+   "human_pairs": 0,
+   "auto_pairs": 49,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "20",
+   "text": "dây nịt da đen",
+   "human_pairs": 0,
+   "auto_pairs": 47,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "22",
+   "text": "vớ cổ cao trắng",
+   "human_pairs": 48,
+   "auto_pairs": 0,
+   "lora_top10_auto": 0,
+   "lora_top10_human": 10,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "23",
+   "text": "giày cao gót đen",
+   "human_pairs": 0,
+   "auto_pairs": 50,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "24",
+   "text": "túi xách da nâu",
+   "human_pairs": 0,
+   "auto_pairs": 48,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "25",
+   "text": "khăn choàng len dài",
+   "human_pairs": 30,
+   "auto_pairs": 20,
+   "lora_top10_auto": 4,
+   "lora_top10_human": 6,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "26",
+   "text": "dù gấp gọn nhỏ",
+   "human_pairs": 39,
+   "auto_pairs": 0,
+   "lora_top10_auto": 0,
+   "lora_top10_human": 10,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "35",
+   "text": "ví cầm tay nhỏ",
+   "human_pairs": 15,
+   "auto_pairs": 33,
+   "lora_top10_auto": 9,
+   "lora_top10_human": 1,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "36",
+   "text": "giày thể thao trắng",
+   "human_pairs": 0,
+   "auto_pairs": 48,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "40",
+   "text": "khăn quàng cổ lụa",
+   "human_pairs": 2,
+   "auto_pairs": 45,
+   "lora_top10_auto": 9,
+   "lora_top10_human": 1,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "71",
+   "text": "giày cao gót mũi nhọn màu đen da bóng",
+   "human_pairs": 0,
+   "auto_pairs": 48,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "72",
+   "text": "túi xách nhỏ đeo chéo màu đen da mềm",
+   "human_pairs": 0,
+   "auto_pairs": 49,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "73",
+   "text": "mũ len bo tròn màu xám đội mùa đông",
+   "human_pairs": 35,
+   "auto_pairs": 13,
+   "lora_top10_auto": 2,
+   "lora_top10_human": 8,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "74",
+   "text": "kính mắt gọng vuông màu đen dáng cổ điển",
+   "human_pairs": 0,
+   "auto_pairs": 48,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "75",
+   "text": "khăn choàng len dày màu đỏ đô mùa lạnh",
+   "human_pairs": 25,
+   "auto_pairs": 22,
+   "lora_top10_auto": 2,
+   "lora_top10_human": 8,
+   "lora_hit10": true
+  },
+  {
+   "query_id": "99",
+   "text": "giày sneaker trắng basic",
+   "human_pairs": 0,
+   "auto_pairs": 45,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "100",
+   "text": "túi tote vải canvas basic",
+   "human_pairs": 0,
+   "auto_pairs": 43,
+   "lora_top10_auto": 10,
+   "lora_top10_human": 0,
+   "lora_hit10": false
+  },
+  {
+   "query_id": "101",
+   "text": "mũ bucket hat vải kaki",
+   "human_pairs": 46,
+   "auto_pairs": 0,
+   "lora_top10_auto": 0,
+   "lora_top10_human": 10,
+   "lora_hit10": true
+  }
+ ],
+ "human_acceptance_unfiltered_accessory": {
+  "item_in_title": [
+   82,
+   138
+  ],
+  "item_not_in_title": [
+   6,
+   169
+  ]
+ },
+ "auto_zero": {
+  "total_rounds_1_2": 2373,
+  "spurious_keyword_pairs": 524,
+  "spurious_keyword_queries": 21,
+  "category_named_in_query_pairs": 44,
+  "category_named_in_query_by_query": {
+   "25": 2,
+   "41": 23,
+   "50": 17,
+   "75": 2
+  },
+  "accessory_filter_pairs_with_item_in_image": 406,
+  "accessory_filter_queries": 14
+ },
+ "error_cases": [
+  {
+   "query_id": "41",
+   "text": "áo sơ mi lụa tay dài công sở màu trắng ngà",
+   "keyword": "Quần dài",
+   "keyword_in_query": false,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "14",
+   "text": "kính mắt gọng tròn",
+   "keyword": "Kính mắt",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "16",
+   "text": "băng đô vải nhung",
+   "keyword": "Băng đô",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "17",
+   "text": "cà vạt kẻ sọc",
+   "keyword": "Cà vạt",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "19",
+   "text": "đồng hồ dây da nâu",
+   "keyword": "Đồng hồ",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "20",
+   "text": "dây nịt da đen",
+   "keyword": "Dây nịt",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "23",
+   "text": "giày cao gót đen",
+   "keyword": "Giày",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "24",
+   "text": "túi xách da nâu",
+   "keyword": "Túi",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "36",
+   "text": "giày thể thao trắng",
+   "keyword": "Giày",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "40",
+   "text": "khăn quàng cổ lụa",
+   "keyword": "Khăn choàng",
+   "keyword_in_query": true,
+   "top5_auto": 4,
+   "top10_auto": 9,
+   "top1_source": "human"
+  },
+  {
+   "query_id": "57",
+   "text": "đầm dạ hội đen dài tay ren dự tiệc tối",
+   "keyword": "Quần dài",
+   "keyword_in_query": false,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "64",
+   "text": "váy hai dây lụa satin màu vàng ánh kim",
+   "keyword": "Chân váy",
+   "keyword_in_query": false,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "71",
+   "text": "giày cao gót mũi nhọn màu đen da bóng",
+   "keyword": "Giày",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "72",
+   "text": "túi xách nhỏ đeo chéo màu đen da mềm",
+   "keyword": "Túi",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "74",
+   "text": "kính mắt gọng vuông màu đen dáng cổ điển",
+   "keyword": "Kính mắt",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "99",
+   "text": "giày sneaker trắng basic",
+   "keyword": "Giày",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "100",
+   "text": "túi tote vải canvas basic",
+   "keyword": "Túi",
+   "keyword_in_query": true,
+   "top5_auto": 5,
+   "top10_auto": 10,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "148",
+   "text": "đầm maxi dáng dài thướt tha",
+   "keyword": "Quần dài",
+   "keyword_in_query": false,
+   "top5_auto": 4,
+   "top10_auto": 9,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "83",
+   "text": "váy tomboy cá tính năng động",
+   "keyword": "Chân váy",
+   "keyword_in_query": false,
+   "top5_auto": 4,
+   "top10_auto": 7,
+   "top1_source": "auto"
+  },
+  {
+   "query_id": "18",
+   "text": "găng tay da đen",
+   "keyword": "Áo choàng không tay",
+   "keyword_in_query": false,
+   "top5_auto": 4,
+   "top10_auto": 8,
+   "top1_source": "auto"
+  }
+ ],
+ "without_audited_queries": {
+  "n_kept": 135,
+  "n_excluded": 20,
+  "metrics": {
+   "bm25": {
+    "r1": 0.22962962962962963,
+    "r5": 0.5259259259259259,
+    "r10": 0.6370370370370371,
+    "mrr": 0.3564638447971783
+   },
+   "clip": {
+    "r1": 0.1925925925925926,
+    "r5": 0.43703703703703706,
+    "r10": 0.4888888888888889,
+    "mrr": 0.28849500293944735
+   },
+   "visiglip_ot": {
+    "r1": 0.0962962962962963,
+    "r5": 0.25925925925925924,
+    "r10": 0.31851851851851853,
+    "mrr": 0.16583186360964142
+   },
+   "siglip2": {
+    "r1": 0.5481481481481482,
+    "r5": 0.8740740740740741,
+    "r10": 0.9703703703703703,
+    "mrr": 0.6802233980011758
+   },
+   "siglip2_lora": {
+    "r1": 0.8,
+    "r5": 0.9703703703703703,
+    "r10": 1.0,
+    "mrr": 0.8770987654320987
+   }
+  },
+  "bootstrap": {
+   "siglip2_lora_vs_siglip2": {
+    "recall@1": [
+     0.2518518518518518,
+     0.0
+    ],
+    "recall@10": [
+     0.02962962962962963,
+     0.037
+    ],
+    "mrr": [
+     0.196875367430923,
+     0.0
+    ]
+   },
+   "siglip2_vs_bm25": {
+    "recall@1": [
+     0.31851851851851853,
+     0.0
+    ],
+    "recall@10": [
+     0.3333333333333333,
+     0.0
+    ],
+    "mrr": [
+     0.32375955320399763,
+     0.0
+    ]
+   },
+   "bm25_vs_clip": {
+    "recall@1": [
+     0.037037037037037035,
+     0.4786
+    ],
+    "recall@10": [
+     0.14814814814814814,
+     0.0082
+    ],
+    "mrr": [
+     0.06796884185773075,
+     0.1098
+    ]
+   }
+  }
+ },
+ "without_rule_affected_queries": {
+  "n_kept": 120,
+  "n_excluded": 35,
+  "metrics": {
+   "bm25": {
+    "r1": 0.24166666666666667,
+    "r5": 0.55,
+    "r10": 0.6583333333333333,
+    "mrr": 0.3748313492063493
+   },
+   "clip": {
+    "r1": 0.20833333333333334,
+    "r5": 0.4583333333333333,
+    "r10": 0.5166666666666667,
+    "mrr": 0.3096957671957672
+   },
+   "visiglip_ot": {
+    "r1": 0.1,
+    "r5": 0.275,
+    "r10": 0.3333333333333333,
+    "mrr": 0.17531084656084656
+   },
+   "siglip2": {
+    "r1": 0.5416666666666666,
+    "r5": 0.8833333333333333,
+    "r10": 0.9833333333333333,
+    "mrr": 0.6827976190476193
+   },
+   "siglip2_lora": {
+    "r1": 0.825,
+    "r5": 0.9833333333333333,
+    "r10": 1.0,
+    "mrr": 0.8947916666666667
+   }
+  },
+  "bootstrap_lora_vs_siglip2": {
+   "recall@1": [
+    0.2833333333333333,
+    0.0
+   ],
+   "recall@10": [
+    0.016666666666666666,
+    0.2692
+   ],
+   "mrr": [
+    0.21199404761904764,
+    0.0
+   ]
+  }
+ }
+}

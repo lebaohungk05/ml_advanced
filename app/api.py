@@ -18,6 +18,8 @@ from typing import Annotated
 from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Request, UploadFile, status
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from starlette.responses import Response
+from starlette.types import Scope
 from pydantic import BaseModel, Field
 
 from src.core.models import Product, Query, SearchResult
@@ -304,8 +306,15 @@ async def search_image(
     return _run(retriever, query)
 
 
+class RevalidatedStaticFiles(StaticFiles):
+    async def get_response(self, path: str, scope: Scope) -> Response:
+        response = await super().get_response(path, scope)
+        response.headers["Cache-Control"] = "no-cache"
+        return response
+
+
 # PUBLIC like /image: static assets only, the key is forwarded to /search client-side.
-app.mount("/ui", StaticFiles(directory=STATIC_DIR, html=True), name="ui")
+app.mount("/ui", RevalidatedStaticFiles(directory=STATIC_DIR, html=True), name="ui")
 
 
 def _causes(exc: BaseException) -> Iterator[BaseException]:

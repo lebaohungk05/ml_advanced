@@ -1,0 +1,32 @@
+\begin{tikzpicture}[
+  font=\footnotesize,
+  act/.style={draw, rounded corners=8pt, fill=blue!5, align=center, text width=3.5cm, minimum height=1.1cm},
+  dec/.style={draw, diamond, aspect=1.7, fill=yellow!10, align=center, inner sep=0pt, text width=2.2cm},
+  err/.style={draw, rounded corners=8pt, fill=red!8, align=center, text width=3.5cm, minimum height=0.9cm},
+  arr/.style={-{Stealth[length=2mm]}}
+]
+\node[circle, fill=black, minimum size=0.3cm] (start) at (0,0) {};
+\node[act] (a1) at (2.3,0) {Đọc cấu hình và danh sách sản phẩm; dựng bộ mã hoá và kho qua bộ đăng ký};
+\node[dec] (d1) at (7.4,0) {Chế độ ảnh, bộ tìm kiếm không phải vector?};
+\node[act] (a2) at (12.6,0) {Tạo bộ sưu tập nếu chưa có; xoá rồi tạo lại khi được yêu cầu};
+\node[err] (e1) at (7.4,-3.0) {Dừng trước khi xoá hay ghi dữ liệu};
+\node[act] (l1) at (2.3,-5.6) {Lấy một lô sản phẩm, đọc ảnh, mã hoá thành vector chuẩn hoá $L_2$};
+\node[dec] (d2) at (7.4,-5.6) {Mọi ảnh trong lô đọc được?};
+\node[act] (l2) at (12.6,-5.6) {Ghi vector kèm thuộc tính vào kho, ghi đè theo mã sản phẩm};
+\node[err] (e2) at (7.4,-8.3) {Dừng, báo mã sản phẩm thiếu ảnh};
+\node[dec] (d3) at (12.6,-8.3) {Còn lô chưa xử lý?};
+\node[circle, draw, minimum size=0.45cm] (end) at (16.4,-8.3) {};
+\node[circle, fill=black, minimum size=0.28cm] at (end) {};
+\node[align=left, anchor=north west] at (15.4,-8.9) {kho chứa các\\sản phẩm đã ghi};
+\draw[arr] (start) -- (a1);
+\draw[arr] (a1) -- (d1);
+\draw[arr] (d1) -- node[above] {không} (a2);
+\draw[arr] (d1) -- node[right] {có} (e1);
+\draw[arr] (a2.south) -- ++(0,-0.7) -| (l1.north);
+\draw[arr] (l1) -- (d2);
+\draw[arr] (d2) -- node[above] {có} (l2);
+\draw[arr] (d2) -- node[right] {không} (e2);
+\draw[arr] (l2) -- (d3);
+\draw[arr] (d3.south) -- node[right] {có} ++(0,-0.9) -| (l1.south);
+\draw[arr] (d3) -- node[above] {không} (end);
+\end{tikzpicture}

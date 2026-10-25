@@ -1,0 +1,47 @@
+\begin{tikzpicture}[
+  font=\small,
+  uc/.style={ellipse, draw, fill=blue!5, minimum width=4.4cm, minimum height=0.95cm, align=center, inner sep=1pt},
+  act/.style={align=center, font=\small},
+  rel/.style={-{Stealth[length=2mm]}, dashed},
+  stereo/.style={font=\scriptsize, fill=gray!3, inner sep=1pt},
+  assoc/.style={-}
+]
+\tikzset{stick/.pic={
+  \draw[thick] (0,1.05) circle (0.2);
+  \draw[thick] (0,0.85) -- (0,0.3);
+  \draw[thick] (-0.35,0.65) -- (0.35,0.65);
+  \draw[thick] (0,0.3) -- (-0.3,-0.15);
+  \draw[thick] (0,0.3) -- (0.3,-0.15);
+}}
+\draw[rounded corners, thick, fill=gray!3] (2.3,-10.9) rectangle (15.0,1.3);
+\node[font=\small\bfseries] at (8.65,0.95) {Hệ thống tìm kiếm sản phẩm thời trang};
+\node[uc] (a1) at (5.2,0) {Tìm bằng chữ (FR01)};
+\node[uc] (a2) at (5.2,-1.6) {Tìm bằng ảnh (FR02)};
+\node[uc] (a3) at (5.2,-3.2) {Xem trạng thái\\hệ thống (FR04)};
+\node[uc] (a4) at (5.2,-4.9) {Lập chỉ mục catalog (FR05)};
+\node[uc] (a5) at (5.2,-6.4) {Đánh giá hệ tìm kiếm (FR06)};
+\node[uc] (a6) at (5.2,-8.0) {Tinh chỉnh LoRA/DoRA (FR08)};
+\node[uc] (a7) at (5.2,-9.9) {Gán nhãn mù (FR09)};
+\node[uc] (b1) at (12.2,-0.8) {Lọc theo danh mục\\(FR03)};
+\node[uc] (b2) at (12.2,-5.5) {Tính chỉ số xếp hạng};
+\node[uc] (b3) at (12.2,-7.3) {Kiểm định thống kê\\(FR07)};
+\node[uc] (b4) at (12.2,-9.9) {Hoàn tác điểm\\vừa chấm};
+\pic at (0,-2.4) {stick};
+\node[act, anchor=north] (p1) at (0,-2.6) {Người dùng\\cuối};
+\pic at (0,-6.5) {stick};
+\node[act, anchor=north] (p2) at (-0.5,-6.7) {Developer};
+\pic at (0,-9.5) {stick};
+\node[act, anchor=north] (p3) at (0,-9.7) {Người gán\\nhãn};
+\draw[assoc] (0.4,-1.7) -- (a1.west);
+\draw[assoc] (0.4,-1.75) -- (a2.west);
+\draw[assoc] (0.4,-1.8) -- (a3.west);
+\draw[assoc] (0.4,-5.8) -- (a4.west);
+\draw[assoc] (0.4,-5.85) -- (a5.west);
+\draw[assoc] (0.4,-5.9) -- (a6.west);
+\draw[assoc] (0.4,-8.8) -- (a7.west);
+\draw[rel] (b1.west) -- node[stereo, sloped, pos=0.45] {$\ll$extend$\gg$} (a1.east);
+\draw[rel] (b1.west) -- node[stereo, sloped, pos=0.45] {$\ll$extend$\gg$} (a2.east);
+\draw[rel] (a5.east) -- node[stereo, sloped, pos=0.5] {$\ll$include$\gg$} (b2.west);
+\draw[rel] (b3.west) -- node[stereo, sloped, pos=0.5] {$\ll$extend$\gg$} (a5.east);
+\draw[rel] (b4.west) -- node[stereo, sloped, pos=0.5] {$\ll$extend$\gg$} (a7.east);
+\end{tikzpicture}

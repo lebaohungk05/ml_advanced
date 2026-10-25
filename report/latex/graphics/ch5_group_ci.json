@@ -1,0 +1,66 @@
+{
+ "A": {
+  "siglip2": {
+   "n": 46,
+   "hits": 37,
+   "recall10": 0.804,
+   "ci_low": 0.674,
+   "ci_high": 0.913
+  },
+  "siglip2_lora": {
+   "n": 46,
+   "hits": 37,
+   "recall10": 0.804,
+   "ci_low": 0.674,
+   "ci_high": 0.913
+  }
+ },
+ "B": {
+  "siglip2": {
+   "n": 41,
+   "hits": 34,
+   "recall10": 0.829,
+   "ci_low": 0.707,
+   "ci_high": 0.927
+  },
+  "siglip2_lora": {
+   "n": 41,
+   "hits": 35,
+   "recall10": 0.854,
+   "ci_low": 0.732,
+   "ci_high": 0.951
+  }
+ },
+ "C": {
+  "siglip2": {
+   "n": 33,
+   "hits": 28,
+   "recall10": 0.848,
+   "ci_low": 0.727,
+   "ci_high": 0.97
+  },
+  "siglip2_lora": {
+   "n": 33,
+   "hits": 30,
+   "recall10": 0.909,
+   "ci_low": 0.788,
+   "ci_high": 1.0
+  }
+ },
+ "D": {
+  "siglip2": {
+   "n": 35,
+   "hits": 35,
+   "recall10": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0
+  },
+  "siglip2_lora": {
+   "n": 35,
+   "hits": 35,
+   "recall10": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0
+  }
+ }
+}
