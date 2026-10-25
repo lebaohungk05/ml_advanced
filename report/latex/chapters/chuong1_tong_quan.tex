@@ -1,0 +1,117 @@
+\chapter{Tổng quan}
+\label{chap:tong_quan}
+
+Chương này đặt bài toán, mục tiêu và ba câu hỏi nghiên cứu của đồ án, rồi nêu phạm vi, đóng góp và bố cục báo cáo.
+
+\section{Bối cảnh và vấn đề}
+\label{sec:boi-canh}
+
+Một món đồ thời trang được nhận ra qua hình dáng, màu sắc, chất liệu và phong cách; những thuộc tính này dễ thấy bằng mắt nhưng khó gọi đúng tên. Người tìm đồ thường chỉ có một hình dung như ``đầm y2k dáng ôm màu hồng'' hay ``áo bomber jacket dáng ngắn'', chứ không biết người bán đặt tên sản phẩm là gì. Ô tìm kiếm theo từ khoá xử lý tình huống này kém. BM25~\cite{robertson2009bm25} chỉ xếp hạng cao một văn bản khi văn bản đó dùng đúng các từ có trong truy vấn, nên gặp hiện tượng lệch từ vựng giữa người hỏi và người mô tả~\cite{manning2008ir}.
+
+Các mô hình học biểu diễn chung cho ảnh và văn bản đưa ra một cách khác. CLIP~\cite{radford2021clip}, SigLIP~\cite{zhai2023siglip} và SigLIP~2~\cite{tschannen2025siglip2} đặt ảnh và câu mô tả vào cùng một không gian vector, nên một câu truy vấn có thể so trực tiếp với ảnh sản phẩm mà không cần văn bản mô tả sản phẩm. FashionCLIP~\cite{chia2022fashionclip} đã áp dụng hướng này cho thời trang. Các mô hình này được huấn luyện với tiếng Việt ở mức rất khác nhau: CLIP không nhắm tới tiếng Việt, SigLIP~2 là mô hình đa ngữ, còn ViSigLIP-OT~\cite{viclipot2026} được huấn luyện riêng cho tiếng Việt. Chúng xử lý đến đâu những cách nói đời thường như ``áo croptop'' hay ``quần wide leg'' thì chưa có số đo trên dữ liệu thời trang tiếng Việt. Đồ án đặt mục tiêu đo điều đó.
+
+Bài toán gặp ba khó khăn cụ thể.
+
+\begin{itemize}
+    \item \textbf{Từ vựng đời thường:} truy vấn tiếng Việt về thời trang trộn từ thuần Việt, từ mượn tiếng Anh và từ mới, như ``giày sneaker trắng basic'' hay ``áo croptop rib bo sát người''. Mô hình chỉ khớp theo từ sẽ trượt khi từ trong truy vấn không trùng với từ trong văn bản của sản phẩm.
+    \item \textbf{Thiếu bộ đánh giá:} Fashionpedia~\cite{jia2020fashionpedia} được xây dựng cho phát hiện và phân đoạn nên không có truy vấn hay nhãn cho bài toán tìm kiếm. Phần điểm lại nghiên cứu ở Chương~\ref{chap:co_so_ly_thuyet} cũng không tìm thấy bộ truy vấn tiếng Việt nào cho tìm ảnh thời trang. Muốn so sánh các mô hình thì nhóm phải tự soạn truy vấn và tự gán nhãn.
+    \item \textbf{Ảnh người mặc cả bộ:} mỗi ảnh trong catalog chứa trung bình 2,95 món, trong khi catalog chỉ lưu một danh mục chính cho mỗi ảnh. Với truy vấn về kính, giày hay túi, không có ảnh sản phẩm đứng riêng, nên khó nói thế nào là một kết quả đúng.
+\end{itemize}
+
+\section{Mục tiêu}
+\label{sec:muc-tieu}
+
+Đồ án xây dựng một hệ thống tìm ảnh sản phẩm thời trang bằng truy vấn tiếng Việt. Trên một bộ đánh giá riêng, hệ thống được đối chiếu với BM25 chạy trên tên danh mục của ảnh. Mô hình được dùng theo hai cách: giữ nguyên bản đã huấn luyện sẵn (zero-shot) hoặc tinh chỉnh thêm trên dữ liệu của đồ án. Năm mục tiêu cụ thể gồm:
+
+\begin{enumerate}
+    \item Dựng catalog tìm kiếm gồm 6.963 ảnh Fashionpedia (tập kiểm tra sau khi lọc trùng và chia 70/15/15 với seed 42), tách khỏi dữ liệu tinh chỉnh.
+    \item Soạn 155 truy vấn tiếng Việt chia thành bốn nhóm và gán nhãn theo thang 0/1/2. Người chấm độc lập gán một phần nhãn; độ đồng thuận giữa họ được đo bằng hệ số $\kappa$ của Cohen. Phần còn lại được gán nhãn 0 bằng bộ lọc tự động (Mục~\ref{sec:du-lieu-cach-do}).
+    \item So sánh năm hệ trên cùng 155 truy vấn bằng Recall@1, Recall@5, Recall@10, MRR và nDCG@10, kèm kiểm định bootstrap ghép cặp 10.000 lần.
+    \item Tinh chỉnh SigLIP~2 bằng DoRA với hạng (rank) bằng 8, rồi so với SigLIP~2 gốc, với LoRA thường, và với cấu hình không dùng mẫu âm khó (hard negative, tức ảnh sai nhưng rất giống ảnh đúng).
+    \item Xây dựng API và giao diện web truy vấn trên Qdrant với catalog 6.963 ảnh. Độ trễ mã hoá và tìm kiếm của từng truy vấn được đo riêng ở bước suy luận và so với chỉ tiêu dưới 200~ms của đề cương.
+\end{enumerate}
+
+\section{Câu hỏi nghiên cứu}
+\label{sec:cau-hoi-nghien-cuu}
+
+Ba câu hỏi nghiên cứu được trả lời bằng số liệu ở Mục~\ref{sec:tra-loi-ch}. Bảng~\ref{tab:ch1-cau-hoi} cho biết mỗi câu so sánh những hệ nào.
+
+\begin{description}
+    \item[CH1.] Tìm kiếm bằng biểu diễn chung đa mô thức dùng zero-shot (SigLIP~2, CLIP, ViSigLIP-OT) có tốt hơn BM25 trên truy vấn tiếng Việt không?
+    \item[CH2.] Tinh chỉnh SigLIP~2 bằng adapter có cho kết quả tốt hơn zero-shot, xét theo kiểm định ghép cặp, hay không? Nếu có, DoRA và mẫu âm khó có làm kết quả tốt hơn LoRA thường hay không?
+    \item[CH3.] Nguyên nhân lỗi còn lại nằm ở mô hình hay ở nhãn và catalog?
+\end{description}
+
+\begin{table}[H]
+\centering
+\caption{Câu hỏi nghiên cứu và đối tượng so sánh}
+\label{tab:ch1-cau-hoi}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}l >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{3.6cm}@{}}
+\toprule
+\textbf{Câu} & \textbf{Đối tượng so sánh} & \textbf{Nơi trả lời} \\
+\midrule
+CH1 & SigLIP~2, CLIP và ViSigLIP-OT so với BM25 & Mục~\ref{sec:so-sanh-cau-hinh}, \ref{sec:kiem-dinh} \\
+CH2 & SigLIP~2 tinh chỉnh so với SigLIP~2 gốc; DoRA so với LoRA thường; có và không có mẫu âm khó & Mục~\ref{sec:ablation}, \ref{sec:kiem-dinh}, \ref{sec:danh-gia-dau-ra} \\
+CH3 & Các truy vấn mà hệ DoRA trượt ở top-10 & Mục~\ref{sec:tra-loi-ch}, dựa trên Mục~\ref{sec:doi-soat-nhan} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Phạm vi và phương pháp}
+\label{sec:pham-vi}
+
+Dữ liệu là Fashionpedia, một bộ ảnh người mặc công khai với 46 danh mục. Sau khi lọc trùng còn 46.416 ảnh, chia thành 32.491 ảnh huấn luyện, 6.962 ảnh xác thực và 6.963 ảnh kiểm tra; catalog dùng để tìm kiếm và đánh giá là tập kiểm tra. Catalog không có màu, chất liệu, giá hay mô tả của người bán, chỉ có tên các danh mục có trong ảnh. Vì vậy BM25 trong đồ án chạy trên tên danh mục, một văn bản ngắn và ít thông tin, nên là đối chứng yếu hơn một ô tìm kiếm có thêm mô tả của người bán. Truy vấn là văn bản tiếng Việt, ảnh là đối tượng được tìm.
+
+Bảng~\ref{tab:ch1-he-thong} liệt kê các hệ được đo. Năm hệ đầu có nhãn đầy đủ cho top-10 và tạo thành bảng kết quả chính. Ba hệ sau chỉ dùng để khảo sát loại bỏ thành phần (ablation), không nằm trong tập ứng viên chấm nhãn nên nhãn của chúng chưa đầy đủ. Riêng ViSigLIP-OT phải chạy trên CPU vì trên GPU mô hình cho giá trị NaN (không phải số), nên điểm thấp của hệ này có thể một phần do cách chạy, không hoàn toàn do chất lượng biểu diễn.
+
+\begin{table}[H]
+\centering
+\caption{Các hệ được đo}
+\label{tab:ch1-he-thong}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.3cm} >{\raggedright\arraybackslash}X c l@{}}
+\toprule
+\textbf{Hệ} & \textbf{Cách biểu diễn} & \textbf{Số chiều vector} & \textbf{Dùng trong} \\
+\midrule
+BM25 & Tìm theo từ khoá; văn bản của sản phẩm là tên các danh mục & -- & Bảng chính \\
+CLIP ViT-B/32 & Biểu diễn chung ảnh--văn bản, zero-shot & 512 & Bảng chính \\
+SigLIP~2 (hệ gốc) & Biểu diễn chung ảnh--văn bản đa ngữ, zero-shot & 768 & Bảng chính \\
+ViSigLIP-OT & Biểu diễn chung cho tiếng Việt, zero-shot & 768 & Bảng chính \\
+SigLIP~2 + DoRA (hệ DoRA) & SigLIP~2 tinh chỉnh, có mẫu âm khó & 768 & Bảng chính \\
+SigLIP~1 & Biểu diễn chung ảnh--văn bản, zero-shot & 768 & Ablation \\
+SigLIP~2 + LoRA thường & Tinh chỉnh không dùng DoRA & 768 & Ablation \\
+SigLIP~2 + DoRA, không mẫu âm khó & Tinh chỉnh chỉ với mẫu âm lấy từ các ảnh khác trong cùng mỗi lô huấn luyện & 768 & Ablation \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Vì chưa có nhãn sẵn, nhóm tự dựng bộ đánh giá. Tập ứng viên gồm 10 kết quả đầu của BM25, CLIP, SigLIP~2 và ViSigLIP-OT (vòng chấm thứ nhất) và của hệ DoRA (vòng thứ hai); các kết quả được xáo trộn và ẩn tên hệ trước khi chấm. Ba cấu hình ablation không vào tập này. Mỗi cặp do người chấm xem có hai người chấm độc lập, riêng 296 cặp có ba người; các cặp còn lại do bộ lọc tự động gán điểm 0 (Mục~\ref{sec:du-lieu-cach-do}). Chất lượng đo bằng Recall@$K$, MRR và nDCG@10; chênh lệch giữa hai hệ được kiểm định bằng bootstrap ghép cặp theo truy vấn. Độ trễ đo từng truy vấn một.
+
+Phạm vi đánh giá có các giới hạn sau.
+
+\begin{itemize}
+    \item \textbf{Loại truy vấn:} đồ án đánh giá truy vấn bằng văn bản. Tìm bằng ảnh nằm ngoài phạm vi đánh giá.
+    \item \textbf{Giới hạn của bộ truy vấn:} bộ truy vấn không dựa trên dữ liệu thương mại hay khảo sát người dùng. Bộ không có câu nào về áo dài, áo bà ba hay nón lá, nên báo cáo không kết luận về thị trường hay độ lệch văn hoá.
+    \item \textbf{Khảo sát loại bỏ thành phần:} gồm bốn trong bảy trục dự kiến; ba trục còn lại dành cho giai đoạn sau. Mỗi cấu hình huấn luyện một lần với seed 42.
+    \item \textbf{Vận hành thực tế:} độ trễ qua API web và kho vector, độ chính xác của chỉ mục gần đúng và khả năng chịu tải đồng thời là hướng phát triển. Mục~\ref{sec:han-che-danh-gia} tổng hợp các giới hạn này.
+\end{itemize}
+
+\section{Đóng góp}
+\label{sec:dong-gop}
+
+Đồ án có bốn đóng góp, mỗi đóng góp gắn với một kết quả được trình bày ở Chương~\ref{chap:danh_gia}.
+
+\begin{enumerate}
+    \item \textbf{Bộ đánh giá tiếng Việt cho tìm ảnh thời trang.} Bộ gồm 155 truy vấn chia bốn nhóm và 7.324 cặp (truy vấn, ảnh) có nhãn. Người chấm gán 4.951 cặp với $\kappa$ từ 0,44 đến 0,52; 2.373 cặp còn lại (khoảng một phần ba) do bộ lọc tự động gán 0.
+    \item \textbf{So sánh có kiểm định giữa các hướng tìm kiếm.} SigLIP~2 gốc tốt hơn BM25 ở Recall@10 (0,865 so với 0,568); CLIP và ViSigLIP-OT thì không. Tinh chỉnh nâng Recall@1 từ 0,490 lên 0,697, nhưng mức tăng chưa quy được riêng cho DoRA hay mẫu âm khó.
+    \item \textbf{Đối soát nhãn tự động.} Bộ lọc tự động gán 0 cho một phần cặp nhãn và làm lệch 35 truy vấn; khi rà lại, nhóm xác nhận 26 truy vấn trong số đó bị chấm sai. Cả 18 truy vấn mà hệ DoRA trượt ở top-10 đều thuộc 26 truy vấn này. Bảng chính vẫn tính trên đủ 155 truy vấn; việc bỏ 35 truy vấn chỉ nhằm xem độ nhạy (Mục~\ref{sec:doi-soat-nhan}, \ref{sec:sau-sua-loc}).
+    \item \textbf{Kiến trúc dễ thay thành phần.} Hệ thống theo kiến trúc lục giác (cổng và bộ chuyển đổi). Phần lõi chỉ khai báo bốn cổng. Mô hình, kho vector và bộ tính chỉ số là các bộ chuyển đổi thay thế được, chọn bằng cấu hình. Nhờ đó đổi giữa CLIP, SigLIP~2 và ViSigLIP-OT, hay giữa kho trong bộ nhớ và Qdrant, không phải sửa lõi.
+\end{enumerate}
+
+\section{Bố cục báo cáo}
+\label{sec:bo-cuc}
+
+Chương~\ref{chap:co_so_ly_thuyet} điểm lại các nghiên cứu liên quan và khái niệm nền tảng. Chương~\ref{chap:thiet_ke} trình bày yêu cầu và thiết kế hệ thống; Chương~\ref{chap:cai_dat} mô tả cài đặt, các tham số chính, API web và giao diện web. Chương~\ref{chap:danh_gia} trình bày kế hoạch kiểm thử, kết quả đo, phân tích lỗi, đối soát nhãn và câu trả lời cho ba câu hỏi nghiên cứu. Phần Kết luận tóm tắt kết quả, hạn chế và hướng phát triển. Phụ lục~\ref{app:truy-van} và Phụ lục~\ref{app:doi-soat} liệt kê bộ truy vấn đánh giá và các truy vấn bị đánh dấu khi đối soát nhãn chấm 0 tự động.

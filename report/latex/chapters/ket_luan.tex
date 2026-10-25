@@ -1,0 +1,10 @@
+\chapter*{KẾT LUẬN}
+\addcontentsline{toc}{chapter}{KẾT LUẬN}
+
+\section*{Kết quả đạt được}
+
+Đồ án xây dựng hệ thống tìm kiếm ảnh thời trang bằng truy vấn tiếng Việt trên catalog 6.963 ảnh Fashionpedia, gồm API web, giao diện web và kho vector, theo kiến trúc lục giác để mọi mô hình chạy qua cùng một quy trình đánh giá. Trên 155 truy vấn với nhãn của hai người chấm độc lập, SigLIP~2 dùng sẵn đạt Recall@10 là 0,865 so với 0,568 của BM25 ($p < 10^{-4}$). Tinh chỉnh bằng adapter nâng Recall@1 từ 0,490 lên 0,697 ($p < 10^{-4}$) sau 3,08 giờ huấn luyện, nhưng hệ DoRA chưa đạt chỉ tiêu độ trễ 200~ms của đề cương trên máy đo (Mục~\ref{sec:danh-gia-dau-ra}). Mức tăng chưa quy được riêng cho DoRA hay cho mẫu âm khó, và cả 18 truy vấn mà hệ DoRA trượt ở top-10 đều nằm trong số 26 truy vấn bị bộ lọc chấm 0 tự động chấm sai, nên chưa tách được lỗi của mô hình khỏi lỗi nhãn (Mục~\ref{sec:doi-soat-nhan}).
+
+\section*{Hạn chế và hướng phát triển}
+
+Nhãn còn hai điểm yếu: các cặp bị bộ lọc chấm 0 chưa có người xem lại, và độ đồng thuận giữa người chấm chỉ ở mức trung bình ($\kappa$ từ 0,44 đến 0,52); bước tiếp theo là để người chấm xem lại các cặp đó. Catalog gồm ảnh người mặc cả bộ và thiếu ảnh phụ kiện đứng riêng, nên cần bổ sung ảnh phụ kiện hoặc lập chỉ mục theo vùng. Bộ truy vấn do một người soạn, chưa có tập giữ lại, và mỗi cấu hình chỉ huấn luyện một lần; hướng phát triển là thêm một tập truy vấn do người khác soạn, có cả trang phục truyền thống, và huấn luyện nhiều lần để tách các khác biệt nhỏ giữa cấu hình. Đồ án đánh giá truy vấn bằng văn bản, nên tìm kiếm bằng ảnh và độ trễ qua Qdrant dành cho giai đoạn sau, với một bộ ảnh truy vấn có nhãn và phép đo trên hệ thống đang chạy.

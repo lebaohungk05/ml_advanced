@@ -233,23 +233,31 @@ function buildCard(card) {
 
   const headline = document.createElement("div");
   headline.className = "headline";
-  headline.textContent = card.category || card.productId || COPY.unknown_category;
+  headline.textContent = card.title || card.category || card.productId || COPY.unknown_category;
   meta.appendChild(headline);
 
-  if (card.title) {
+  const secondaryParts = [];
+  if (card.title && card.category) secondaryParts.push(card.category);
+  if (card.productId) secondaryParts.push(card.productId);
+  if (secondaryParts.length) {
     const secondary = document.createElement("div");
     secondary.className = "secondary";
-    secondary.textContent = card.title;
+    secondary.textContent = secondaryParts.join(" · ");
     meta.appendChild(secondary);
   }
 
-  const score = document.createElement("div");
-  score.className = "score";
-  const parts = [];
-  if (card.productId) parts.push(card.productId);
-  if (card.score !== null) parts.push(card.score.toFixed(3));
-  score.textContent = parts.join(" · ");
-  if (parts.length) meta.appendChild(score);
+  if (card.score !== null) {
+    const score = document.createElement("div");
+    score.className = "score";
+    const label = document.createElement("span");
+    label.className = "score-label";
+    label.textContent = COPY.similarity;
+    const value = document.createElement("span");
+    value.className = "score-value";
+    value.textContent = card.score.toFixed(3);
+    score.append(label, value);
+    meta.appendChild(score);
+  }
 
   if (card.chips.length) {
     const chips = document.createElement("div");

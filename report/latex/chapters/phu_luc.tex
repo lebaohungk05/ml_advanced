@@ -1,0 +1,15 @@
+\chapter{Bộ truy vấn đánh giá}
+\label{app:truy-van}
+
+Bảng~\ref{tab:pl-truy-van} liệt kê nguyên văn 155 truy vấn dùng ở Chương~\ref{chap:danh_gia}, giữ cách viết của người soạn, kể cả từ mượn tiếng Anh. Nhóm được định nghĩa ở Mục~\ref{sec:du-lieu-cach-do}: A là một thuộc tính, B là nhiều thuộc tính, C là từ địa phương hoặc từ mượn tiếng Anh, D là theo phong cách. Truy vấn số 1 đến 133 là lô thứ nhất, xếp theo nhóm; số 134 đến 155 là lô thứ hai, cũng chia theo bốn nhóm đó.
+
+\input{chapters/phu_luc_truy_van}
+
+\chapter{Đối soát nhãn chấm 0 tự động}
+\label{app:doi-soat}
+
+Bảng~\ref{tab:pl-doi-soat} liệt kê 35 truy vấn bị đánh dấu khi đối soát nhãn 0 tự động (định nghĩa bộ lọc ở Mục~\ref{sec:du-lieu-cach-do}). Từ khoá bộ lọc là tên danh mục mà bộ lọc chọn từ câu truy vấn. Cột Loại chia nguyên nhân bị đánh dấu thành ba nhóm: bộ lọc chọn nhầm danh mục (từ khoá giả), truy vấn phụ kiện, và truy vấn có chữ ``đầm''. Ví dụ nhóm đầu: ``Quần dài'' được chọn cho chữ ``tay dài''. Với truy vấn phụ kiện (kính, túi, giày), ảnh có đúng món được hỏi vẫn bị gán 0 vì danh mục chính của ảnh là món khác. Với truy vấn có chữ ``đầm'', bộ lọc chọn đúng loại sản phẩm; truy vấn bị đánh dấu vì câu không chứa chữ ``váy'' trong tên danh mục ``Váy đầm''.
+
+Cột Cặp bị chấm 0 đếm theo hai cách. Với truy vấn từ khoá giả và từ khoá đầm, cột này tính mọi cặp bị bộ lọc gán 0. Với truy vấn phụ kiện, cột chỉ tính các cặp có món được hỏi trong tiêu đề ảnh. Cột Top-10 tự động đếm, trong 10 kết quả đầu của hệ DoRA, số kết quả bị bộ lọc gán nhãn 0 và chưa có người xem lại. Ở 14 truy vấn phụ kiện, cột này là 9 hoặc 10, nên Recall@10 của chúng bằng 0 do cách chấm. Ở 9 truy vấn đầm, cột này chỉ từ 0 đến 2 và hệ DoRA không trượt truy vấn nào. Trong 12 truy vấn từ khoá giả, 4 truy vấn (số 41, 57, 64 và 148) là những truy vấn hệ DoRA không tìm đúng.
+
+\input{chapters/phu_luc_doi_soat}

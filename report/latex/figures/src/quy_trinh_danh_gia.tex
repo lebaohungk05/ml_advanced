@@ -1,0 +1,22 @@
+\begin{tikzpicture}[
+    box/.style={draw, rounded corners=2pt, fill=blue!6, minimum width=3.3cm, minimum height=2.1cm, text width=3.1cm, font=\scriptsize, align=center},
+    lab/.style={draw, rounded corners=2pt, fill=orange!10, minimum width=3.3cm, minimum height=2.1cm, text width=3.1cm, font=\scriptsize, align=center},
+    kq/.style={draw, rounded corners=2pt, fill=green!8, minimum width=3.3cm, minimum height=2.1cm, text width=3.1cm, font=\scriptsize, align=center},
+    ex/.style={draw, dashed, rounded corners=2pt, fill=gray!8, minimum width=9.4cm, minimum height=1.2cm, text width=9.2cm, font=\scriptsize, align=center},
+    arr/.style={-{Stealth[length=2mm]}, thick}
+]
+\node[box] (in) at (0,0) {\textbf{Đầu vào}\\155 truy vấn tiếng Việt\\6.963 ảnh của tập kiểm tra};
+\node[box] (v1) at (4,0) {\textbf{Vòng 1}\\10 kết quả đầu của bốn hệ nền; gộp, xáo trộn, ẩn tên hệ\\6.079 cặp};
+\node[box] (v2) at (8,0) {\textbf{Vòng 2}\\10 kết quả đầu của hệ DoRA, phần chưa có nhãn\\1.245 cặp};
+\node[lab] (lbl) at (12,0) {\textbf{Hai nguồn nhãn}\\Người chấm: 4.951 cặp\\Chấm 0 tự động: 2.373};
+\node[kq] (agg) at (12,-2.8) {\textbf{Gộp nhãn}\\trung bình hai điểm; từ 1 trở lên là liên quan};
+\node[kq] (met) at (8,-2.8) {\textbf{Chỉ số}\\Recall@K, MRR, nDCG@10 tính theo từng truy vấn};
+\node[kq] (sig) at (4,-2.8) {\textbf{Kiểm định}\\bootstrap ghép cặp theo truy vấn};
+\node[kq] (err) at (0,-2.8) {\textbf{Đối soát nhãn}\\phân tích lỗi và độ nhạy};
+\node[ex] (abl) at (8,-5.5) {\textbf{Ba hệ ablation} (LoRA thường, không mẫu âm khó, SigLIP 1)\\không vào tập ứng viên; cặp thiếu nhãn báo cáo dạng khoảng};
+\foreach \a/\b in {in/v1, v1/v2, v2/lbl, lbl/agg, agg/met, met/sig, sig/err} {
+    \draw[arr] (\a) -- (\b);
+}
+\draw[arr, densely dashed] (abl.north) -- (met.south);
+\end{tikzpicture}
+\relax

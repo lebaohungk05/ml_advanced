@@ -1,0 +1,55 @@
+\begin{tikzpicture}[
+    cell/.style={draw, minimum size=0.62cm, inner sep=0pt, font=\footnotesize},
+    hd/.style={font=\scriptsize},
+    ttl/.style={font=\footnotesize\itshape, align=center}
+]
+\foreach \i in {1,2,3,4}{
+  \foreach \j in {1,2,3,4}{
+    \pgfmathsetmacro{\x}{\j*0.62}
+    \pgfmathsetmacro{\y}{-\i*0.62}
+    \ifnum\i=\j
+      \node[cell, fill=green!35] at (\x,\y) {$+$};
+    \else
+      \ifnum\i=1
+        \node[cell, fill=blue!18] at (\x,\y) {};
+      \else
+        \ifnum\j=1
+          \node[cell, fill=orange!30] at (\x,\y) {};
+        \else
+          \node[cell] at (\x,\y) {};
+        \fi
+      \fi
+    \fi
+  }
+  \node[hd] at (0.2,-\i*0.62) {$I_\i$};
+}
+\foreach \j in {1,2,3,4}{
+  \node[hd] at (\j*0.62,0.05) {$T_\j$};
+}
+\draw[decorate, decoration={brace, amplitude=3pt}, thick] (2.95,-0.93) -- (2.95,-0.31);
+\node[hd, anchor=west, align=left] at (3.1,-0.62) {một phép\\softmax\\trên cả hàng};
+\draw[decorate, decoration={brace, mirror, amplitude=3pt}, thick] (0.31,-2.85) -- (0.93,-2.85);
+\node[hd, anchor=north west] at (0.0,-3.1) {một phép softmax trên cả cột};
+\node[ttl] at (1.8,-3.85) {(a) Softmax của CLIP};
+
+\begin{scope}[xshift=7.2cm]
+\foreach \i in {1,2,3,4}{
+  \foreach \j in {1,2,3,4}{
+    \pgfmathsetmacro{\x}{\j*0.62}
+    \pgfmathsetmacro{\y}{-\i*0.62}
+    \ifnum\i=\j
+      \node[cell, fill=green!35] at (\x,\y) {$+$};
+    \else
+      \node[cell, fill=gray!10] at (\x,\y) {$-$};
+    \fi
+  }
+  \node[hd] at (0.2,-\i*0.62) {$I_\i$};
+}
+\foreach \j in {1,2,3,4}{
+  \node[hd] at (\j*0.62,0.05) {$T_\j$};
+}
+\draw[decorate, decoration={brace, amplitude=3pt}, thick] (2.95,-2.17) -- (2.95,-0.31);
+\node[hd, anchor=west, align=left] at (3.1,-1.24) {mỗi ô một\\phép sigmoid\\riêng};
+\node[ttl] at (1.8,-3.85) {(b) Sigmoid của SigLIP};
+\end{scope}
+\end{tikzpicture}

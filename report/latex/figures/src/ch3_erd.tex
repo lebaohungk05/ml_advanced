@@ -1,0 +1,23 @@
+\begin{tikzpicture}[
+  tbl/.style={draw, line width=0.7pt, append after command={\pgfextra{\draw[line width=0.7pt] (\tikzlastnode.north west) rectangle (\tikzlastnode.south east);}}, rectangle split, rectangle split parts=2, rectangle split part fill={green!12,white}, text width=3.9cm, align=left, font=\scriptsize, inner sep=2.5pt},
+  rel/.style={thick},
+  logical/.style={thick, dashed, gray},
+  card/.style={font=\scriptsize\bfseries, fill=white, inner sep=1pt}
+]
+\node[tbl, anchor=north west] (query) at (0,0) {\centering\textbf{Query}\\(truy vấn của bộ đánh giá)\nodepart{second}PK\ query\_id: TEXT\\text: TEXT\\group: A--D};
+\node[draw, dashed, gray, align=left, font=\scriptsize, text=black, text width=5.2cm, inner sep=3pt, anchor=north west] at (0,-6.9) {Không vẽ: truy vấn qua API web (có thể mang ảnh) và \texttt{SearchResult}, vì chỉ tồn tại trong bộ nhớ.};
+\node[tbl, anchor=north west] (sr) at (5.9,0) {\centering\textbf{EvalRunEntry}\\(kết quả đánh giá)\nodepart{second}PK,FK\ query\_id: TEXT\\PK\ system: TEXT\\PK\ rank: INT (từ 1)\\FK\ product\_id: TEXT\\score: FLOAT};
+\node[tbl, anchor=north west] (prod) at (11.8,0) {\centering\textbf{Product}\\(sản phẩm)\nodepart{second}PK\ product\_id: TEXT\\title: TEXT\\category: TEXT\\image\_path: TEXT\\attributes: MAP (chi tiết)\\color, material, price\_vnd,\\description: để trống};
+\node[tbl, anchor=north west] (rl) at (5.9,-4.4) {\centering\textbf{RelevanceLabel}\\(nhãn liên quan)\nodepart{second}PK,FK\ query\_id: TEXT\\PK,FK\ product\_id: TEXT\\PK\ annotator: TEXT\\grade: INT (0, 1, 2)};
+\node[tbl, anchor=north west] (vp) at (11.8,-6.6) {\centering\textbf{VectorPoint}\\(điểm trong kho vector)\nodepart{second}PK\ id: UUID\\(uuid5 từ product\_id)\\collection: TEXT\\vector: VECTOR ($D$ chiều)\\payload: bản sao Product};
+\draw[rel] ($(query.north east)+(0,-1.25)$) -- ($(sr.north west)+(0,-1.25)$) node[card, pos=0.12, above] {1} node[card, pos=0.88, above] {n};
+\draw[rel] ($(prod.north west)+(0,-2.15)$) -- ($(sr.north east)+(0,-2.15)$) node[card, pos=0.12, above] {1} node[card, pos=0.88, above] {n};
+\coordinate (qx) at ($(query.south west)+(1.2,0)$);
+\draw[rel] (qx) -- (qx |- rl.west) node[card, pos=0.1, right] {1};
+\draw[rel] (qx |- rl.west) -- (rl.west) node[card, pos=0.9, above] {n};
+\coordinate (px) at ($(prod.south west)+(1.0,0)$);
+\draw[rel] (px) -- (px |- rl.east) node[card, pos=0.2, right] {1};
+\draw[rel] (px |- rl.east) -- (rl.east) node[card, pos=0.9, above] {n};
+\coordinate (vx) at ($(prod.south east)+(-1.0,0)$);
+\draw[logical] (vx) -- (vx |- vp.north) node[pos=0.5, right, align=left, font=\scriptsize, text=black, fill=white] {mỗi bộ sưu tập\\một điểm};
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+    q/.style={draw, rounded corners=2pt, fill=gray!10, minimum width=2.5cm, minimum height=1.5cm, font=\footnotesize, align=center},
+    sys/.style={draw, rounded corners=2pt, minimum width=5.0cm, minimum height=1.5cm, font=\footnotesize, align=center},
+    kq/.style={draw, rounded corners=2pt, fill=green!10, minimum width=3.6cm, minimum height=1.5cm, font=\footnotesize, align=center},
+    loi/.style={draw, rounded corners=2pt, fill=orange!14, minimum width=3.6cm, minimum height=1.2cm, font=\footnotesize, align=center},
+    arr/.style={-{Stealth[length=2mm]}, thick},
+    cmp/.style={{Stealth[length=2mm]}-{Stealth[length=2mm]}, thick}
+]
+\node[sys, fill=blue!6] (s1) at (5.0,2.6) {Tìm theo từ khoá:\\BM25};
+\node[sys, fill=blue!12] (s2) at (5.0,0) {Biểu diễn chung, zero-shot:\\SigLIP 2, CLIP, ViSigLIP-OT};
+\node[sys, fill=blue!20] (s3) at (5.0,-2.6) {Biểu diễn chung, tinh chỉnh:\\SigLIP 2 + DoRA};
+\node[q] (qr) at (-0.4,0) {Truy vấn\\tiếng Việt\\(155 câu)};
+\node[kq] (rs) at (10.6,0) {Danh sách ảnh\\xếp hạng\\Recall, MRR, nDCG};
+\node[loi] (er) at (10.6,-3.2) {Phân tích lỗi\\và đối soát nhãn};
+
+\draw (qr.east) -- (1.5,0);
+\draw (1.5,2.6) -- (1.5,-2.6);
+\draw[arr] (1.5,2.6) -- (s1.west);
+\draw[arr] (1.5,0) -- (s2.west);
+\draw[arr] (1.5,-2.6) -- (s3.west);
+\draw (s1.east) -- (8.5,2.6);
+\draw (s2.east) -- (8.5,0);
+\draw (s3.east) -- (8.5,-2.6);
+\draw (8.5,2.6) -- (8.5,-2.6);
+\draw[arr] (8.5,0) -- (rs.west);
+\draw[arr] (rs.south) -- node[right, font=\footnotesize\bfseries] {CH3} (er.north);
+
+\draw[cmp] (5.0,1.85) -- node[right, font=\footnotesize\bfseries] {CH1} (5.0,0.75);
+\draw[cmp] (5.0,-0.75) -- node[right, font=\footnotesize\bfseries] {CH2} (5.0,-1.85);
+\end{tikzpicture}

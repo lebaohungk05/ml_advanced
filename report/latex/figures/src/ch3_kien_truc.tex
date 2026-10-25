@@ -1,0 +1,45 @@
+\begin{tikzpicture}[
+  font=\small,
+  box/.style={draw, rounded corners, fill=white, align=center, minimum height=0.95cm, font=\footnotesize},
+  adp/.style={box, text width=1.8cm, minimum height=1.9cm, font=\scriptsize},
+  ext/.style={box, dashed, fill=gray!8, font=\scriptsize},
+  layer/.style={draw, rounded corners, fill=#1, inner sep=6pt},
+  arr/.style={-{Stealth[length=2mm]}},
+  dep/.style={-{Stealth[length=2mm]}, dashed},
+  lbl/.style={font=\scriptsize, inner sep=1.5pt, fill=white, align=center}
+]
+\node[box, text width=2.5cm] (d1) at (1.3,0) {Giao diện web\\và API web};
+\node[box, text width=2.5cm] (d2) at (4.2,0) {Công cụ\\lập chỉ mục};
+\node[box, text width=2.5cm] (d3) at (7.1,0) {Công cụ đánh giá\\và ablation};
+\node[box, text width=2.5cm] (d4) at (10.0,0) {Công cụ huấn luyện\\và gán nhãn};
+\node[box, text width=3.3cm, minimum height=1.9cm, font=\scriptsize] (c1) at (1.85,-3.0) {\textbf{Mô hình miền}\\\texttt{Product}, \texttt{Query},\\\texttt{SearchResult},\\\texttt{RelevanceLabel}};
+\node[box, text width=3.3cm, minimum height=1.9cm, font=\scriptsize] (c2) at (5.65,-3.0) {\textbf{Bốn cổng}\\\texttt{Embedder}, \texttt{VectorStore},\\\texttt{Retriever},\\\texttt{MetricsPort}};
+\node[box, text width=3.3cm, minimum height=1.9cm, font=\scriptsize] (c3) at (9.45,-3.0) {\textbf{Bộ tìm kiếm vector}\\\texttt{DenseRetriever} ghép\\một \texttt{Embedder} với\\một \texttt{VectorStore}};
+\node[adp] (a1) at (1.0,-6.1) {\textbf{Embedder}\\giả, CLIP,\\\mbox{SigLIP 1 và 2},\\\mbox{ViSigLIP-OT},\\ResNet-50};
+\node[adp] (a2) at (3.2,-6.1) {\textbf{VectorStore}\\bộ nhớ trong,\\Qdrant};
+\node[adp] (a3) at (5.4,-6.1) {\textbf{Retriever}\\BM25};
+\node[adp] (a4) at (7.6,-6.1) {\textbf{MetricsPort}\\Recall@$K$, MRR,\\nDCG@$K$};
+\node[adp] (a6) at (12.0,-6.1) {\textbf{Kiểm định}\\kappa, bootstrap\\ghép cặp\\(ngoài cổng)};
+\node[adp] (a5) at (9.8,-6.1) {\textbf{Huấn luyện}\\LoRA, DoRA,\\GradCache\\(ngoài cổng)};
+\node[ext, text width=1.8cm] (x1) at (1.1,-8.9) {Trọng số mô hình\\và adapter};
+\node[ext, text width=1.8cm] (x2) at (3.9,-8.9) {Qdrant\\(HNSW, cosine)};
+\node[ext, text width=5.4cm] (x3) at (9.5,-8.9) {Tệp catalog, ảnh, truy vấn,\\nhãn, nhật ký thí nghiệm};
+\node[box, fill=yellow!14, text width=2.3cm, minimum height=6.9cm, font=\scriptsize] (reg) at (15.9,-3.1) {\textbf{Bộ đăng ký}\\ánh xạ tên trong\\cấu hình sang\\hàm dựng\\[4pt]\textbf{Tệp cấu hình}\\chọn bộ mã hoá,\\kho vector và\\loại bộ tìm kiếm};
+\begin{scope}[on background layer]
+\node[layer=blue!6, fit=(d1)(d4), name=l1, label={[font=\small\bfseries]left:1}] {};
+\node[layer=green!6, fit=(c1)(c3), name=l2, label={[font=\small\bfseries]left:2}] {};
+\node[layer=orange!8, fit=(a1)(a6), name=l3, label={[font=\small\bfseries]left:3}] {};
+\node[layer=purple!6, fit=(x1)(x3), name=l4, label={[font=\small\bfseries]left:4}] {};
+\end{scope}
+\foreach \d in {d1,d2,d3,d4}{\draw[arr] (\d.south) -- (\d.south |- l2.north);}
+\foreach \a in {a1,a2,a3,a4,a5}{\draw[dep] (\a.north) -- (\a.north |- l2.south);}
+\draw[arr] (a1.south) -- (a1.south |- x1.north);
+\draw[arr] (a2.south) -- (a2.south |- x2.north);
+\draw[arr] (a4.south) -- (a4.south |- x3.north);
+\draw[arr] (a5.south) -- (a5.south |- x3.north);
+\draw[arr] (a6.south) -- (a6.south |- x3.north);
+\draw[arr] (l1.east |- reg.north) ++(0,-0.5) coordinate (rq) -- node[lbl, above=1pt] {tra tên\\bộ tìm kiếm} (rq -| reg.west);
+\draw[arr] (reg.west |- l3.east) -- node[lbl, above=1pt] {dựng bộ\\chuyển đổi} (l3.east);
+\node[lbl] at (5.65,-1.75) {gọi qua cổng};
+\node[lbl] at (6.5,-4.55) {cài đặt cổng};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[
+  font=\small,
+  head/.style={draw, fill=blue!6, text width=2.4cm, minimum height=1.0cm, align=center, font=\footnotesize},
+  msg/.style={-{Stealth[length=2mm]}},
+  ret/.style={-{Stealth[length=2mm]}, dashed},
+  lbl/.style={above, font=\scriptsize, inner sep=1.5pt, fill=white, align=center},
+  frame/.style={draw, thick, gray},
+  tag/.style={draw, fill=white, font=\scriptsize, anchor=north west, inner sep=2pt},
+  cond/.style={font=\scriptsize, align=center, fill=white, inner sep=1pt}
+]
+\def\U{0}\def\W{2.8}\def\F{5.6}\def\R{8.4}\def\E{11.2}\def\S{14.0}
+\foreach \x/\n/\t in {\U/u/Người dùng, \W/w/Giao diện web, \F/f/API web, \R/r/Bộ tìm kiếm vector, \E/e/Bộ mã hoá, \S/s/Kho vector}{
+  \node[head] (\n) at (\x,0) {\t};
+  \draw[gray, dashed] (\x,-0.5) -- (\x,-15.3);
+}
+\draw[msg] (\U,-1.5) -- node[lbl] {nhập câu mô tả,\\chọn danh mục} (\W,-1.5);
+\draw[msg] (\W,-2.55) -- node[lbl] {yêu cầu tìm chữ\\(kèm khoá API)} (\F,-2.55);
+\draw[msg] (\F,-3.6) -- node[lbl] {kiểm tra khoá,\\tìm theo \texttt{Query}} (\R,-3.6);
+\draw[msg] (\R,-4.65) -- node[lbl] {mã hoá câu\\(NFC, chữ thường)} (\E,-4.65);
+\draw[ret] (\E,-5.7) -- node[lbl] {vector $D$ chiều,\\chuẩn hoá $L_2$} (\R,-5.7);
+\draw[msg] (\R,-6.75) -- node[lbl, pos=0.75] {tìm $K$ gần nhất,\\kèm bộ lọc} (\S,-6.75);
+\draw[frame] (\U-1.0,-7.35) rectangle (\S+1.0,-14.9);
+\node[tag] at (\U-1.0,-7.35) {alt};
+\node[cond, anchor=west] at (\U-0.6,-7.9) {[kho vector phản hồi]};
+\draw[ret] (\S,-9.0) -- node[lbl, pos=0.75] {$K$ điểm gần nhất\\kèm thuộc tính} (\R,-9.0);
+\draw[ret] (\R,-10.05) -- node[lbl] {danh sách $K$ kết quả\\(hạng, điểm)} (\F,-10.05);
+\draw[ret] (\F,-11.0) -- node[lbl] {phản hồi gồm\\các kết quả} (\W,-11.0);
+\draw[ret] (\W,-11.9) -- node[lbl] {thẻ kết quả\\theo hạng} (\U,-11.9);
+\draw[gray, densely dotted] (\U-1.0,-12.5) -- (\S+1.0,-12.5);
+\node[cond, anchor=west] at (\U-0.6,-12.9) {[kho vector không phản hồi]};
+\draw[ret] (\F,-13.9) -- node[lbl] {lỗi 503} (\W,-13.9);
+\draw[ret] (\W,-14.5) -- node[lbl] {thông báo lỗi} (\U,-14.5);
+\end{tikzpicture}

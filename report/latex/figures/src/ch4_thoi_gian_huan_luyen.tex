@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+\begin{axis}[
+  xbar,
+  scale only axis,
+  width=0.6\textwidth,
+  height=3.0cm,
+  bar width=14pt,
+  xmin=0, xmax=4,
+  xlabel={Thời gian huấn luyện (giờ)},
+  symbolic y coords={DoRA có mẫu âm khó,LoRA thường,Không mẫu âm khó},
+  ytick=data,
+  y dir=reverse,
+  enlarge y limits=0.28,
+  xmajorgrids=true,
+  grid style={dashed,gray!30},
+  nodes near coords={\pgfmathprintnumber[fixed,fixed zerofill,precision=2,use comma]{\pgfplotspointmeta}},
+  nodes near coords style={font=\scriptsize},
+  xticklabel style={/pgf/number format/use comma},
+  ytick style={draw=none},
+]
+\addplot[fill=teal!55,draw=teal!70!black] coordinates {(3.08,DoRA có mẫu âm khó) (2.07,LoRA thường) (2.40,Không mẫu âm khó)};
+\end{axis}
+\end{tikzpicture}
