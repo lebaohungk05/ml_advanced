@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm Kiếm Thời Trang Đa Phương Thức - Báo Cáo Học Máy Nâng Cao</title>
+    
+    <!-- Modern High-Legibility Sans-Serif & Monospace -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Mathematical Typography -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <style>
+        /* ===========================================
+           FIXED 16:9 STAGE BASE STYLES & STYLE A THEME
+           Enlarged Presentation Scale & Lining Figures
+           =========================================== */
+        :root {
+            /* Web App Palette Tokens */
+            --ground: #efede8;
+            --surface: #fbfaf7;
+            --step: #dedbd2;
+            --step-hover: #d2cebf;
+            --ink: #0e0e0e;
+            --ink-soft: #42403a;
+            --ink-faint: #6e6b61;
+            --accent: #ee3d1c;
+            --accent-bg: rgba(238, 61, 28, 0.08);
+            --accent-ink: #ffffff;
+            --ok: #1c8a45;
+            --ok-bg: rgba(28, 138, 69, 0.1);
+            --warn: #a35c06;
+            --bad: #b3200b;
+            --shadow-subtle: 0 16px 40px rgba(14, 14, 14, 0.06);
+            --shadow-card: 0 24px 54px rgba(14, 14, 14, 0.09);
+
+            /* High-Legibility Modern Typography */
+            --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+
+            /* Canvas Configuration */
+            --stage-bg: #111111;
+            --slide-bg: #efede8;
+        }
+
+        /* Force Equal Height for ALL Numerals (Lining Figures) */
+        *, *::before, *::after {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-variant-numeric: tabular-nums lining-nums;
+            font-feature-settings: "lnum" 1, "tnum" 1;
+        }
+
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            background: var(--stage-bg); font-family: var(--font-body);
+            color: var(--ink);
+        }
+
+        .deck-viewport {
+            position: fixed; inset: 0; overflow: hidden; background: var(--stage-bg);
+        }
+
+        .deck-stage {
+            position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+            overflow: hidden; transform-origin: 0 0; background: var(--slide-bg);
+            color: var(--ink);
+        }
+
+        /* Slide Shell - Generous Padding */
+        .slide {
+            position: absolute; inset: 0; width: 1920px; height: 1080px;
+            padding: 56px 88px 48px; display: flex; flex-direction: column; justify-content: space-between;
+            background: var(--slide-bg); visibility: hidden; opacity: 0; pointer-events: none;
+            transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.996);
+        }
+
+        .slide.active, .slide.visible {
+            visibility: visible; opacity: 1; pointer-events: auto; transform: scale(1); z-index: 1;
+        }
+
+        /* Top Header Component */
+        .top-nav {
+            display: flex; justify-content: space-between; align-items: center; width: 100%;
+            height: 54px;
+        }
+        .nav-pills { display: flex; align-items: center; gap: 16px; }
+        .pill {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 10px 22px; border-radius: 999px; background: var(--surface);
+            border: 1.5px solid var(--step); color: var(--ink-soft); font-size: 17px; font-weight: 700;
+        }
+        .pill .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ok); }
+        .pill.accent { border-color: rgba(238, 61, 28, 0.4); color: var(--accent); background: var(--accent-bg); }
+        .logo-box {
+            display: flex; align-items: center; gap: 16px; height: 48px;
+        }
+        .logo-box img {
+            height: 48px; width: auto; object-fit: contain;
+        }
+        .section-tag {
+            font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--ink-faint);
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+
+        /* Main Stage Content Layouts */
+        .slide-body {
+            flex: 1; display: flex; flex-direction: column; justify-content: center;
+            padding: 24px 0 20px;
+        }
+
+        /* Typography Essentials - Enlarged for Large Display */
+        .slide-title-area { margin-bottom: 32px; }
+        .kicker {
+            font-family: var(--font-mono); font-size: 17px; font-weight: 800; color: var(--accent);
+            letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px;
+        }
+        h2.slide-h2 {
+            font-family: var(--font-display); font-size: 68px; line-height: 1.08;
+            font-weight: 800; letter-spacing: -0.03em; color: var(--ink);
+        }
+        h2.slide-h2 em {
+            font-style: normal; color: var(--accent);
+        }
+
+        /* Grid Frameworks */
+        .grid-2col {
+            display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 54px; align-items: stretch;
+        }
+        .grid-2col-equal {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: stretch;
+        }
+        .grid-3col {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; align-items: stretch;
+        }
+        .grid-4col {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; align-items: stretch;
+        }
+
+        /* Editorial Cards - Larger Padding and Stronger Shadows */
+        .card {
+            background: var(--surface); border: 1.5px solid var(--step); border-radius: 24px;
+            padding: 38px 40px; box-shadow: var(--shadow-subtle); display: flex; flex-direction: column;
+            justify-content: space-between;
+        }
+        .card.highlight {
+            border-color: rgba(238, 61, 28, 0.45); box-shadow: var(--shadow-card);
+            position: relative; overflow: hidden;
+        }
+        .card.highlight::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent);
+        }
+
+        /* Key Metrics & Big Number Blocks */
+        .kpi-num {
+            font-family: var(--font-display); font-size: 88px; font-weight: 800; line-height: 1;
+            color: var(--accent); margin-bottom: 10px; letter-spacing: -0.03em;
+        }
+        .kpi-label {
+            font-family: var(--font-mono); font-size: 17px; font-weight: 700; color: var(--ink-soft);
+            text-transform: uppercase; letter-spacing: 0.06em;
+        }
+        .kpi-desc {
+            font-size: 20px; color: var(--ink-soft); line-height: 1.5; margin-top: 14px;
+        }
+
+        /* Bullet & Keyword Lists */
+        .key-points {
+            display: flex; flex-direction: column; gap: 24px;
+        }
+        .point-item {
+            display: flex; align-items: flex-start; gap: 18px;
+        }
+        .point-badge {
+            width: 38px; height: 38px; border-radius: 10px; background: var(--accent-bg); color: var(--accent);
+            font-family: var(--font-mono); font-size: 16px; font-weight: 800; display: flex;
+            align-items: center; justify-content: center; flex: none; margin-top: 4px;
+        }
+        .point-content { flex: 1; }
+        .point-title {
+            font-size: 26px; font-weight: 800; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.01em;
+        }
+        .point-desc {
+            font-size: 20px; color: var(--ink-soft); line-height: 1.55;
+        }
+
+        /* Bottom Status Footer */
+        .slide-footer {
+            display: flex; justify-content: space-between; align-items: center; width: 100%;
+            height: 48px; padding-top: 18px; border-top: 1.5px solid var(--step);
+        }
+        .footer-meta {
+            font-family: var(--font-mono); font-size: 16px; font-weight: 600; color: var(--ink-faint);
+            display: flex; gap: 28px;
+        }
+        .footer-page {
+            font-family: var(--font-mono); font-size: 18px; font-weight: 800; color: var(--ink);
+        }
+
+        /* Data Tables */
+        .data-table {
+            width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface);
+            border: 1.5px solid var(--step); border-radius: 20px; overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+        .data-table th, .data-table td {
+            padding: 22px 28px; text-align: left; font-size: 21px;
+        }
+        .data-table th {
+            background: var(--ground); font-family: var(--font-mono); font-size: 16px;
+            font-weight: 800; color: var(--ink-soft); text-transform: uppercase;
+            border-bottom: 1.5px solid var(--step);
+        }
+        .data-table tr:not(:last-child) td {
+            border-bottom: 1px solid var(--step);
+        }
+        .data-table tr.highlight-row {
+            background: rgba(238, 61, 28, 0.05); font-weight: 800;
+        }
+        .data-table tr.highlight-row td {
+            color: var(--accent); font-size: 23px;
+        }
+        .data-table td.mono {
+            font-family: var(--font-mono); font-weight: 700;
+        }
+
+        /* Math formula display cards */
+        .math-box {
+            background: var(--ground); border-radius: 16px; padding: 22px 28px;
+            margin: 18px 0; border: 1.5px solid var(--step); font-size: 24px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Controls HUD */
+        .deck-controls {
+            position: fixed; right: 32px; bottom: 24px; z-index: 1000;
+            display: flex; align-items: center; gap: 12px;
+            background: var(--surface); border: 1.5px solid var(--step); padding: 8px 18px;
+            border-radius: 999px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+        .ctrl-btn {
+            background: none; border: none; font-family: var(--font-mono); font-size: 14px;
+            font-weight: 700; color: var(--ink-soft); cursor: pointer; padding: 6px 10px; border-radius: 6px;
+        }
+        .ctrl-btn:hover { background: var(--step); color: var(--ink); }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed; left: 0; bottom: 0; height: 5px; background: var(--accent);
+            transition: width 0.3s ease; z-index: 1001;
+        }
+
+        /* KaTeX formula font adjustments */
+        .katex { font-size: 1.35em !important; }
+        .katex-display { margin: 10px 0 !important; }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+
+            <!-- ==========================================
+                 SLIDE 01: BÌA ĐỀ TÀI
+                 ========================================== -->
+            <section class="slide active">
+                <div class="top-nav">
+                    <div class="nav-pills">
+                        <div class="pill">
+                            <span class="dot"></span>
+                            <span>Học máy Nâng cao (N01)</span>
+                        </div>
+                        <div class="pill">
+                            <span>Đại học Phenikaa</span>
+                        </div>
+                    </div>
+                    <div class="logo-box">
+                        <img src="assets/logo_phenikaa.png" alt="Phenikaa University Logo">
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 68px; align-items: center;">
+                        <div>
+                            <div class="kicker">BÁO CÁO ĐỒ ÁN MÔN HỌC CHUYÊN SÂU</div>
+                            <h1 style="font-family: var(--font-display); font-size: 88px; line-height: 1.05; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 28px;">
+                                Tìm Kiếm Thời Trang<br><span style="color: var(--accent);">Đa Phương Thức</span>
+                            </h1>
+                            <p style="font-size: 26px; line-height: 1.5; color: var(--ink-soft); max-width: 880px; margin-bottom: 40px;">
+                                Hệ thống truy vấn catalog thời trang song ngữ văn bản và hình ảnh dựa trên kiến trúc Hexagonal, mô hình SigLIP 2 kết hợp tinh chỉnh tham số DoRA.
+                            </p>
+                            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                                <span class="pill" style="font-size: 18px; padding: 12px 24px;">SigLIP 2 Backbone</span>
+                                <span class="pill" style="font-size: 18px; padding: 12px 24px;">DoRA Adaptation</span>
+                                <span class="pill" style="font-size: 18px; padding: 12px 24px;">GradCache 256</span>
+                                <span class="pill" style="font-size: 18px; padding: 12px 24px;">Qdrant Vector DB</span>
+                                <span class="pill accent" style="font-size: 18px; padding: 12px 24px;">FastAPI và Web UI</span>
+                            </div>
+                        </div>
+
+                        <div class="card highlight" style="padding: 44px;">
+                            <div style="font-family: var(--font-mono); font-size: 16px; font-weight: 800; color: var(--ink-faint); margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1.5px solid var(--step);">
+                                KẾT QUẢ THỰC NGHIỆM ĐỘT PHÁ
+                            </div>
+                            <div class="kpi-num" style="font-size: 104px;">0.697</div>
+                            <div class="kpi-label" style="font-size: 20px;">Recall@1 (SigLIP 2 + DoRA)</div>
+                            <div class="kpi-desc" style="font-size: 21px;">
+                                Tăng vượt bậc so với Zero-shot (0.490) trên tập 155 truy vấn tiếng Việt. Kiểm định paired bootstrap 10,000 resamples đạt <strong>p &lt; 0.0001</strong>.
+                            </div>
+                            <div style="margin-top: 32px; padding-top: 20px; border-top: 1.5px solid var(--step); display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div>
+                                    <div style="font-family: var(--font-display); font-size: 36px; font-weight: 800;">6,963</div>
+                                    <div style="font-size: 15px; font-family: var(--font-mono); font-weight: 700; color: var(--ink-soft);">ẢNH CATALOG TEST</div>
+                                </div>
+                                <div>
+                                    <div style="font-family: var(--font-display); font-size: 36px; font-weight: 800;">0.766</div>
+                                    <div style="font-size: 15px; font-family: var(--font-mono); font-weight: 700; color: var(--ink-soft);">MEAN RECIPROCAL RANK</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div class="footer-meta">
+                        <span>NHÓM THỰC HIỆN: Lê Bảo Hưng (23010090) · Đoàn Anh Hùng (23010022) · Nguyễn Quang Hiệp (23010451)</span>
+                    </div>
+                    <div class="footer-page">01 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 02: ĐẶT VẤN ĐỀ
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">01 / BỐI CẢNH VÀ THÁCH THỨC</span>
+                    <span class="pill">SEMANTIC GAP</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">THÁCH THỨC THƯƠNG MẠI ĐIỆN TỬ THỜI TRANG</div>
+                        <h2 class="slide-h2">Khoảng Cách Ngữ Nghĩa và <em>Đặc Thù Tiếng Việt</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card">
+                            <div class="point-badge">01</div>
+                            <h3 style="font-size: 28px; font-weight: 800; margin: 20px 0 12px;">Ngôn Ngữ Phong Phú</h3>
+                            <p class="point-desc">
+                                Người dùng sử dụng phong phú từ mượn ("blazer oversize", "croptop"), từ địa phương ("áo bà ba", "váy xoè") và thuật ngữ phong cách ("vintage", "minimalist").
+                            </p>
+                            <div style="margin-top: 24px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--accent);">
+                                → BM25 mất dấu ngữ nghĩa (Recall@1 = 0.200)
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="point-badge">02</div>
+                            <h3 style="font-size: 28px; font-weight: 800; margin: 20px 0 12px;">Khoảng Cách Đa Phương Thức</h3>
+                            <p class="point-desc">
+                                Mô tả văn bản trừu tượng không trùng khớp trực tiếp với không gian điểm ảnh thời trang (pixel space). Cần cầu nối nhúng liên phương thức (Joint Embedding Space).
+                            </p>
+                            <div style="margin-top: 24px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--accent);">
+                                → CLIP gốc không tối ưu tiếng Việt (Recall@1 = 0.168)
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="point-badge">03</div>
+                            <h3 style="font-size: 28px; font-weight: 800; margin: 20px 0 12px;">Yêu Cầu Truy Xuất Thực Tế</h3>
+                            <p class="point-desc">
+                                Phục vụ danh mục hàng nghìn sản phẩm theo thời gian thực (&lt; 200 ms), hỗ trợ cả hai chiều truy vấn: nhập văn bản hoặc tải ảnh trực tiếp.
+                            </p>
+                            <div style="margin-top: 24px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--ok);">
+                                → Cần kiến trúc Module hóa và Vector DB chuyên dụng
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Mục tiêu: Xóa bỏ rào cản từ khóa để tìm kiếm đúng ý định người mua</div>
+                    <div class="footer-page">02 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 03: MỤC TIÊU NGHIÊN CỨU
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">02 / MỤC TIÊU VÀ PHẠM VI</span>
+                    <span class="pill">PROJECT OBJECTIVES</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">PHẠM VI THỰC THI VÀ CHỈ TIÊU</div>
+                        <h2 class="slide-h2">Xây Dựng Hệ Thống <em>Truy Xuất Hoàn Chỉnh</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card" style="border-top: 5px solid var(--ink);">
+                            <div class="kpi-num" style="color: var(--ink); font-size: 96px;">6,963</div>
+                            <div class="kpi-label" style="font-size: 20px;">Ảnh Catalog Kiểm Thử</div>
+                            <p class="kpi-desc">
+                                Trích xuất từ bộ dữ liệu Fashionpedia, khử trùng tuyệt đối bằng Perceptual Hash, thiết lập tập test cô lập phục vụ demo và đánh giá.
+                            </p>
+                        </div>
+
+                        <div class="card" style="border-top: 5px solid var(--accent);">
+                            <div class="kpi-num" style="font-size: 96px;">05</div>
+                            <div class="kpi-label" style="font-size: 20px;">Hệ Thống Đối Soát Độc Lập</div>
+                            <p class="kpi-desc">
+                                Đo lường trên cùng 155 truy vấn: BM25, CLIP ViT-B/32, ViSigLIP-OT, SigLIP 2 Zero-shot và SigLIP 2 + DoRA Adapter.
+                            </p>
+                        </div>
+
+                        <div class="card" style="border-top: 5px solid var(--ok);">
+                            <div class="kpi-num" style="color: var(--ok); font-size: 96px;">5/5</div>
+                            <div class="kpi-label" style="font-size: 20px;">Module Pipeline Hoàn Thiện</div>
+                            <p class="kpi-desc">
+                                Vận hành trọn vẹn: Lập chỉ mục HNSW, Huấn luyện DoRA, Đánh giá Paired Bootstrap, FastAPI Backend và Web UI song ngữ.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Bộ dữ liệu: Fashionpedia (ECCV 2020) · Đơn vị đánh giá: Phenikaa University</div>
+                    <div class="footer-page">03 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 04: CƠ SỞ LÝ THUYẾT - SIGLIP 2
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">03 / CƠ SỞ LÝ THUYẾT</span>
+                    <span class="pill accent">BACKBONE SELECTION</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">TẠI SAO CHỌN SIGLIP 2?</div>
+                        <h2 class="slide-h2">SigLIP 2 và Contrastive <em>Sigmoid Loss</em></h2>
+                    </div>
+
+                    <div class="grid-2col-equal">
+                        <div class="card" style="background: rgba(0,0,0,0.02);">
+                            <div style="font-family: var(--font-mono); font-size: 17px; color: var(--bad); font-weight: 800; margin-bottom: 12px;">
+                                ✕ CLIP TRUYỀN THỐNG (SOFTMAX LOSS)
+                            </div>
+                            <h3 style="font-size: 28px; margin-bottom: 10px;">Chuẩn Hóa Toàn Cục Mini-Batch</h3>
+                            
+                            <div class="math-box">
+                                $$L_{\text{Softmax}} = -\sum_{i=1}^B \log \frac{\exp(s_{i,i}/\tau)}{\sum_{j=1}^B \exp(s_{i,j}/\tau)}$$
+                            </div>
+
+                            <div class="key-points" style="gap: 14px; margin-top: 10px;">
+                                <div style="font-size: 20px; color: var(--ink-soft);">• Độ phức tạp bộ nhớ: <strong>$\mathcal{O}(B^2)$</strong> giữa các cặp biểu diễn.</div>
+                                <div style="font-size: 20px; color: var(--ink-soft);">• Phụ thuộc cực lớn vào kích thước batch khổng lồ để hội tụ.</div>
+                                <div style="font-size: 20px; color: var(--ink-soft);">• Hạn chế ngữ cảnh tiếng Việt (chủ yếu tối ưu tiếng Anh).</div>
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <div style="font-family: var(--font-mono); font-size: 17px; color: var(--ok); font-weight: 800; margin-bottom: 12px;">
+                                ✓ SIGLIP 2 (SIGMOID LOSS)
+                            </div>
+                            <h3 style="font-size: 28px; margin-bottom: 10px;">Phân Loại Nhị Phân Độc Lập</h3>
+                            
+                            <div class="math-box" style="background: rgba(238, 61, 28, 0.05); border-color: rgba(238, 61, 28, 0.25);">
+                                $$L_{\text{Sigmoid}} = -\sum_{i=1}^B \sum_{j=1}^B \log \sigma\Big(z_{ij} \cdot (-1)^{1-y_{ij}}\Big)$$
+                            </div>
+
+                            <div class="key-points" style="gap: 14px; margin-top: 10px;">
+                                <div style="font-size: 20px; color: var(--ink);">• Tiết kiệm bộ nhớ: <strong>$\mathcal{O}(B)$</strong>, không cần giao tiếp liên-node toàn batch.</div>
+                                <div style="font-size: 20px; color: var(--ink);">• Hội tụ ổn định ngay ở batch size vừa và nhỏ.</div>
+                                <div style="font-size: 20px; color: var(--ink);">• Hỗ trợ đa ngôn ngữ nguyên bản xuất sắc (Multilingual native).</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Mô hình sử dụng: google/siglip2-base-patch16-224 (86M vision params + text tower)</div>
+                    <div class="footer-page">04 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 05: TINH CHỈNH THAM SỐ DORA
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">04 / KỸ THUẬT HUẤN LUYỆN</span>
+                    <span class="pill">PARAMETER-EFFICIENT FINE-TUNING</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">PHƯƠNG PHÁP TINH CHỈNH THÍCH ỨNG HIỆU QUẢ</div>
+                        <h2 class="slide-h2">DoRA: Phân Tách <em>Độ Lớn và Hướng Trọng Số</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card">
+                            <h3 style="font-size: 28px; margin-bottom: 12px;">Công Thức Phân Rã Trọng Số DoRA</h3>
+                            
+                            <div class="math-box" style="font-size: 26px;">
+                                $$W = m \frac{W_0 + \Delta W}{\|W_0 + \Delta W\|_F} = m \frac{W_0 + \frac{\alpha}{r} B A}{\|W_0 + \frac{\alpha}{r} B A\|_F}$$
+                            </div>
+
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">m</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Magnitude Vector (Độ lớn)</div>
+                                        <div class="point-desc">Học riêng vector tỷ lệ độ lớn tham số, giúp thích ứng miền mà không phá vỡ trọng số gốc.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">BA</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Directional Matrix (Hướng thích nghi)</div>
+                                        <div class="point-desc">Tối ưu hóa hướng không gian qua ma trận thứ hạng thấp $r = 8$, $\alpha = 16$, $\text{dropout} = 0.1$.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Vị Trí Cấy Ghép Adapter</h3>
+                            <div class="key-points" style="gap: 16px;">
+                                <div class="card" style="background: var(--ground); padding: 22px;">
+                                    <div style="font-weight: 800; font-size: 22px; margin-bottom: 6px;">Dual-Tower Adaptation</div>
+                                    <div style="font-size: 18px; color: var(--ink-soft);">Cấy DoRA vào cả Tháp Văn bản (Text Tower) và Tháp Hình ảnh (Vision Tower).</div>
+                                </div>
+                                <div class="card" style="background: var(--ground); padding: 22px;">
+                                    <div style="font-weight: 800; font-size: 22px; margin-bottom: 6px;">Target Projections</div>
+                                    <div style="font-size: 18px; color: var(--ink-soft);">Huấn luyện trên 4 ma trận chiếu chú ý: <code>q_proj</code>, <code>k_proj</code>, <code>v_proj</code>, <code>out_proj</code>.</div>
+                                </div>
+                                <div class="card" style="background: var(--ground); padding: 22px;">
+                                    <div style="font-weight: 800; font-size: 22px; margin-bottom: 6px;">Bảo Toàn Backbone Gốc</div>
+                                    <div style="font-size: 18px; color: var(--ink-soft);">Đóng băng 100% trọng số tiền huấn luyện, chỉ cập nhật dưới 1% tổng tham số.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Cấu hình: AdamW, lr = 1e-4, Cosine Schedule 500 warmup steps, Early Stopping patience = 2</div>
+                    <div class="footer-page">05 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 06: GRADCACHE
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">05 / TỐI ƯU HÓA PHẦN CỨNG</span>
+                    <span class="pill accent">GRADCACHE PIPELINE</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">GIẢI BÀI TOÁN BỘ NHỚ VRAM TRÊN GPU CÁ NHÂN</div>
+                        <h2 class="slide-h2">GradCache: Tích Lũy <em>Effective Batch 256</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card">
+                            <div class="point-badge">Pass 1</div>
+                            <h3 style="font-size: 26px; font-weight: 800; margin: 20px 0 10px;">Forward Sub-Batches</h3>
+                            <p class="point-desc">
+                                Chia nhỏ dữ liệu thành các batch vật lý kích thước <strong>$B_{\text{phys}} = 32$</strong>. Forward qua model ở chế độ <code>no_grad</code> để thu thập các vector biểu diễn rút gọn.
+                            </p>
+                            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--ink-soft);">
+                                Tiết kiệm 85% VRAM không lưu đồ thị tính toán.
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="point-badge">Loss</div>
+                            <h3 style="font-size: 26px; font-weight: 800; margin: 20px 0 10px;">Tập Trung Tính Loss</h3>
+                            <p class="point-desc">
+                                Gom toàn bộ 256 vector đại diện lại trên GPU để tính toán hàm mất mát Sigmoid Contrastive trên toàn bộ kích thước mẫu lớn.
+                            </p>
+                            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--accent);">
+                                Tính gradient chuẩn xác trên không gian 256 mẫu.
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="point-badge">Pass 2</div>
+                            <h3 style="font-size: 26px; font-weight: 800; margin: 20px 0 10px;">Backward Cục Bộ</h3>
+                            <p class="point-desc">
+                                Thực hiện lan truyền ngược từng sub-batch kèm theo gradient đã được gán nhãn từ bước Loss, cập nhật trọng số adapter DoRA an toàn.
+                            </p>
+                            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--ok);">
+                                Chạy mượt mà trên GPU Laptop Quadro T2000 (4GB).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Cơ sở lý thuyết: Gao et al. (RepL4NLP 2021) · Physical: 32 → Effective: 256</div>
+                    <div class="footer-page">06 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 07: HARD NEGATIVE MINING
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">06 / CHIẾN LƯỢC HỌC BIỂU DIỄN</span>
+                    <span class="pill">REPRESENTATION QUALITY</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">CHỐNG SỤP ĐỔ BIỂU DIỄN VÀ TĂNG TÍNH PHÂN BIỆT</div>
+                        <h2 class="slide-h2">Khai Phá <em>Mẫu Âm Khó (Hard Negatives)</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Chiến Lược 2 Giai Đoạn</h3>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">1-4</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Epochs 1 đến 4: In-batch Random</div>
+                                        <div class="point-desc">Mô hình làm quen với không gian phân bố chung, học cách tách biệt các nhóm danh mục lớn (áo vs váy vs giày).</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">5+</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Epochs 5 đến 10: Hard Negatives Kích Hoạt</div>
+                                        <div class="point-desc">Tự động khai phá <strong>4 láng giềng gần nhất</strong> cùng danh mục nhưng sai chi tiết thiết kế.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Tác Động Lên Không Gian Vector</h3>
+                            <p style="font-size: 21px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 24px;">
+                                Ngăn ngừa tình trạng mô hình chỉ dựa vào loại sản phẩm tổng thể để xếp hạng.
+                            </p>
+                            <div class="card" style="background: var(--ground); padding: 24px;">
+                                <div style="font-weight: 800; font-size: 21px; color: var(--accent);">Ví dụ Truy Vấn: "Váy maxi hai dây đi biển"</div>
+                                <div style="font-size: 18px; color: var(--ink-soft); margin-top: 10px; line-height: 1.6;">
+                                    • Mẫu âm dễ: Áo khoác da nam (quá dễ loại bỏ).<br>
+                                    • Mẫu âm khó: Váy công sở tay bồng cùng màu trắng (buộc mô hình chú ý đến "hai dây" và "đi biển").
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Thuật toán: K-NN trên embedding không gian hiện tại của catalog</div>
+                    <div class="footer-page">07 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 08: KIẾN TRÚC HEXAGONAL
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">07 / KIẾN TRÚC HỆ THỐNG</span>
+                    <span class="pill">HEXAGONAL DESIGN</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">THIẾT KẾ PHẦN MỀM CHUẨN MỰC</div>
+                        <h2 class="slide-h2">Kiến Trúc Hexagonal: <em>Ports và Adapters</em></h2>
+                    </div>
+
+                    <div class="grid-4col">
+                        <div class="card">
+                            <div class="kicker" style="color: var(--ink-soft); font-size: 15px;">PORT 1</div>
+                            <h3 style="font-size: 26px; margin: 10px 0 14px;">Embedder</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 20px;">
+                                Hợp đồng mã hóa văn bản và hình ảnh thành vector L2-normalized.
+                            </p>
+                            <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--accent);">
+                                Adapters: Fake, CLIP, SigLIP 2, ViSigLIP
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker" style="color: var(--ink-soft); font-size: 15px;">PORT 2</div>
+                            <h3 style="font-size: 26px; margin: 10px 0 14px;">VectorStore</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 20px;">
+                                Hợp đồng lưu trữ vector kèm payload và truy vấn láng giềng k-NN.
+                            </p>
+                            <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--accent);">
+                                Adapters: InMemory, Qdrant Client
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker" style="color: var(--ink-soft); font-size: 15px;">PORT 3</div>
+                            <h3 style="font-size: 26px; margin: 10px 0 14px;">Retriever</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 20px;">
+                                Hợp đồng chuyển đổi Query thành danh sách kết quả xếp hạng.
+                            </p>
+                            <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--accent);">
+                                Adapters: DenseRetriever, BM25Retriever
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="kicker" style="color: var(--accent); font-size: 15px;">PORT 4</div>
+                            <h3 style="font-size: 26px; margin: 10px 0 14px;">MetricsPort</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 20px;">
+                                Đo lường độc lập Recall@K, MRR, nDCG@10, Cohen Kappa và Bootstrap.
+                            </p>
+                            <div style="font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--ok);">
+                                Adapters: RankingMetricsAdapter
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Cấu hình linh hoạt qua YAML tại <code>configs/</code> · Dynamic Registry Pattern</div>
+                    <div class="footer-page">08 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 09: HẠ TẦNG PHỤC VỤ (QDRANT & FASTAPI)
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">08 / HẠ TẦNG TRIỂN KHAI</span>
+                    <span class="pill accent">QDRANT VÀ FASTAPI</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">HẠ TẦNG PHỤC VỤ TRUY VẤN THỰC TẾ</div>
+                        <h2 class="slide-h2">Qdrant Vector DB và <em>FastAPI Serving</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Chỉ Mục Vector Qdrant HNSW</h3>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">01</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Cosine Similarity Metric</div>
+                                        <div class="point-desc">Không gian nhúng 768 chiều được chuẩn hóa L2, tính toán tương đồng cosine tốc độ cao.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">02</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Payload Filtering Tích Hợp</div>
+                                        <div class="point-desc">Lọc danh mục cứng (Category Exact Match) trực tiếp trong quá trình duyệt đồ thị HNSW, không cần post-filtering.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">REST API và Web UI Phục Vụ</h3>
+                            <div class="card" style="background: var(--ground); padding: 22px; margin-bottom: 18px;">
+                                <div style="font-family: var(--font-mono); font-size: 18px; color: var(--accent); font-weight: 800;">POST /search và POST /search/image</div>
+                                <div style="font-size: 18px; color: var(--ink-soft); margin-top: 8px;">
+                                    Xử lý bất đồng bộ (async), nhận text query hoặc upload ảnh multipart, hỗ trợ lọc theo Top-K và category.
+                                </div>
+                            </div>
+                            <div class="card" style="background: var(--ground); padding: 22px;">
+                                <div style="font-family: var(--font-mono); font-size: 18px; color: var(--ok); font-weight: 800;">Static Web UI (/ui)</div>
+                                <div style="font-size: 18px; color: var(--ink-soft); margin-top: 8px;">
+                                    Giao diện Web thuần HTML/CSS/JS, zero dependencies, hỗ trợ song ngữ (Anh/Việt) và Dark/Light mode.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Chỉ mục 6,963 ảnh mất ~22 phút trên GPU Quadro T2000</div>
+                    <div class="footer-page">09 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 10: XỬ LÝ DỮ LIỆU FASHIONPEDIA
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">09 / TIỀN XỬ LÝ DỮ LIỆU</span>
+                    <span class="pill">DATASET PREPARATION</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">CHUẨN BỊ DỮ LIỆU ĐÁNH GIÁ NGHIÊM NGẶT</div>
+                        <h2 class="slide-h2">Pipeline Dữ Liệu: <em>Lọc Trùng và Phân Tách</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card">
+                            <div class="kpi-num" style="color: var(--ink); font-size: 88px;">46,781</div>
+                            <div class="kpi-label" style="font-size: 19px;">Ảnh Gốc Ban Đầu</div>
+                            <p class="kpi-desc">
+                                Tập dữ liệu Fashionpedia (Jia et al., ECCV 2020) tải về từ Hugging Face gồm danh mục sản phẩm và bounding box.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kpi-num" style="color: var(--warn); font-size: 88px;">365</div>
+                            <div class="kpi-label" style="font-size: 19px;">Ảnh Trùng Bị Loại Bỏ</div>
+                            <p class="kpi-desc">
+                                Sử dụng thuật toán <strong>Perceptual Hash</strong> để quét và loại bỏ triệt để các ảnh trùng lặp thị giác trước khi phân chia tập.
+                            </p>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="kpi-num" style="font-size: 88px;">46,416</div>
+                            <div class="kpi-label" style="font-size: 19px;">Ảnh Sạch Phân Tách</div>
+                            <p class="kpi-desc">
+                                Phân chia tỷ lệ <strong>70% Train (32,491) / 15% Val (6,962) / 15% Test (6,963)</strong> cố định seed 42. Tập Test được bảo vệ tuyệt đối.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Nguyên tắc: Tập Test là catalog tìm kiếm và không bao giờ xuất hiện trong lúc huấn luyện</div>
+                    <div class="footer-page">10 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 11: BỘ 155 TRUY VẤN
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">10 / BENCHMARK TRUY VẤN</span>
+                    <span class="pill">EVALUATION QUERIES</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">THIẾT KẾ BỘ KIỂM THỬ THỰC TẾ</div>
+                        <h2 class="slide-h2">155 Truy Vấn Tiếng Việt <em>Thuộc 4 Nhóm</em></h2>
+                    </div>
+
+                    <div class="grid-4col">
+                        <div class="card">
+                            <div class="kpi-num" style="font-size: 76px;">46</div>
+                            <div class="kpi-label" style="font-size: 19px;">Đơn Thuộc Tính</div>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-top: 14px;">
+                                Màu sắc hoặc kiểu dáng đơn giản.<br>
+                                <em>Ví dụ: "áo sơ mi trắng", "chân váy xoè".</em>
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kpi-num" style="font-size: 76px;">41</div>
+                            <div class="kpi-label" style="font-size: 19px;">Đa Thuộc Tính</div>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-top: 14px;">
+                                Kết hợp nhiều đặc trưng hình thể và màu.<br>
+                                <em>Ví dụ: "áo len cổ lọ màu be form rộng".</em>
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kpi-num" style="font-size: 76px;">33</div>
+                            <div class="kpi-label" style="font-size: 19px;">Từ Mượn / Địa Phương</div>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-top: 14px;">
+                                Thử thách ngữ nghĩa bản địa hoá.<br>
+                                <em>Ví dụ: "blazer kẻ caro", "áo bà ba".</em>
+                            </p>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="kpi-num" style="font-size: 76px;">35</div>
+                            <div class="kpi-label" style="font-size: 19px;">Phong Cách / Dịp Dùng</div>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5; margin-top: 14px;">
+                                Ngữ cảnh trừu tượng cao cấp.<br>
+                                <em>Ví dụ: "đầm dự tiệc sang trọng", "thanh lịch".</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Toàn bộ 155 queries được soạn tay độc lập, không sinh bằng template nhân tạo</div>
+                    <div class="footer-page">11 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 12: GÁN NHÃN VÀ THANG ĐO
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">11 / GIAO THỨC ĐÁNH GIÁ</span>
+                    <span class="pill accent">LABELING PROTOCOL</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">ĐẢM BẢO TÍNH KHÁCH QUAN KHOA HỌC</div>
+                        <h2 class="slide-h2">Pooled Top-20 và <em>Graded Relevance</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card">
+                            <div class="point-badge">01</div>
+                            <h3 style="font-size: 28px; margin: 20px 0 12px;">Pooled Top-20</h3>
+                            <p class="point-desc">
+                                Thu thập Top-20 ứng viên từ tất cả các hệ thống, xáo trộn ngẫu nhiên để thẩm định viên chấm nhãn mù (blind review), loại bỏ định kiến thiên vị mô hình.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="point-badge">02</div>
+                            <h3 style="font-size: 28px; margin: 20px 0 12px;">Thang Điểm Graded (0/1/2)</h3>
+                            <div style="font-size: 19px; color: var(--ink-soft); line-height: 1.7; margin-top: 12px;">
+                                • <strong>0 (Irrelevant):</strong> Không liên quan.<br>
+                                • <strong>1 (Partially):</strong> Đúng danh mục, lệch màu hoặc dáng.<br>
+                                • <strong>2 (Exact Match):</strong> Khớp hoàn toàn mọi thuộc tính.
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <div class="point-badge">03</div>
+                            <h3 style="font-size: 28px; margin: 20px 0 12px;">Độ Tin Cậy Kappa</h3>
+                            <div class="kpi-num" style="font-size: 58px;">0.44 - 0.52</div>
+                            <p class="point-desc">
+                                Chỉ số Cohen's Kappa giữa 3 cặp người chấm: $\kappa \in [0.441, 0.520]$ thể hiện mức độ đồng thuận thực tế (moderate agreement) đúng chuẩn thực nghiệm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Một cặp được tính là relevant khi điểm trung bình giữa 2 annotators ≥ 1.0</div>
+                    <div class="footer-page">12 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 13: BẢNG KẾT QUẢ SO SÁNH 5 HỆ THỐNG
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">12 / KẾT QUẢ THỰC NGHIỆM</span>
+                    <span class="pill accent">BENCHMARK MATRIX</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">ĐỐI SOÁT TRÊN TOÀN BỘ 155 TRUY VẤN</div>
+                        <h2 class="slide-h2">So Sánh Định Lượng <em>5 Hệ Thống</em></h2>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Hệ Thống Truy Xuất</th>
+                                <th>Recall@1</th>
+                                <th>Recall@5</th>
+                                <th>Recall@10</th>
+                                <th>MRR</th>
+                                <th>nDCG@10</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>SigLIP 2 + DoRA (Fine-tuned)</strong></td>
+                                <td class="mono"><strong>0.697</strong></td>
+                                <td class="mono"><strong>0.852</strong></td>
+                                <td class="mono"><strong>0.884</strong></td>
+                                <td class="mono"><strong>0.766</strong></td>
+                                <td class="mono"><strong>0.684</strong></td>
+                            </tr>
+                            <tr>
+                                <td>SigLIP 2 (Zero-shot)</td>
+                                <td class="mono">0.490</td>
+                                <td class="mono">0.774</td>
+                                <td class="mono">0.865</td>
+                                <td class="mono">0.606</td>
+                                <td class="mono">0.449</td>
+                            </tr>
+                            <tr>
+                                <td>BM25 (Từ khóa cổ điển)</td>
+                                <td class="mono">0.200</td>
+                                <td class="mono">0.471</td>
+                                <td class="mono">0.568</td>
+                                <td class="mono">0.318</td>
+                                <td class="mono">0.179</td>
+                            </tr>
+                            <tr>
+                                <td>CLIP ViT-B/32 (Zero-shot)</td>
+                                <td class="mono">0.168</td>
+                                <td class="mono">0.381</td>
+                                <td class="mono">0.426</td>
+                                <td class="mono">0.252</td>
+                                <td class="mono">0.139</td>
+                            </tr>
+                            <tr>
+                                <td>ViSigLIP-OT</td>
+                                <td class="mono">0.084</td>
+                                <td class="mono">0.226</td>
+                                <td class="mono">0.277</td>
+                                <td class="mono">0.145</td>
+                                <td class="mono">0.066</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">SigLIP 2 + DoRA áp đảo hoàn toàn các baseline từ khóa và mô hình zero-shot</div>
+                    <div class="footer-page">13 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 14: PHÂN TÍCH BƯỚC NHẢY RECALL@1
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">13 / PHÂN TÍCH CHUYÊN SÂU</span>
+                    <span class="pill accent">RECALL@1 JUMP</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">BƯỚC NHẢY VỌT VỊ TRÍ HÀNG ĐẦU</div>
+                        <h2 class="slide-h2">Recall@1: <em>Tăng Trưởng +42.2%</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card highlight" style="justify-content: center; align-items: center; text-align: center; padding: 56px;">
+                            <div class="kpi-num" style="font-size: 126px;">+42.2%</div>
+                            <div class="kpi-label" style="font-size: 24px; margin-top: 8px;">TĂNG TRƯỞNG TƯƠNG ĐỐI RECALL@1</div>
+                            <div style="font-family: var(--font-display); font-size: 40px; font-weight: 800; color: var(--ink); margin-top: 24px;">
+                                0.490 → <span style="color: var(--accent);">0.697</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3 style="font-size: 28px; margin-bottom: 24px;">Ý Nghĩa Thực Tiễn Cốt Lõi</h3>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">✓</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Đưa Sản Phẩm Đúng Lên Đầu (Rank 1)</div>
+                                        <div class="point-desc">Trong thương mại điện tử, đa số người dùng chỉ bấm vào vị trí số 1. Tinh chỉnh DoRA nâng MRR từ 0.606 lên 0.766 (+26.4%).</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">i</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Ngưỡng Recall@10 Bão Hòa</div>
+                                        <div class="point-desc">Tại Top 10, Zero-shot (0.865) và DoRA (0.884) chênh lệch không đáng kể ($p = 0.24$). Giá trị thực sự nằm ở độ chính xác tuyệt đối của Top 1.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">nDCG@10 tăng từ 0.449 lên 0.684 (+52.3% chất lượng xếp hạng phân cấp)</div>
+                    <div class="footer-page">14 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 15: KIỂM ĐỊNH PAIRED BOOTSTRAP
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">14 / Ý NGHĨA THỐNG KÊ</span>
+                    <span class="pill">BOOTSTRAP SIGNIFICANCE</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">CHỨNG MINH ĐỘ TIN CẬY TOÁN HỌC</div>
+                        <h2 class="slide-h2">Kiểm Định Bootstrap: <em>p &lt; 0.0001</em></h2>
+                    </div>
+
+                    <div class="grid-3col">
+                        <div class="card highlight">
+                            <div class="kicker">RECALL@1 DIFFERENCE</div>
+                            <div class="kpi-num" style="font-size: 72px;">+0.207</div>
+                            <div class="kpi-label" style="font-size: 19px;">95% CI: [+0.135, +0.277]</div>
+                            <p class="kpi-desc">
+                                p-value <strong>&lt; 0.0001</strong>. Khoảng tin cậy hoàn toàn nằm bên dương, khẳng định sự vượt trội không thể do ngẫu nhiên.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker">MRR DIFFERENCE</div>
+                            <div class="kpi-num" style="font-size: 72px; color: var(--ink);">+0.160</div>
+                            <div class="kpi-label" style="font-size: 19px;">95% CI: [+0.108, +0.211]</div>
+                            <p class="kpi-desc">
+                                p-value <strong>&lt; 0.0001</strong>. Tốc độ đưa kết quả chuẩn xác lên đầu trang có ý nghĩa thống kê áp đảo.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker">RECALL@10 (BOUNDARY CASE)</div>
+                            <div class="kpi-num" style="font-size: 72px; color: var(--warn);">+0.019</div>
+                            <div class="kpi-label" style="font-size: 19px;">p-value = 0.24 (NOT SIG)</div>
+                            <p class="kpi-desc">
+                                Khoảng tin cậy $[-0.013, +0.052]$ chứa giá trị 0. Minh chứng tính trung thực khoa học: Không tô hồng kết quả.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Phương pháp: 10,000 resamples ngẫu nhiên có hoàn lại trên 155 queries, seed 42</div>
+                    <div class="footer-page">15 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 16: PHÂN TÍCH 20 CA LỖI
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">15 / CHẨN ĐOÁN LỖI</span>
+                    <span class="pill accent">ERROR DIAGNOSTICS</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">BÓC TÁCH CÁC TRƯỜNG HỢP THẤT BẠI</div>
+                        <h2 class="slide-h2">Phân Tích 20 Ca Lỗi: <em>Lỗ Hổng Phụ Kiện</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Hai Nguyên Nhân Gốc Chính</h3>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">!</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Lỗ Hổng Phụ Kiện (Accessory Gap)</div>
+                                        <div class="point-desc">Các truy vấn như "thắt lưng da", "kính râm", "khuyên tai" có tỷ lệ lỗi cao do Fashionpedia tập trung 85% vào trang phục chính (quần, áo, váy).</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">!</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Thiếu Thuộc Tính Hạt Mịn (Granular Tags)</div>
+                                        <div class="point-desc">Dataset chỉ có nhãn danh mục, thiếu thông tin về chất liệu ("lụa tơ tằm", "cotton thoáng mát") dẫn đến nhầm lẫn ngữ nghĩa chi tiết.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card highlight">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">Bài Học Về Bộ Lọc Tự Động</h3>
+                            <div class="card" style="background: var(--ground); padding: 22px; margin-bottom: 18px;">
+                                <div style="font-weight: 800; font-size: 20px; color: var(--bad);">Sự Cố Lọc Zero-Grade Tự Động</div>
+                                <div style="font-size: 18px; color: var(--ink-soft); margin-top: 8px;">
+                                    Bộ lọc heuristics tự động đánh điểm 0 cho 35 truy vấn; thẩm định lại phát hiện <strong>26/35 query bị chấm sai</strong> (chủ yếu là phụ kiện).
+                                </div>
+                            </div>
+                            <p style="font-size: 19px; color: var(--ink-soft); line-height: 1.55;">
+                                <strong>Khẳng định:</strong> Báo cáo chính thức giữ nguyên toàn bộ 155 queries để bảo toàn tính liêm chính dữ liệu thực nghiệm.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Chương 5 Báo cáo luận văn chi tiết hóa toàn bộ 20 ca lỗi xếp hạng</div>
+                    <div class="footer-page">16 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 17: GIỚI HẠN CỦA GIẢI PHÁP
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">16 / RANH GIỚI NGHIÊN CỨU</span>
+                    <span class="pill">LIMITATIONS VÀ BOUNDARIES</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">KHIÊM TỐN NHẬN THỨC VÀ TÍNH TOÀN VẸN</div>
+                        <h2 class="slide-h2">Giới Hạn và <em>Đánh Đổi Kỹ Thuật</em></h2>
+                    </div>
+
+                    <div class="grid-4col">
+                        <div class="card">
+                            <div class="kicker" style="color: var(--accent); font-size: 15px;">GIỚI HẠN 1</div>
+                            <h3 style="font-size: 24px; margin: 10px 0;">DoRA vs Plain LoRA</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5;">
+                                DoRA (0.697) và LoRA (0.690) chưa thể hiện sự khác biệt có ý nghĩa thống kê trên tập 155 queries.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker" style="color: var(--accent); font-size: 15px;">GIỚI HẠN 2</div>
+                            <h3 style="font-size: 24px; margin: 10px 0;">Độ Trễ Phục Vụ</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5;">
+                                Chưa đạt mục tiêu 200 ms trên máy thử nghiệm do nạp adapter lúc runtime mà chưa merge trực tiếp trọng số vào backbone.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker" style="color: var(--accent); font-size: 15px;">GIỚI HẠN 3</div>
+                            <h3 style="font-size: 24px; margin: 10px 0;">Truy Vấn Bằng Ảnh</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5;">
+                                Tháp hình ảnh được huấn luyện qua cặp Text-Image; chưa có tập ground-truth riêng để đo độ chính xác Image-to-Image.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <div class="kicker" style="color: var(--accent); font-size: 15px;">GIỚI HẠN 4</div>
+                            <h3 style="font-size: 24px; margin: 10px 0;">Môi Trường Chạy</h3>
+                            <p style="font-size: 18px; color: var(--ink-soft); line-height: 1.5;">
+                                Huấn luyện trên một lượt chạy duy nhất (seed 42); các trục ablation còn lại cần mở rộng trên cụm GPU lớn hơn.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Minh bạch ranh giới nghiên cứu là yêu cầu bắt buộc của môn học</div>
+                    <div class="footer-page">17 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 18: DEMO THỰC TẾ
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <span class="section-tag">17 / MINH HỌA HỆ THỐNG</span>
+                    <span class="pill accent">LIVE DEMO APPLICATION</span>
+                </div>
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">SẢN PHẨM PHẦN MỀM THỰC NGHIỆM HOÀN CHỈNH</div>
+                        <h2 class="slide-h2">Giao Diện Web và <em>Trải Nghiệm Người Dùng</em></h2>
+                    </div>
+
+                    <div class="grid-2col" style="align-items: center; gap: 60px;">
+                        <div>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">01</div>
+                                    <div class="point-content">
+                                        <div class="point-title" style="font-size: 26px;">Hỗ Trợ Song Song 2 Phương Thức</div>
+                                        <div class="point-desc">Tìm kiếm bằng văn bản tự nhiên tiếng Việt hoặc tải ảnh trực tiếp để tìm sản phẩm tương đồng.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">02</div>
+                                    <div class="point-content">
+                                        <div class="point-title" style="font-size: 26px;">Bộ Lọc Nhanh Danh Mục</div>
+                                        <div class="point-desc">Các chip lọc tức thì: Váy đầm, Áo khoác, Quần dài, Phụ kiện, cùng thanh điều chỉnh Top-K từ 1 đến 100.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">03</div>
+                                    <div class="point-content">
+                                        <div class="point-title" style="font-size: 26px;">Giao Diện Song Ngữ và Chế Độ Sáng/Tối</div>
+                                        <div class="point-desc">Chuyển đổi giao diện Tiếng Việt / Tiếng Anh và Dark / Light theme đồng bộ thời gian thực.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="padding: 18px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-card);">
+                            <img src="assets/ui_ch4_sang_gon.jpg" alt="Web UI Demo" style="width: 100%; height: auto; border-radius: 16px; display: block;">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <div class="footer-meta">Khởi chạy qua: <code>uvicorn app.api:app</code> · Truy cập tại: <code>http://localhost:8000/ui</code></div>
+                    <div class="footer-page">18 / 19</div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 SLIDE 19: TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN
+                 ========================================== -->
+            <section class="slide">
+                <div class="top-nav">
+                    <div class="nav-pills">
+                        <div class="pill"><span>Học máy Nâng cao (N01)</span></div>
+                        <div class="pill accent"><span>KẾT LUẬN VÀ ĐỊNH HƯỚNG</span></div>
+                    </div>
+                    <div class="logo-box">
+                        <img src="assets/logo_phenikaa.png" alt="Phenikaa University Logo">
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="slide-title-area">
+                        <div class="kicker">TỔNG KẾT BÀI BÁO CÁO</div>
+                        <h2 class="slide-h2">Đóng Góp Cốt Lõi và <em>Lời Cảm Ơn</em></h2>
+                    </div>
+
+                    <div class="grid-2col">
+                        <div class="card highlight">
+                            <h3 style="font-size: 28px; margin-bottom: 20px;">3 Đóng Góp Kỹ Thuật Đã Được Kiểm Chứng</h3>
+                            <div class="key-points">
+                                <div class="point-item">
+                                    <div class="point-badge">✓</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Kiến Trúc Hexagonal Hoàn Chỉnh</div>
+                                        <div class="point-desc">Tách biệt rõ ràng miền nghiệp vụ khỏi các adapter mô hình và cơ sở dữ liệu vector.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">✓</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Hiệu Quả Fine-Tuning Thực Tế</div>
+                                        <div class="point-desc">Nâng Recall@1 từ 0.490 lên 0.697 (+42.2%) với kiểm định bootstrap $p &lt; 0.0001$.</div>
+                                    </div>
+                                </div>
+                                <div class="point-item">
+                                    <div class="point-badge">✓</div>
+                                    <div class="point-content">
+                                        <div class="point-title">Bộ Benchmark 155 Queries Bản Địa</div>
+                                        <div class="point-desc">Cung cấp bộ dữ liệu đánh giá graded relevance được gán nhãn mù độc lập.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="justify-content: center; align-items: center; text-align: center; padding: 56px;">
+                            <h3 style="font-family: var(--font-display); font-size: 50px; font-weight: 800; color: var(--ink); margin-bottom: 20px;">
+                                Cảm Ơn Thầy Cô và Các Bạn!
+                            </h3>
+                            <p style="font-size: 24px; color: var(--ink-soft); line-height: 1.6; max-width: 520px; margin-bottom: 32px;">
+                                Nhóm nghiên cứu sẵn sàng lắng nghe các nhận xét và câu hỏi thảo luận từ Hội đồng.
+                            </p>
+                            <div class="pill accent" style="font-size: 22px; padding: 14px 38px; font-weight: 800;">
+                                Q &amp; A SESSION
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer">
+                    <div class="footer-meta">Mã nguồn và Luận văn hoàn chỉnh tại kho lưu trữ: <code>ml_advanced</code></div>
+                    <div class="footer-page">19 / 19</div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- HUD Navigation Controls -->
+    <div class="deck-controls">
+        <button class="ctrl-btn" onclick="prevSlide()" title="Trang trước (Phím mũi tên trái)">← TRƯỚC</button>
+        <span id="slideIndicator" style="font-family: var(--font-mono); font-size: 15px; font-weight: 800; padding: 0 10px;">01 / 19</span>
+        <button class="ctrl-btn" onclick="nextSlide()" title="Trang sau (Phím mũi tên phải hoặc Space)">SAU →</button>
+        <button class="ctrl-btn" onclick="toggleFullScreen()" title="Toàn màn hình (F)">[ F ]</button>
+    </div>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <script>
+        /* ===========================================
+           SLIDE CONTROLLER, RESIZE & KATEX SETUP
+           =========================================== */
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const stage = document.getElementById('deckStage');
+        const slideIndicator = document.getElementById('slideIndicator');
+        const progressBar = document.getElementById('progressBar');
+
+        function scaleStage() {
+            const factor = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+            const x = (window.innerWidth - 1920 * factor) / 2;
+            const y = (window.innerHeight - 1080 * factor) / 2;
+            stage.style.transform = `translate(${x}px, ${y}px) scale(${factor})`;
+        }
+        window.addEventListener('resize', scaleStage);
+        scaleStage();
+
+        function showSlide(index) {
+            if (index < 0) index = 0;
+            if (index >= totalSlides) index = totalSlides - 1;
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+                s.classList.toggle('visible', i === index);
+            });
+            currentSlide = index;
+            const formattedCurrent = String(currentSlide + 1).padStart(2, '0');
+            const formattedTotal = String(totalSlides).padStart(2, '0');
+            slideIndicator.innerText = `${formattedCurrent} / ${formattedTotal}`;
+            progressBar.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+        }
+
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+
+        window.addEventListener('keydown', (e) => {
+            if (['ArrowRight', 'Space', 'PageDown'].includes(e.code)) {
+                e.preventDefault(); nextSlide();
+            } else if (['ArrowLeft', 'PageUp'].includes(e.code)) {
+                e.preventDefault(); prevSlide();
+            } else if (e.code === 'Home') {
+                e.preventDefault(); showSlide(0);
+            } else if (e.code === 'End') {
+                e.preventDefault(); showSlide(totalSlides - 1);
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullScreen();
+            }
+        });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(() => {});
+            } else {
+                if (document.exitFullscreen) document.exitFullscreen();
+            }
+        }
+
+        // Render KaTeX after page load
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+
+        // Initialize at first slide
+        showSlide(0);
+    </script>
+</body>
+</html>
